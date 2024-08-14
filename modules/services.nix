@@ -18,19 +18,17 @@
     };
   };
 
+
   systemd.services = {
     # https://github.com/NixOS/nixpkgs/issues/59603#issuecomment-1356844284
     NetworkManager-wait-online.enable = false;
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    enable = true;
-    xkb.layout = "us";
-    xkb.variant = "";
+  services={
+    gvfs.enable = true;
+    gnome.gnome-keyring.enable = true;
+    # Enable CUPS to print documents.
+    printing.enable = true;
+    openssh.enable = true;
   };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.openssh.enable = true;
 }

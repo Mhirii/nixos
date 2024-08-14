@@ -2,13 +2,17 @@
   description = "Hyprland";
 
   inputs = {
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     stylix.url = "github:danth/stylix";
+    # home-manager = {
+    #   url = "github:nix-community/home-manager";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
-  outputs = {self, nixpkgs, ... }@inputs :
-    let 
+  outputs = {self, nixpkgs, home-manager, stylix, ... }@inputs :
+    let
+      username = "mhiri";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
@@ -18,16 +22,22 @@
 
     in
     {
-      # packages.x86_64-linux.default = nixpkgs.legacyPackages.${system}.hello;
-      nixosConfigurations.mhiri = lib.nixosSystem {
-        specialArgs = { inherit system inputs; };
-        modules = [
-          inputs.stylix.nixosModules.stylix
-          ./nixos/configuration.nix
-          ./hosts/desktop/hardware-configuration.nix
-          ./modules/bundle.nix
-          ./home-manager/home.nix
-        ];
+      nixosConfigurations={
+        specialArgs = { host="desktop"; inherit self inputs username ; };
+        desktop = lib.nixosSystem {
+          inherit system;
+          modules = [
+            inputs.stylix.nixosModules.stylix
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.mhiri = import ./home-manager/home.nix ;
+            }
+            (import ./hosts/desktop)
+          ];
+        };
+
       };
     };
 }

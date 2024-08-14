@@ -1,4 +1,4 @@
-{pkgs, ...}:{
+{inputs, pkgs, ...}:{
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -6,7 +6,7 @@
   # environment.systemPackages = with pkgs; []
   #packages = with pkgs; [
   # users.users.mhiri.packages = with pkgs; [
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     home-manager
 
     # tools
@@ -60,6 +60,7 @@
 
     # software
     brave
+    floorp
     firefox
     bitwarden-desktop
     bitwarden-cli
@@ -69,6 +70,7 @@
     mpv
     gnome.eog
     vlc
+    playerctl
 
     #sys
     cliphist
@@ -87,6 +89,5 @@
     gtk3
     gtk4
     polkit_gnome
-  ];
-  programs.thunar.enable = true;
+  ]);
 }
