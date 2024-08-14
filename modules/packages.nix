@@ -3,9 +3,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-# environment.systemPackages = with pkgs; []
+  # environment.systemPackages = with pkgs; []
   #packages = with pkgs; [
-environment.systemPackages = with pkgs; [
+  # users.users.mhiri.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     home-manager
 
     # tools
