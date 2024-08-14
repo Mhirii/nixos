@@ -26,26 +26,27 @@
       #   normal = { family = "MonaspiceNe Nerd Font"; style = "Medium"; };
       #   bold = { family = "MonaspiceNe Nerd Font"; style = "Bold"; };
       #   size = 12;
-      # };
+      # }
 
       mouse.hide_when_typing = true;
 
-      # window = {
-      #   decorations = "full";
-      #   decorations_theme_variant = "Dark";
-      #   dynamic_padding = false;
-      #   dynamic_title = true;
-      #   opacity = 0.5;
-      #   title = "Alacritty";
-      #   padding = {
-      #     x = 12;
-      #     y = 12;
-      #   };
-      # };
+      window = {
+        decorations = "full";
+        decorations_theme_variant = "Dark";
+        dynamic_padding = false;
+        dynamic_title = true;
+        opacity = lib.mkForce 0.5;
+        title = "Alacritty";
+        padding = {
+          x = 4;
+          y = 4;
+        };
+      };
 
       # shell = {
       #   program = "/usr/bin/env fish";
       # };
     };
   };
+  programs.alacritty.settings.font.normal.family = lib.mkForce "MonaspiceNe Nerd Font";
 }

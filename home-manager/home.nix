@@ -7,7 +7,7 @@
   };
   imports = [
     # ./gtk.nix
-    # ./programs
+    ./programs
   ];
   home.stateVersion = "18.09";
 }

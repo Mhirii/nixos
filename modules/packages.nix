@@ -89,5 +89,7 @@
     gtk3
     gtk4
     polkit_gnome
+
+    font-manager
   ]);
 }
