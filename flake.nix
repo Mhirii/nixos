@@ -4,10 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     stylix.url = "github:danth/stylix";
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {self, nixpkgs, home-manager, stylix, ... }@inputs :
@@ -23,18 +23,19 @@
     in
     {
       nixosConfigurations={
-        specialArgs = { host="desktop"; inherit self inputs username ; };
+        specialArgs = { host="desktop"; inherit self inputs username stylix ; };
         desktop = lib.nixosSystem {
           inherit system;
           modules = [
-            inputs.stylix.nixosModules.stylix
+            (import ./hosts/desktop)
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.mhiri = import ./home-manager/home.nix ;
             }
-            (import ./hosts/desktop)
+            inputs.stylix.nixosModules.stylix
+            (import ./modules/stylix.nix)
           ];
         };
 
