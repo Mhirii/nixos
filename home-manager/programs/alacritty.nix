@@ -1,8 +1,7 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
+{ config
+, pkgs
+, lib
+, ...
 }: {
   # home.packages = lib.optionals config.programs.alacritty.enable ;
 
@@ -15,7 +14,7 @@
       selection.save_to_clipboard = true;
 
       cursor = {
-          style = {
+        style = {
           shape = "Block";
           blinking = "On";
         };

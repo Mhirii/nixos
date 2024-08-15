@@ -1,4 +1,4 @@
-{inputs, pkgs, ... }:{
+{ inputs, pkgs, ... }: {
   stylix.enable = true;
   stylix.image = ../home-manager/assets/midnight.png;
   stylix.polarity = "dark";
@@ -26,7 +26,7 @@
 
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerdfonts.override { fonts = ["Monaspace"];};
+      package = pkgs.nerdfonts.override { fonts = [ "Monaspace" ]; };
       name = "MonaspaceNe Nerd Font";
       # name = "JetBrainsMono Nerd Font Mono";
     };

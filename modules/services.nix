@@ -1,8 +1,8 @@
-{...}:{
+{ ... }: {
   services.keyd.enable = true;
   services.keyd.keyboards = {
     default = {
-      ids = ["*"];
+      ids = [ "*" ];
       settings = {
         main = {
           capslock = "overload(control, esc)";
@@ -24,7 +24,7 @@
     NetworkManager-wait-online.enable = false;
   };
 
-  services={
+  services = {
     gvfs.enable = true;
     gnome.gnome-keyring.enable = true;
     # Enable CUPS to print documents.

@@ -1,9 +1,7 @@
-
-{
-  config,
-  pkgs,
-  lib,
-  ...
+{ config
+, pkgs
+, lib
+, ...
 }: {
   programs.yazi = {
     enable = true;

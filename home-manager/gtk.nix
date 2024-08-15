@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 let
   nerdfonts = pkgs.nerdfonts.override {
     fonts = [
@@ -28,15 +28,15 @@ let
 in
 {
 
-    gtk = {
-      inherit iconTheme;
-      # theme.name = theme.name;
-      # enable = true;
-      # gtk3.extraCss = ''
-      #   headerbar, .titlebar,
-      #   .csd:not(.popup):not(tooltip):not(messagedialog) decoration{
-      #     border-radius: 0;
-      #   }
-      # '';
-    };
+  gtk = {
+    inherit iconTheme;
+    # theme.name = theme.name;
+    # enable = true;
+    # gtk3.extraCss = ''
+    #   headerbar, .titlebar,
+    #   .csd:not(.popup):not(tooltip):not(messagedialog) decoration{
+    #     border-radius: 0;
+    #   }
+    # '';
+  };
 }

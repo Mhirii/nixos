@@ -1,9 +1,9 @@
-{username, pkgs, inputs, ...}:{
- 
-  # system.stateVersion = "24.05";
-  imports = 
+{ username, pkgs, inputs, ... }: {
 
-       [ (import ../nixos/configuration.nix) ]
+  # system.stateVersion = "24.05";
+  imports =
+
+    [ (import ../nixos/configuration.nix) ]
     ++ [ (import ./sys.nix) ]
     ++ [ (import ./xserver.nix) ]
     ++ [ (import ./network.nix) ]
@@ -14,7 +14,7 @@
     ++ [ (import ./hyprland.nix) ]
     ++ [ (import ./gnome.nix) ]
     ++ [ (import ./packages.nix) ];
-    # ++ [ inputs.stylix.nixosModules.stylix ]
-    # ++ [ (import ./stylix.nix) ];
-    # ++ [ (import ../home-manager/home.nix ) ];
+  # ++ [ inputs.stylix.nixosModules.stylix ]
+  # ++ [ (import ./stylix.nix) ];
+  # ++ [ (import ../home-manager/home.nix ) ];
 }

@@ -1,4 +1,4 @@
-{config, pkgs, ...}:{
+{ config, pkgs, ... }: {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -26,18 +26,18 @@
   #   alsa.enable = true;
   #   alsa.support32Bit = true;
   #   pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+  # If you want to use JACK applications, uncomment this
+  #jack.enable = true;
 
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
+  # use the example session manager (no others are packaged yet so this is enabled by default,
+  # no need to redefine it in your config for now)
+  #media-session.enable = true;
   # };
   hardware = {
     opengl.enable = true;
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
     modesetting.enable = true;
@@ -57,7 +57,7 @@
     open = false;
 
     # Enable the Nvidia settings menu,
-	  # accessible via `nvidia-settings`.
+    # accessible via `nvidia-settings`.
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;

@@ -1,4 +1,4 @@
-{inputs, pkgs, ...}:{
+{ inputs, pkgs, ... }: {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -75,8 +75,8 @@
     #sys
     cliphist
     brightnessctl
-    pamixer 
-    pavucontrol 
+    pamixer
+    pavucontrol
     bluez
     bluez-tools
     blueman

@@ -10,21 +10,21 @@
     };
   };
 
-  outputs = {self, nixpkgs, home-manager, stylix, ... }@inputs :
+  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
     let
       username = "mhiri";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-        config.allowUnfree = true;	
+        config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
 
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
-      nixosConfigurations={
-        specialArgs = { host="desktop"; inherit self inputs username stylix ; };
+      nixosConfigurations = {
+        specialArgs = { host = "desktop"; inherit self inputs username stylix; };
         desktop = lib.nixosSystem {
           inherit system;
           modules = [
@@ -33,7 +33,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.mhiri = import ./home-manager/home.nix ;
+              home-manager.users.mhiri = import ./home-manager/home.nix;
             }
             inputs.stylix.nixosModules.stylix
             (import ./modules/stylix.nix)
