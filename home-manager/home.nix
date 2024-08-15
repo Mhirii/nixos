@@ -6,8 +6,9 @@
     homeDirectory = "/home/mhiri";
   };
   imports = [
-    # ./gtk.nix
+    ./gtk.nix
     ./programs
+    ./mimeapps.nix
   ];
   home.stateVersion = "18.09";
 }

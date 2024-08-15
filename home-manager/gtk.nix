@@ -29,7 +29,7 @@ in
 {
 
     gtk = {
-      inherit font cursorTheme iconTheme;
+      inherit iconTheme;
       # theme.name = theme.name;
       # enable = true;
       # gtk3.extraCss = ''

@@ -22,6 +22,7 @@
 
     in
     {
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
       nixosConfigurations={
         specialArgs = { host="desktop"; inherit self inputs username stylix ; };
         desktop = lib.nixosSystem {
