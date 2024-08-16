@@ -11,7 +11,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
-    let
+      let
       username = "mhiri";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -34,6 +34,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.mhiri = import ./home-manager/home.nix;
+              home-manager.backupFileExtension = "backup";
             }
             inputs.stylix.nixosModules.stylix
             (import ./modules/stylix.nix)

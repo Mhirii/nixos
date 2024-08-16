@@ -5,6 +5,8 @@
     ../../modules/bundle.nix
   ];
 
+  networking.hostName = "desktop";
+
 
   powerManagement.cpuFreqGovernor = "performance";
 }

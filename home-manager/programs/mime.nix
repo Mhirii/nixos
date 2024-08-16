@@ -1,4 +1,3 @@
-{ home, ... }:
 let
   browser = "floorp.desktop";
   image = "org.gnome.eog.desktop";
@@ -19,7 +18,6 @@ in
       "x-scheme-handler/about" = "${browser}";
       "x-scheme-handler/unknown" = "${browser}";
       "image/png" = "${image}";
-      "      text/html" = "${browser}";
     };
   };
 }

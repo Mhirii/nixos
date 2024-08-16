@@ -2,7 +2,7 @@
 {
   networking = {
     # wireless.enable = true; #user networkmanager instead
-    hostName = "nixos";
+    # hostName = "nixos";
     networkmanager.enable = true;
     nameservers = [ "1.1.1.1" ];
     firewall = {

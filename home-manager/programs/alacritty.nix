@@ -1,10 +1,6 @@
-{ config
-, pkgs
-, lib
-, ...
-}: {
-  # home.packages = lib.optionals config.programs.alacritty.enable ;
-
+# home.packages = lib.optionals config.programs.alacritty.enable ;
+{lib, ...}:
+{
   programs.alacritty = {
     enable = true;
 
@@ -21,11 +17,12 @@
         unfocused_hollow = true;
       };
 
-      # font = {
-      #   normal = { family = "MonaspiceNe Nerd Font"; style = "Medium"; };
-      #   bold = { family = "MonaspiceNe Nerd Font"; style = "Bold"; };
-      #   size = 12;
-      # }
+      font = {
+        normal = lib.mkForce { family = "MonaspiceNe Nerd Font"; style = "Medium"; };
+        bold = { family = "MonaspiceNe Nerd Font"; style = "Bold"; };
+        size = lib.mkDefault 12;
+      };
+      # font.normal.family = "MonaspiceNe Nerd Font";
 
       mouse.hide_when_typing = true;
 
@@ -34,7 +31,7 @@
         decorations_theme_variant = "Dark";
         dynamic_padding = false;
         dynamic_title = true;
-        opacity = lib.mkForce 0.5;
+        opacity = 0.5;
         title = "Alacritty";
         padding = {
           x = 4;
@@ -42,10 +39,6 @@
         };
       };
 
-      # shell = {
-      #   program = "/usr/bin/env fish";
-      # };
     };
   };
-  programs.alacritty.settings.font.normal.family = lib.mkForce "MonaspiceNe Nerd Font";
 }
