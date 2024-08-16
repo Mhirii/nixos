@@ -218,6 +218,10 @@ in
       "......" = "cd ../../../../..";
 
       untar = "tar -zxvf";
+
+      lg="lazygit";
+      v="nvim";
+      t="tmux";
     };
   };
 
