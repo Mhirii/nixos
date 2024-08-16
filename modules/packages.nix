@@ -47,6 +47,7 @@
     jq
     fastfetch
     pfetch-rs
+    sqlite
 
     # langs
     go
