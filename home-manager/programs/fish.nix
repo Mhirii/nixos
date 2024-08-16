@@ -181,6 +181,52 @@ in
                   commandline -i '$'
           end
         '';
+      getVitePID = # fish
+        ''
+          pgrep -a node | rg internship | sed 's/ .*//' $argv
+        '';
+      switch_mode=# fish
+      ''
+        if [ "$fish_key_bindings" = fish_vi_key_bindings ]
+            fish_default_key_bindings
+            set mode Default
+        else
+            fish_vi_key_bindings
+            set mode Vim
+        end
+
+        echo "$mode Keybinds set"
+        starship prompt
+      '';
+      tmux_fzf = # fish
+      ''
+        set prev (pwd)
+        zi
+        set name (basename (pwd))
+        if test "$name" != mhiri
+            if tmux has-session -t $name
+                tmux attach -t $name
+            else
+                tmux new -s (basename (pwd))
+            end
+            cd $prev
+        end
+        starship prompt
+      '';
+      yz = # fish
+      ''
+        set tmp (mktemp -t "yazi-cwd.XXXXX")
+        yazi $argv --cwd-file="$tmp"
+        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+            cd -- "$cwd"
+        end
+        rm -f -- "$tmp"
+      '';
+      zoxide_find = #fish
+      ''
+        zi
+        starship prompt
+      '';
     };
 
     shellAbbrs = {
