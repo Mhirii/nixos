@@ -1,6 +1,7 @@
 let
   browser = "floorp.desktop";
   image = "org.gnome.eog.desktop";
+  editor = "nvim.desktop";
 in
 {
   xdg.mimeApps = {
@@ -18,6 +19,10 @@ in
       "x-scheme-handler/about" = "${browser}";
       "x-scheme-handler/unknown" = "${browser}";
       "image/png" = "${image}";
+      "text/markdown" = "${editor}";
+      "text/plain" = "${editor}";
+      "image/jpeg" = "${image}";
+      "image/gif" = "${browser}";
     };
   };
 }
