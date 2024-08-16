@@ -8,9 +8,10 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, hyprland, ... }@inputs:
     let
       username = "mhiri";
       system = "x86_64-linux";
@@ -25,6 +26,7 @@
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
       nixosConfigurations = {
         specialArgs = { host = "desktop"; inherit self inputs username stylix; };
+        programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
         desktop = lib.nixosSystem {
           inherit system;
           modules = [
@@ -34,7 +36,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.mhiri = import ./home-manager/home.nix;
-              home-manager.backupFileExtension = "backup";
+              home-manager.backupFileExtension = "bckup";
             }
             inputs.stylix.nixosModules.stylix
             (import ./modules/stylix.nix)

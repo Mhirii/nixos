@@ -185,48 +185,48 @@ in
         ''
           pgrep -a node | rg internship | sed 's/ .*//' $argv
         '';
-      switch_mode=# fish
-      ''
-        if [ "$fish_key_bindings" = fish_vi_key_bindings ]
-            fish_default_key_bindings
-            set mode Default
-        else
-            fish_vi_key_bindings
-            set mode Vim
-        end
+      switch_mode = # fish
+        ''
+          if [ "$fish_key_bindings" = fish_vi_key_bindings ]
+              fish_default_key_bindings
+              set mode Default
+          else
+              fish_vi_key_bindings
+              set mode Vim
+          end
 
-        echo "$mode Keybinds set"
-        starship prompt
-      '';
+          echo "$mode Keybinds set"
+          starship prompt
+        '';
       tmux_fzf = # fish
-      ''
-        set prev (pwd)
-        zi
-        set name (basename (pwd))
-        if test "$name" != mhiri
-            if tmux has-session -t $name
-                tmux attach -t $name
-            else
-                tmux new -s (basename (pwd))
-            end
-            cd $prev
-        end
-        starship prompt
-      '';
+        ''
+          set prev (pwd)
+          zi
+          set name (basename (pwd))
+          if test "$name" != mhiri
+              if tmux has-session -t $name
+                  tmux attach -t $name
+              else
+                  tmux new -s (basename (pwd))
+              end
+              cd $prev
+          end
+          starship prompt
+        '';
       yz = # fish
-      ''
-        set tmp (mktemp -t "yazi-cwd.XXXXX")
-        yazi $argv --cwd-file="$tmp"
-        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-            cd -- "$cwd"
-        end
-        rm -f -- "$tmp"
-      '';
+        ''
+          set tmp (mktemp -t "yazi-cwd.XXXXX")
+          yazi $argv --cwd-file="$tmp"
+          if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+              cd -- "$cwd"
+          end
+          rm -f -- "$tmp"
+        '';
       zoxide_find = #fish
-      ''
-        zi
-        starship prompt
-      '';
+        ''
+          zi
+          starship prompt
+        '';
     };
 
     shellAbbrs = {
@@ -265,9 +265,9 @@ in
 
       untar = "tar -zxvf";
 
-      lg="lazygit";
-      v="nvim";
-      t="tmux";
+      lg = "lazygit";
+      v = "nvim";
+      t = "tmux";
     };
   };
 
@@ -276,14 +276,14 @@ in
     text = "
       preferred_background: ${base16.base00}
       fish_color_normal ${base16.base07}
-      fish_color_command ${base16.base0A}
-      fish_color_param ${base16.base0D}
+      fish_color_command ${base16.base0D}
+      fish_color_param ${base16.base0F }
       fish_color_keyword ${base16.base0E}
       fish_color_quote ${base16.base0B}
       fish_color_redirection ${base16.base0E}
       fish_color_end ${base16.base0C}
       fish_color_comment ${base16.base06}
-      fish_color_error ${base16.base0F}
+      fish_color_error ${base16.base0A }
       fish_color_gray ${base16.base05}
       fish_color_selection --background=${base16.base03}
       fish_color_search_match --background=${base16.base03}
@@ -291,12 +291,12 @@ in
       fish_color_operator ${base16.base0E}
       fish_color_escape ${base16.base0C}
       fish_color_autosuggestion ${base16.base05}
-      fish_color_cancel ${base16.base0F}
+      fish_color_cancel ${base16.base0A }
       fish_color_cwd f6d484
       fish_color_user ${base16.base0B}
-      fish_color_host ${base16.base0A}
+      fish_color_host ${base16.base0D}
       fish_color_host_remote ${base16.base0B}
-      fish_color_status ${base16.base0F}
+      fish_color_status ${base16.base0A }
       fish_pager_color_progress ${base16.base05}
       fish_pager_color_prefix ${base16.base0E}
       fish_pager_color_completion ${base16.base07}

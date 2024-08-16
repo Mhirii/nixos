@@ -1,6 +1,6 @@
-{...}:
+{ ... }:
 let
-lang = icon: color: {
+  lang = icon: color: {
     symbol = icon;
     format = "[$symbol ](${color})[$version](${color})";
   };
@@ -58,12 +58,12 @@ in
       };
       container = {
         symbol = " 󰏖";
-        format = "[$symbol ](cyan dimmed)";
+        format = "[$symbol ](yellow dimmed)";
       };
       directory = {
         format = builtins.concatStringsSep "" [
-          " [$path](fg:yellow)"
-          " [$read_only](fg:cyan)"
+          " [$path](fg:cyan)"
+          " [$read_only](fg:yellow)"
         ];
         read_only = " ";
         truncate_to_repo = true;
@@ -71,7 +71,7 @@ in
         truncation_symbol = "";
       };
 
-      python = lang "" "cyan";
+      python = lang "" "yellow";
       nodejs = lang "󰎙" "green";
       bun = lang "󰛦" "blue";
       deno = lang "󰛦" "blue";
@@ -102,7 +102,7 @@ in
 
       cmd_duration = {
         min_time = 1;
-        format = "[ ](fg:cyan bold)$duration(fg:white)";
+        format = "[ ](fg:yellow bold)$duration(fg:white)";
       };
     };
   };

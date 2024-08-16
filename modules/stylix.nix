@@ -13,12 +13,12 @@
     base07 = "#cdd6f4";
     base08 = "#C0CAF5";
     base09 = "#A9B1D6";
-    base0A = "#2ec1dc";
+    base0A = "#ef6b91";
     base0B = "#90dc89";
     base0C = "#f18b74";
     base0D = "#59a8f8";
     base0E = "#a879e2";
-    base0F = "#ef6b91";
+    base0F = "#2ec1dc";
   };
 
   stylix.cursor.package = pkgs.bibata-cursors;
