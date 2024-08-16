@@ -6,5 +6,6 @@
     ./yazi.nix
     ./bash.nix
     ./fish.nix
+    ./starship.nix
   ];
 }
