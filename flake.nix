@@ -11,7 +11,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
-      let
+    let
       username = "mhiri";
       system = "x86_64-linux";
       pkgs = import nixpkgs {

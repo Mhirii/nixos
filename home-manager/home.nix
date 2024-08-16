@@ -10,8 +10,7 @@
   home.packages = [
   ];
 
-  home.file = {
-  };
+  home.file = { };
 
   home.sessionVariables = {
     EDITOR = "nvim";

@@ -1,5 +1,5 @@
 # home.packages = lib.optionals config.programs.alacritty.enable ;
-{lib, ...}:
+{ lib, ... }:
 {
   programs.alacritty = {
     enable = true;
