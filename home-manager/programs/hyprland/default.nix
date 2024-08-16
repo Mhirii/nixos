@@ -8,11 +8,11 @@ in
     enable = true;
   };
 
-  home.file.launch = {
-    target = ".config/hypr/scripts/launch.fish";
-    source = "${flake_dir}/home-manager/assets/launch.fish";
-    executable = true;
-  };
+  # home.file.launch = {
+  #   target = ".config/hypr/scripts/launch.fish";
+  #   source = "${flake_dir}/home-manager/assets/launch.fish";
+  #   executable = true;
+  # };
 
   imports = [
     ./scripts
