@@ -43,7 +43,7 @@ in
       git_branch = {
         symbol = "";
         style = "";
-        format = "[ $symbol $branch](fg:purple)(:$remote_branch)";
+        format = "[ $symbol $branch](fg:purple)(:$remote_branch) ";
       };
       git_status = {
         ahead = ">";
