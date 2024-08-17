@@ -68,6 +68,7 @@
     brave
     floorp
     firefox
+    betterbird
     bitwarden-desktop
     bitwarden-cli
     discord
