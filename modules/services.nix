@@ -31,4 +31,13 @@
     printing.enable = true;
     openssh.enable = true;
   };
+
+  virtualisation.docker={
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+    enableNvidia = false;
+  };
 }
