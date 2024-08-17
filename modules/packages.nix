@@ -1,4 +1,6 @@
 { inputs, pkgs, ... }: {
+{ inputs, pkgs, unstable_pkgs, ... }:
+{
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -12,6 +14,7 @@
     # tools
     vim
     neovim
+    # neovim
     neovide
     tmux
     alacritty
@@ -96,5 +99,7 @@
     polkit_gnome
 
     font-manager
+
+    unstable_pkgs.neovim
   ]);
 }

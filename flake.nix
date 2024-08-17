@@ -16,11 +16,15 @@
     };
   };
 
-  outputs =  { self, nixpkgs, home-manager, stylix, hyprland, spicetify-nix, ... } @inputs : 
+  outputs =  { self, nixpkgs, nixpkgs_unstable, home-manager, stylix, hyprland, spicetify-nix, ... } @inputs : 
     let
       username = "mhiri";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      unstable_pkgs = import nixpkgs_unstable {
         inherit system;
         config.allowUnfree = true;
       };
@@ -46,7 +50,7 @@
             inputs.stylix.nixosModules.stylix
             (import ./modules/stylix.nix)
           ];
-          specialArgs = { host = "desktop"; inherit self inputs username stylix spicetify-nix; };
+          specialArgs = { host = "desktop"; inherit self inputs username stylix spicetify-nix unstable_pkgs; };
         };
 
       };
