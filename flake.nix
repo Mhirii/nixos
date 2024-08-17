@@ -10,10 +10,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    spicetify-nix.url = "github:the-argus/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, hyprland, ... }@inputs:
+  outputs =  { self, nixpkgs, home-manager, stylix, hyprland, spicetify-nix, ... } @inputs : 
     let
       username = "mhiri";
       system = "x86_64-linux";
@@ -23,26 +26,27 @@
       };
       lib = nixpkgs.lib;
 
-    in
-    {
+    in {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
       nixosConfigurations = {
-        specialArgs = { host = "desktop"; inherit self inputs username stylix; };
         programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
         desktop = lib.nixosSystem {
           inherit system;
           modules = [
             (import ./hosts/desktop)
+            inputs.spicetify-nix.nixosModules.default
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.mhiri = import ./home-manager/home.nix;
               home-manager.backupFileExtension = "bckup";
+              home-manager.extraSpecialArgs = { inherit inputs username; };
             }
             inputs.stylix.nixosModules.stylix
             (import ./modules/stylix.nix)
           ];
+          specialArgs = { host = "desktop"; inherit self inputs username stylix spicetify-nix; };
         };
 
       };
