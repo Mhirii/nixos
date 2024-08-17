@@ -1,7 +1,4 @@
 { config, lib, ... }:
-let
-  base16 = config.stylix.base16Scheme;
-in
 {
   wayland.windowManager.hyprland.settings = with config.colorScheme.colors; {
     general = {
