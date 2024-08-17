@@ -16,6 +16,7 @@
     tmux
     alacritty
     ueberzugpp # to render images in alacritty
+    wezterm
     kitty
     starship
     fish
@@ -66,8 +67,10 @@
     firefox
     bitwarden-desktop
     bitwarden-cli
-    # discord
+    discord
+    betterdiscordctl
     spotify
+    spicetify-cli
     zathura
     mpv
     gnome.eog
