@@ -1,19 +1,14 @@
-{ inputs, pkgs, ... }: {
 { inputs, pkgs, unstable_pkgs, ... }:
 {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # environment.systemPackages = with pkgs; []
-  #packages = with pkgs; [
-  # users.users.mhiri.packages = with pkgs; [
   environment.systemPackages = (with pkgs; [
     home-manager
 
     # tools
     vim
-    neovim
     # neovim
     neovide
     tmux
@@ -57,11 +52,15 @@
     go
     nodejs_22
     nodePackages.pnpm
+    prettierd
     yarn
     bun
+    biome
     esbuild
     rustup
     clang
+    clang-tools
+    cmake
     python3
 
     # software
