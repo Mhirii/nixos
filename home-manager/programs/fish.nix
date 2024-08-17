@@ -227,6 +227,20 @@ in
           zi
           starship prompt
         '';
+      nixw = # fish
+        ''
+          if ! test -f ./flake.nix
+            echo "No flake.nix found"
+            return 1
+          end
+          if ! test -f ./.git/config
+            echo "No git repo found"
+            return 1
+          end
+          git add . && \
+          rm -f $HOME/.config/fish/themes/stylix.theme.bckup && \
+          sudo nixos-rebuild switch --flake $HOME/flake#desktop
+        '';
     };
 
     shellAbbrs = {
@@ -254,7 +268,6 @@ in
       lt = "eza -aT --color=always --group-directories-first --icons";
       "l." = "eza -ald --color=always --group-directories-first --icons .*";
 
-      cat = "'bat --style header --style snip --style changes --style header'";
       getip = "curl https://ipinfo.io/ip";
 
       ".." = "cd ..";

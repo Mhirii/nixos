@@ -7,6 +7,7 @@
     ./bash.nix
     ./fish.nix
     ./starship.nix
+    ./gtk.nix
     ./hyprland
   ];
 }

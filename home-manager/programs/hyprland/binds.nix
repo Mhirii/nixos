@@ -78,8 +78,8 @@ let
   ];
 
   utils = [
-    "SUPER SHIFT, equal,  exec, $colorPicker"
-    "SUPER, V,  exec, $clipboard"
+    "SUPER SHIFT, equal,  exec, hyprpicker -a"
+    "SUPER, V,  exec, $launch clipboard"
     ", print,  exec, hyprshot -m output"
     "CTRL, print,  exec, hyprshot -m region"
     "SHIFT, print,  exec, hyprshot -m window"

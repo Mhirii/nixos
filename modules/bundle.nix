@@ -14,7 +14,4 @@
     ++ [ (import ./hyprland.nix) ]
     ++ [ (import ./gnome.nix) ]
     ++ [ (import ./packages.nix) ];
-  # ++ [ inputs.stylix.nixosModules.stylix ]
-  # ++ [ (import ./stylix.nix) ];
-  # ++ [ (import ../home-manager/home.nix ) ];
 }

@@ -1,9 +1,9 @@
-{...}:{
+{ ... }: {
   wayland.windowManager.hyprland.settings = {
 
 
-#monitor= eDP-1, 1920x1080@60.00000, 0x0, 1
-monitor=[
+    #monitor= eDP-1, 1920x1080@60.00000, 0x0, 1
+    monitor = [
       "Unknown-1, disable"
       ", preferred, auto, 1.00 "
       # "monitor= , preferred, 1920x0, 1.00"

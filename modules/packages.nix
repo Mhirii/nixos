@@ -58,6 +58,7 @@
     esbuild
     rustup
     clang
+    python3
 
     # software
     brave

@@ -1,101 +1,101 @@
 let
   launch_script = #fish
-  ''
-#!/usr/bin/env fish
+    ''
+      #!/usr/bin/env fish
 
-if test -z "$argv[1]"
-    echo "Please provide an argument"
-    exit 1
-end
+      if test -z "$argv[1]"
+          echo "Please provide an argument"
+          exit 1
+      end
 
-set arg $argv[1]
+      set arg $argv[1]
 
-# defaults
-set terminal alacritty
-set editor $EDITOR
-
-
-function isRunning
-    set appName $argv[1]
-    if pgrep -x $appName >/dev/null
-        return 0
-    else
-        return 1
-    end
-end
-
-function getWorkspaceId
-    set appName $argv[1]
-    set client (hyprctl clients -j | jq ".[] | select(.initialClass == \"$appName\") | .workspace.id")
-    if test -n "$client"
-        echo $client
-    else
-        echo 9 # Return 9 to indicate that the application is not running in any workspace
-    end
-end
-
-switch $arg
-    # Hyprland Only
-    case firefox
-        if isRunning firefox
-            hyprctl dispatch workspace (getWorkspaceId "firefox")
-        else
-            firefox
-        end
-
-    case browser
-        if pgrep floorp >/dev/null
-            set browserClient (hyprctl clients -j | jq ".[] | select(.initialClass == \"floorp\") | .workspace.id")
-            if test -n "$browserClient"
-                hyprctl dispatch workspace $browserClient
-            end
-        else
-            floorp
-        end
+      # defaults
+      set terminal alacritty
+      set editor $EDITOR
 
 
-    case rofi
-        rofi -show drun
+      function isRunning
+          set appName $argv[1]
+          if pgrep -x $appName >/dev/null
+              return 0
+          else
+              return 1
+          end
+      end
 
-    case dmenu
-        bemenu-run
+      function getWorkspaceId
+          set appName $argv[1]
+          set client (hyprctl clients -j | jq ".[] | select(.initialClass == \"$appName\") | .workspace.id")
+          if test -n "$client"
+              echo $client
+          else
+              echo 9 # Return 9 to indicate that the application is not running in any workspace
+          end
+      end
 
-    case terminal
-        $terminal
-    case terminal2
-        alacritty
+      switch $arg
+          # Hyprland Only
+          case firefox
+              if isRunning firefox
+                  hyprctl dispatch workspace (getWorkspaceId "firefox")
+              else
+                  firefox
+              end
 
-    case tmux
-        if tmux has
-            alacritty -T tmux -e tmux a &
-        else
-            tmux new -d -s Default
-            alacritty -T tmux -e tmux a &
-        end
+          case browser
+              if pgrep floorp >/dev/null
+                  set browserClient (hyprctl clients -j | jq ".[] | select(.initialClass == \"floorp\") | .workspace.id")
+                  if test -n "$browserClient"
+                      hyprctl dispatch workspace $browserClient
+                  end
+              else
+                  floorp
+              end
 
-    case nvim
-        $terminal -e nvim &
-    case neovide
-        neovide
 
-    case filesgui
-        thunar
+          case rofi
+              rofi -show drun
 
-    case filestui
-        $terminal -e ranger &
+          case dmenu
+              bemenu-run
 
-    case clipboard
-        cliphist list | rofi -dmenu | cliphist decode | wl-copy
+          case terminal
+              $terminal
+          case terminal2
+              alacritty
 
-    case spotify
-        spotify
+          case tmux
+              if tmux has
+                  alacritty -T tmux -e tmux a &
+              else
+                  tmux new -d -s Default
+                  alacritty -T tmux -e tmux a &
+              end
 
-    case spt
-        spotifyd
-        $terminal -e spt &
-        $terminal -e cava &
-end
-  '';
+          case nvim
+              $terminal -e nvim &
+          case neovide
+              neovide
+
+          case filesgui
+              thunar
+
+          case filestui
+              $terminal -e ranger &
+
+          case clipboard
+              cliphist list | rofi -dmenu | cliphist decode | wl-copy
+
+          case spotify
+              spotify
+
+          case spt
+              spotifyd
+              $terminal -e spt &
+              $terminal -e cava &
+      end
+    '';
 in
 {
   home.file = {
