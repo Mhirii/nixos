@@ -14,5 +14,6 @@
     ++ [ (import ./user.nix) ]
     ++ [ (import ./hyprland.nix) ]
     ++ [ (import ./gnome.nix) ]
+    ++ [ (import ./nh.nix) ]
     ++ [ (import ./packages.nix) ];
 }
