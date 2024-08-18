@@ -11,6 +11,13 @@
       "wl-paste --watch cliphist store"
       "swaync"
       "waybar"
+
+      "hyprctl dispatch exec [workspace special silent] 'alacritty -e btop'"
+      "hyprctl dispatch exec [workspace 2 silent] '$HOME/.config/hypr/scripts/launch.fish' browser"
+      "hyprctl dispatch exec [workspace 5 silent] discord"
+      "hyprctl dispatch exec [workspace 5 silent] betterbird"
+      "hyprctl dispatch exec [workspace 6 silent] spotify"
+      "hyprctl dispatch exec [workspace special:third silent] bitwarden"
     ];
   };
 }
