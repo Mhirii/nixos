@@ -7,6 +7,7 @@
     ++ [ (import ./sys.nix) ]
     ++ [ (import ./xserver.nix) ]
     ++ [ (import ./network.nix) ]
+    ++ [ (import ./variables.nix) ]
     ++ [ (import ./pipewire.nix) ]
     ++ [ (import ./program.nix) ]
     ++ [ (import ./services.nix) ]
