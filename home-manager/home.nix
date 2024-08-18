@@ -1,4 +1,4 @@
-{ config, pkgs, spicetify-nix,  ... }:
+{ config, pkgs, spicetify-nix, ... }:
 {
 
   home.username = "mhiri";

@@ -1,4 +1,4 @@
-{inputs, ...}:{
+{ inputs, ... }: {
   imports = [
     ./alacritty.nix
     ./btop.nix
@@ -9,6 +9,6 @@
     ./starship.nix
     ./gtk.nix
     ./hyprland
-    ( import ./spicetify.nix )
+    (import ./spicetify.nix)
   ];
 }

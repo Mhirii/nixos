@@ -1,7 +1,7 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 {
 
-  home.packages = [pkgs.hyprlock];
+  home.packages = [ pkgs.hyprlock ];
   xdg.configFile."hypr/hyprlock.conf".text = with config.colorScheme.colors; #bash
     ''
       $background = ${base00}

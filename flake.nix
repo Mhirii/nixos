@@ -9,14 +9,17 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    ags.url = "github:Aylur/ags";
+
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs =  { self, nixpkgs, nixpkgs_unstable, home-manager, stylix, hyprland, spicetify-nix, ... } @inputs : 
+  outputs = { self, nixpkgs, nixpkgs_unstable, home-manager, stylix, hyprland, spicetify-nix, ... } @inputs:
     let
       username = "mhiri";
       system = "x86_64-linux";
@@ -30,7 +33,8 @@
       };
       lib = nixpkgs.lib;
 
-    in {
+    in
+    {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
       nixosConfigurations = {
         programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
