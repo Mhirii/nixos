@@ -47,6 +47,7 @@
     fastfetch
     pfetch-rs
     sqlite
+    postgresql
 
     # langs
     go
@@ -57,6 +58,8 @@
     bun
     biome
     esbuild
+    sass
+    sassc
     rustup
     clang
     clang-tools
@@ -102,4 +105,7 @@
 
     unstable_pkgs.neovim
   ]);
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "Monaspace" "JetBrainsMono" ]; })
+  ];
 }
