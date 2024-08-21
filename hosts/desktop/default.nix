@@ -5,7 +5,7 @@
     ../../modules/bundle.nix
   ];
 
-  networking.hostName = "desktop";
+  networking.hostName = "nixos-desktop";
 
 
   powerManagement.cpuFreqGovernor = "performance";
