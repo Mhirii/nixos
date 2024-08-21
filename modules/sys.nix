@@ -2,6 +2,20 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
+
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
+
+  hardware.bluetooth.enable= true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+  hardware.bluetooth.settings = {
+    General = {
+      Experimental = true;
+    };
+  };
+
   time.timeZone = "Africa/Tunis";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -60,7 +74,7 @@
     # accessible via `nvidia-settings`.
     nvidiaSettings = true;
 
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
   };
   nix = {
     settings = {

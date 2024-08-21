@@ -54,7 +54,7 @@
             inputs.stylix.nixosModules.stylix
             (import ./modules/stylix.nix)
           ];
-          specialArgs = { host = "desktop"; inherit self inputs username stylix spicetify-nix unstable_pkgs; };
+          specialArgs = { host = "nixos-desktop"; inherit self inputs username stylix spicetify-nix unstable_pkgs; };
         };
 
       };

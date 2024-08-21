@@ -3,7 +3,7 @@
     isNormalUser = true;
     description = "Mhiri";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
-    shell = pkgs.bash;
+    shell = pkgs.fish;
   };
   nix.settings.allowed-users = [ "mhiri" ];
 }

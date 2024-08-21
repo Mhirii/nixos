@@ -8,7 +8,7 @@
     };
 
     displayManager.autoLogin = {
-      enable = true;
+      enable = false;
       user = "mhiri";
     };
     libinput = {
