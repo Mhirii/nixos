@@ -3,23 +3,24 @@
   stylix.image = ../home-manager/assets/midnight.png;
   stylix.polarity = "dark";
   stylix.base16Scheme = {
-    base00 = "#0F1A2D";
-    base01 = "#16161E";
-    base02 = "#1a2c47";
-    base03 = "#263e5f";
-    base04 = "#787C99";
-    base05 = "#A9B1D6";
-    base06 = "#CBCCD1";
-    base07 = "#cdd6f4";
-    base08 = "#C0CAF5";
-    base09 = "#A9B1D6";
-    base0A = "#ef6b91";
-    base0B = "#90dc89";
-    base0C = "#f18b74";
+    base00 = "#0F1B2E";
+    base01 = "#132232";
+    base02 = "#1E3452";
+    base03 = "#2E4D70";
+    base04 = "#3F6688";
+    base05 = "#50809F";
+    base06 = "#96D0E9";
+    base07 = "#ADDAEB";
+    base08 = "#ef6b91";
+    base09 = "#f18b74";
+    base0A = "#f6d484";
+    base0B = "#25da80";
+    base0C = "#2ec1dc";
     base0D = "#59a8f8";
     base0E = "#a879e2";
-    base0F = "#2ec1dc";
+    base0F = "#25dabc";
   };
+  #
 
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
