@@ -18,11 +18,6 @@
     TERMINAL = "alacritty";
   };
 
-  programs.git = {
-    enable = true;
-    userName = "Mhirii";
-    userEmail = "ahmedmhiri218@gmail.com";
-  };
 
   imports = [
     ./programs

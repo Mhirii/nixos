@@ -9,6 +9,7 @@
     ./starship.nix
     ./gtk.nix
     ./hyprland
+    ./git.nix
     (import ./spicetify.nix)
   ];
 }
