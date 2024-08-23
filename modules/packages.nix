@@ -70,6 +70,7 @@
     brave
     floorp
     firefox
+    chromium
     betterbird
     bitwarden-desktop
     bitwarden-cli
