@@ -4,8 +4,8 @@
     general = {
       gaps_in = 4;
       gaps_out = 4;
-      border_size = 2;
-      "col.active_border" = lib.mkDefault " ${ base0F } 45deg";
+      border_size = 3;
+      "col.active_border" = lib.mkDefault " ${ base0D } 45deg";
       "col.inactive_border" = lib.mkDefault "rgba(00000000)";
     };
     misc = {

@@ -21,7 +21,7 @@ in
             @define-color text_inactive ${base16.base05};
             @define-color text_muted ${base16.base06};
             @define-color text_active ${base16.base07};
-            @define-color accent ${base16.base0F};
+            @define-color accent ${base16.base0D};
 
             @keyframes changebg {
               0% {
@@ -115,7 +115,7 @@ in
               padding-right: 0px;
               margin: 2px 1px;
               border-radius: 8px;
-              border: 0px;
+              border: 1px solid transparent;
               color: ${base16.base07};
               background-color: transparent;
               transition: all 0.3s ease-in-out;
@@ -326,9 +326,8 @@ in
               border-right: 1px solid;
               border-color: @borderColor;
               border-radius: 0px 8px 8px 0px;
-              padding-left: 6px;
+              padding-left: ${custom.pad_adjacents};
               padding-right: 20px;
-              padding-right: ${custom.pad_adjacents};
             }
       #clock {
         font-weight: 600;
