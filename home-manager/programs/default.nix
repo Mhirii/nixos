@@ -11,6 +11,7 @@
     ./hyprland
     ./git.nix
     ./waybar
+    ./rofi
     (import ./spicetify.nix)
   ];
 }
