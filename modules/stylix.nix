@@ -1,8 +1,6 @@
-{ inputs, pkgs, ... }: {
-  stylix.enable = true;
-  stylix.image = ../home-manager/assets/midnight.png;
-  stylix.polarity = "dark";
-  stylix.base16Scheme = {
+{ inputs, pkgs, ... }:
+let
+  midnight = {
     base00 = "#0F1B2E";
     base01 = "#1E3452";
     base02 = "#2E4D70";
@@ -20,6 +18,31 @@
     base0E = "#a879e2";
     base0F = "#25dabc";
   };
+  monospace = {
+    base00 = "#10151d";
+    base01 = "#333e4f";
+    base02 = "#475365";
+    base03 = "#738295";
+    base04 = "#8b98a9";
+    base05 = "#a4afbd";
+    base06 = "#d9dfe7";
+    base07 = "#fafbfe";
+    base08 = "#fd8da3";
+    base09 = "#ffd395";
+    base0A = "#ffa23e";
+    base0B = "#77d5a3";
+    base0C = "#85cdf1";
+    base0D = "#92a9ff";
+    base0E = "#a87ffb";
+    base0F = "#bd9cfe";
+  };
+in
+{
+  stylix.enable = true;
+  # stylix.image = ../home-manager/assets/midnight.png;
+  stylix.image = ../home-manager/assets/idx.png;
+  stylix.polarity = "dark";
+  stylix.base16Scheme = monospace;
   #
 
   stylix.cursor.package = pkgs.bibata-cursors;
