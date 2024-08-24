@@ -68,7 +68,6 @@
 
     # software
     brave
-    floorp
     firefox
     chromium
     betterbird
@@ -105,6 +104,7 @@
     font-manager
 
     unstable_pkgs.neovim
+    unstable_pkgs.floorp
   ]);
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Monaspace" "JetBrainsMono" ]; })
