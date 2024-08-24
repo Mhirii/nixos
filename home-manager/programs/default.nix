@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ configs, inputs, ... }: {
   imports = [
     ./alacritty.nix
     ./btop.nix
@@ -10,6 +10,7 @@
     ./gtk.nix
     ./hyprland
     ./git.nix
+    ./waybar
     (import ./spicetify.nix)
   ];
 }

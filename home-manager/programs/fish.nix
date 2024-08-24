@@ -230,6 +230,8 @@ in
             return 1
           end
           git add . && \
+          nix fmt . && \
+          git add . && \
           rm -f $HOME/.config/fish/themes/stylix.theme.bckup && \
           sudo nixos-rebuild switch --flake $HOME/flake#desktop
         '';

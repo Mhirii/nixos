@@ -5,7 +5,7 @@
       gaps_in = 4;
       gaps_out = 4;
       border_size = 2;
-      "col.active_border" = lib.mkDefault " ${ base0D } 45deg";
+      "col.active_border" = lib.mkDefault " ${ base0F } 45deg";
       "col.inactive_border" = lib.mkDefault "rgba(00000000)";
     };
     misc = {
@@ -16,7 +16,7 @@
       rounding = 8;
       blur = {
         enabled = true;
-        size = 2;
+        size = 3;
         passes = 4;
         new_optimizations = true;
         ignore_opacity = true;
@@ -32,7 +32,7 @@
       dim_around = 0.4;
       inactive_opacity = 0.95;
 
-      blurls = [ "rofi" "mako" "launcher" "bar0"];
+      blurls = [ "rofi" "mako" "launcher" "bar0" ];
 
       drop_shadow = false;
       shadow_range = 10;
