@@ -38,7 +38,7 @@ let name = "Mhirii"; in
       };
 
       color = {
-        branch={
+        branch = {
           current = "cyan bold reverse";
           local = "white";
           remote = "cyan";
@@ -70,20 +70,9 @@ let name = "Mhirii"; in
     delta = {
       enable = true;
       options = {
-      features = "decorations";
-      side-by-side = true;
-      minus-style                   =  "#37222c";
-      minus-non-emph-style          =  "#37222c";
-      minus-emph-style              =  "#713137";
-      minus-empty-line-marker-style =  "#37222c";
-      line-numbers-minus-style      = "#b2555b";
-      plus-style                    =  "#20303b";
-      plus-non-emph-style           =  "#20303b";
-      plus-emph-style               =  "#2c5a66";
-      plus-empty-line-marker-style  =  "#20303b";
-      line-numbers-plus-style       = "#266d6a";
-      line-numbers-zero-style       = "#3b4261";
-      interactive.keep-plus-minus-markers = false;
+        features = "decorations";
+        side-by-side = true;
+        interactive.keep-plus-minus-markers = false;
       };
     };
 
