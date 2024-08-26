@@ -34,10 +34,6 @@
         v = "nvim";
         t = "tmux";
 
-        tks = "tmux kill-session";
-        tls = "tmux list-sessions";
-        tlc = "tmux list-clients";
-        tns = "tmux new -s";
       };
   };
 }

@@ -75,6 +75,7 @@ let
     "SUPER, e, exec, thunar"
     "SUPER, R, exec, rofi -show drun"
     "SUPER, N, exec, swaync-client -t"
+    "SUPER SHIFT, N, exec, neovide"
   ];
 
   utils = [

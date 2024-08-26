@@ -49,7 +49,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.mhiri = import ./home-manager/home.nix;
               home-manager.backupFileExtension = "bckup";
-              home-manager.extraSpecialArgs = { inherit inputs username; };
+              home-manager.extraSpecialArgs = { inherit inputs username unstable_pkgs; };
             }
             inputs.stylix.nixosModules.stylix
             (import ./modules/stylix.nix)

@@ -17,7 +17,6 @@
     wezterm
     kitty
     starship
-    fish
     git
     lazygit
     delta
@@ -105,6 +104,7 @@
 
     unstable_pkgs.neovim
     unstable_pkgs.floorp
+    unstable_pkgs.fish
   ]);
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Monaspace" "JetBrainsMono" ]; })

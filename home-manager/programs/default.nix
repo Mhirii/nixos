@@ -4,14 +4,14 @@
     ./btop.nix
     ./mime.nix
     ./yazi.nix
-    ./bash.nix
-    ./fish.nix
+    ./shell
     ./starship.nix
     ./gtk.nix
     ./hyprland
     ./git.nix
     ./waybar
     ./rofi
+    ./tmux.nix
     (import ./spicetify.nix)
   ];
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, spicetify-nix, ... }:
+{ unstable_pkgs, config, pkgs, spicetify-nix, ... }:
 {
 
   home.username = "mhiri";
@@ -11,12 +11,6 @@
 
   home.file = { };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    BROWSER = "floorp";
-    TERM = "alacritty";
-    TERMINAL = "alacritty";
-  };
 
 
   imports = [

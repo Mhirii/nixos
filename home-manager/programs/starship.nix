@@ -1,4 +1,4 @@
-{ ... }:
+{ config, pkgs, ... }:
 let
   lang = icon: color: {
     symbol = icon;
@@ -105,5 +105,15 @@ in
         format = "[ ](fg:yellow bold)$duration(fg:white)";
       };
     };
+  };
+
+  programs.nushell = {
+    extraEnv = ''
+      mkdir ${config.xdg.cacheHome}/starship
+      ${pkgs.starship}/bin/starship init nu | save -f ${config.xdg.cacheHome}/starship/init.nu
+    '';
+    extraConfig = ''
+      use ${config.xdg.cacheHome}/starship/init.nu
+    '';
   };
 }
