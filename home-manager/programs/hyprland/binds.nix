@@ -1,5 +1,5 @@
 let
-  terminal = "alacritty";
+  terminal = "kitty";
   manup_window = key1: key2: dir: {
     arr = [
       "SUPER, ${key1}, movefocus, ${dir}"

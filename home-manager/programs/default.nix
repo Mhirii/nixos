@@ -12,6 +12,7 @@
     ./waybar
     ./rofi
     ./tmux.nix
+    ./kitty.nix
     (import ./spicetify.nix)
   ];
 }

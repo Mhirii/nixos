@@ -34,8 +34,8 @@
   };
   home.sessionVariables = {
     BROWSER = "floorp";
-    TERM = "alacritty";
-    TERMINAL = "alacritty";
+    TERM = "kitty";
+    TERMINAL = "kitty";
     EDITOR = "nvim";
     USE_EDITOR = "$EDITOR";
     VISUAL = "$EDITOR";

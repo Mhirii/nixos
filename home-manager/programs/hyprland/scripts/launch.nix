@@ -11,7 +11,7 @@ let
       set arg $argv[1]
 
       # defaults
-      set terminal alacritty
+      set terminal $TERMINAL
       set editor $EDITOR
 
 
@@ -67,10 +67,10 @@ let
 
           case tmux
               if tmux has
-                  alacritty -T tmux -e tmux a &
+                  $terminal -T tmux -e tmux a &
               else
                   tmux new -d -s Default
-                  alacritty -T tmux -e tmux a &
+                  $terminal -T tmux -e tmux a &
               end
 
           case nvim

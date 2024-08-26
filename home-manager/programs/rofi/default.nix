@@ -3,11 +3,6 @@ let
   base16 = config.stylix.base16Scheme;
 in
 {
-  # stylix.targets.rofi.enable = false;
-  # programs.rofi = {
-  #   enable = true;
-  #   terminal = "${pkgs.alacritty}/bin/alacritty";
-  # };
   home = {
     file = {
       ".config/rofi/colors.rasi".text = ''

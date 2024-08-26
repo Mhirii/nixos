@@ -1,4 +1,7 @@
 { ... }:
+let
+  terminal = "kitty";
+in
 {
   programs.waybar.settings.mainBar = {
     position = "top";
@@ -69,19 +72,19 @@
       format = "󰟜 {}%";
       format-alt = "󰟜 {used} GiB"; # 
       interval = 2;
-      "on-click" = "alacritty -e btop";
+      "on-click" = "${terminal} -e btop";
     };
     cpu = {
       format = "  {usage}%";
       format-alt = "  {avg_frequency} GHz";
-      "on-click" = "alacritty -e btop";
+      "on-click" = "${terminal} -e btop";
       interval = 2;
     };
     disk = {
       # path = "/";
       format = "󰋊 {percentage_used}%";
       interval = 60;
-      "on-click" = "alacritty -e btop";
+      "on-click" = "${terminal} -e btop";
     };
     network = {
       format-wifi = "  {signalStrength}%";

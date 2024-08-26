@@ -28,7 +28,7 @@
 
     EDITOR = "nvim";
     BROWSER = "floorp";
-    TERM = "alacritty";
-    TERMINAL = "alacritty";
+    TERM = "kitty";
+    TERMINAL = "kitty";
   };
 }
