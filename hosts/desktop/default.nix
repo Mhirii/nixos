@@ -6,7 +6,5 @@
   ];
 
   networking.hostName = "nixos-desktop";
-
-
   powerManagement.cpuFreqGovernor = "performance";
 }
