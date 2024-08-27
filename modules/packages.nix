@@ -54,7 +54,6 @@
     nodePackages.pnpm
     prettierd
     yarn
-    bun
     biome
     esbuild
     sass
@@ -106,6 +105,7 @@
     unstable_pkgs.neovim
     unstable_pkgs.floorp
     unstable_pkgs.fish
+    unstable_pkgs.bun
   ]);
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Monaspace" "JetBrainsMono" ]; })
