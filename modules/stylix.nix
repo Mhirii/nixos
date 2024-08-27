@@ -20,9 +20,9 @@ let
   };
   monospace = {
     base00 = "#10151d";
-    base01 = "#333e4f";
-    base02 = "#475365";
-    base03 = "#738295";
+    base01 = "#1f2939";
+    base02 = "#333e4f";
+    base03 = "#475365";
     base04 = "#8b98a9";
     base05 = "#a4afbd";
     base06 = "#d9dfe7";
@@ -73,7 +73,7 @@ in
   };
   stylix.opacity = {
     applications = 1.0;
-    terminal = 0.5;
+    terminal = 0.2;
     desktop = 1.0;
     popups = 0.9;
   };
