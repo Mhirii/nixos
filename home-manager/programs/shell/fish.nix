@@ -43,8 +43,6 @@ in
               bind '$' __history_previous_command_arguments
           end
 
-          zoxide init fish | source
-
           if status --is-interactive
               source ("starship" init fish --print-full-init | psub)
           end

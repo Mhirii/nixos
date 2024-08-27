@@ -1,4 +1,3 @@
-
 {
   imports = [
     ./btop.nix
@@ -6,5 +5,6 @@
     ./starship.nix
     ./git.nix
     ./tmux.nix
+    ./zoxide.nix
   ];
 }

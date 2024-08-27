@@ -81,18 +81,10 @@ let
       (map (name: completion name) names);
 in
 {
-  # home.file.".config/nushell/config.nu".text =
   programs.nushell.extraConfig =
     ''
       $env.config = {${envconfig}};
       ${completions ["cargo" "git" "nix" "npm" "bat" "make" "gh" "less" "man" "pnpm" "rustup"  "tar" "rg" "curl"]}
       source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/auto-generate/parse-fish.nu
-      source ~/.cache/zoxide.nu
-
     '';
-
-  programs.nushell.extraEnv = ''
-    zoxide init nushell | save -f ~/.cache/zoxide.nu
-  '';
-
 }
