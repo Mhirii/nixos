@@ -95,8 +95,6 @@ let
   ];
 
   media = [
-    ",            xf86audioraisevolume,  exec, $scripts/volume.fish inc"
-    ",            xf86audiolowervolume,  exec, $scripts/volume.fish dec"
     ",            xf86AudioMicMute,      exec, $scripts/volume.fish --toggle-mic"
     ",            xf86audioMute,         exec, $scripts/volume.fish mute"
 
@@ -104,11 +102,6 @@ let
     ",            xf86AudioNext,         exec, playerctl next"
     ",            XF86AudioPrev,         exec, playerctl previous"
 
-    ",            xf86MonBrightnessDown, exec, $scripts/brightness --dec"
-    ",            xf86MonBrightnessUp,   exec, $scripts/brightness --inc"
-
-    "SUPER,      equal,                 exec, $scripts/volume.fish inc"
-    "SUPER,      minus,                 exec, $scripts/volume.fish dec"
     "SUPER,      0,                     exec, $scripts/volume.fish mute"
     "SUPER CTRL, equal,                 exec, playerctl next"
     "SUPER CTRL, minus,                 exec, playerctl play-pause"
@@ -117,6 +110,17 @@ let
     "SUPER,      8,                     exec, playerctl play-pause"
     "SUPER,      9,                     exec, playerctl next"
 
+  ];
+  media_e = [
+    ",            xf86audioraisevolume,  exec, $scripts/volume.fish inc"
+    ",            xf86audiolowervolume,  exec, $scripts/volume.fish dec"
+
+    ",            xf86MonBrightnessDown, exec, $scripts/brightness --dec"
+    ",            xf86MonBrightnessUp,   exec, $scripts/brightness --inc"
+
+    "SUPER,      equal,                 exec, $scripts/volume.fish inc"
+    "SUPER,      minus,                 exec, $scripts/volume.fish dec"
+
     "SUPER ALT,  minus,                 exec, $scripts/brightness --dec"
     "SUPER ALT,  equal,                 exec, $scripts/brightness --inc"
   ];
@@ -124,6 +128,8 @@ let
   window = [
     "SUPER,       F,            fullscreen,"
     "SUPER SHIFT, F,            togglefloating,"
+    ",            F11,          fakefullscreen"
+    "SUPER,       Y,            pin"
     "SUPER CTRL,  F,            centerwindow,"
     "SUPER ALT,   TAB,          layoutmsg,                      swapwithmaster master,"
   ];
@@ -140,7 +146,6 @@ in
       ++ utils
       ++ session
       ++ window_move
-      ++ resize
       ++ window
       ++ workspace_bindings
       ++ scratchpads
@@ -148,6 +153,9 @@ in
       ++ monitors
       ++ media
     ;
+    binde = resize
+      ++ media_e;
+
     bindm = [
       "SUPER,      mouse:272,    movewindow"
       "SUPER,      mouse:273,    resizewindow"
