@@ -10,5 +10,6 @@
     ./kitty.nix
     (import ./spicetify.nix)
     ./cli
+    ./vscode.nix
   ];
 }
