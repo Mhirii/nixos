@@ -73,6 +73,7 @@
     bitwarden-desktop
     bitwarden-cli
     discord
+    slack
     betterdiscordctl
     spotify
     spicetify-cli
