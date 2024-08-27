@@ -187,6 +187,10 @@ in
         '';
       nixw = # fish
         ''
+          if test -n "$FLAKE" && test (pwd) != "$FLAKE"
+            cd $FLAKE
+          end
+
           if ! test -f ./flake.nix
             echo "No flake.nix found"
             return 1
