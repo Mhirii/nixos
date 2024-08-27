@@ -31,7 +31,6 @@
         decorations_theme_variant = "Dark";
         dynamic_padding = false;
         dynamic_title = true;
-        opacity = 0.5;
         title = "Alacritty";
         padding = {
           x = 4;
