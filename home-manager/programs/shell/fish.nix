@@ -1,8 +1,12 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 let
   base16 = config.stylix.base16Scheme;
 in
 {
+  home.packages = with pkgs; [
+    fishPlugins.pisces
+  ];
+
   programs.fish = {
     enable = true;
 
