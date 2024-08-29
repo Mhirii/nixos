@@ -1,6 +1,6 @@
 { configs, inputs, ... }: {
   imports = [
-    ./alacritty.nix
+    #./alacritty.nix
     ./mime.nix
     ./shell
     ./gtk.nix
@@ -10,6 +10,6 @@
     ./kitty.nix
     (import ./spicetify.nix)
     ./cli
-    ./vscode.nix
+   # ./vscode.nix
   ];
 }

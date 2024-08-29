@@ -8,11 +8,7 @@
     home-manager
 
     # tools
-    vim
     tmux
-    alacritty
-    ueberzugpp # to render images in alacritty
-    wezterm
     kitty
     starship
     git
@@ -24,7 +20,7 @@
     docker-compose
     docker-buildx
     lazydocker
-    postman
+    #postman
     wget
     curl
     curlie
@@ -37,12 +33,11 @@
     dust
     ripgrep
     fd
-    gum
+    #gum
     btop
     speedtest-rs
     jq
     fastfetch
-    pfetch-rs
     sqlite
     postgresql
 
@@ -63,14 +58,13 @@
     python3
 
     # software
-    brave
-    firefox
+    #firefox
     chromium
     betterbird
     bitwarden-desktop
     bitwarden-cli
     discord
-    slack
+    #slack
     betterdiscordctl
     spotify
     spicetify-cli
@@ -92,8 +86,8 @@
     xorg.xeyes
     xorg.xhost
     keyd
-    smartmontools
-    stow
+    #smartmontools
+    #stow
     gtk3
     gtk4
     polkit_gnome
@@ -102,7 +96,7 @@
 
     unstable_pkgs.neovim
     unstable_pkgs.neovide
-    unstable_pkgs.floorp
+    #unstable_pkgs.floorp
     unstable_pkgs.fish
     unstable_pkgs.bun
     inputs.zen-browser.packages."${system}".specific

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, profile, ... }:
 let
   base16 = config.stylix.base16Scheme;
 in
@@ -204,7 +204,7 @@ in
           nix fmt . && \
           git add . && \
           rm -f $HOME/.config/fish/themes/stylix.theme.bckup && \
-          sudo nixos-rebuild switch --flake $HOME/flake#desktop
+          sudo nixos-rebuild switch --flake $HOME/flake#${profile}
         '';
     };
 

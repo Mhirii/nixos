@@ -40,7 +40,11 @@
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
       nixosConfigurations = {
         programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-        desktop = lib.nixosSystem {
+        desktop =
+        let
+          profile = "desktop";
+        in
+          lib.nixosSystem {
           inherit system;
           modules = [
             (import ./hosts/desktop)
@@ -51,12 +55,34 @@
               home-manager.useUserPackages = true;
               home-manager.users.mhiri = import ./home-manager/home.nix;
               home-manager.backupFileExtension = "bckup";
-              home-manager.extraSpecialArgs = { inherit inputs username unstable_pkgs; };
+              home-manager.extraSpecialArgs = { inherit inputs username unstable_pkgs profile; };
             }
             inputs.stylix.nixosModules.stylix
             (import ./modules/stylix.nix)
           ];
           specialArgs = { host = "nixos-desktop"; inherit self inputs username stylix spicetify-nix unstable_pkgs system; };
+        };
+        laptop = 
+        let
+          profile = "laptop";
+        in
+          lib.nixosSystem {
+          inherit system;
+          modules = [
+            (import ./hosts/laptop)
+            inputs.spicetify-nix.nixosModules.default
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.mhiri = import ./home-manager/home.nix;
+              home-manager.backupFileExtension = "bk";
+              home-manager.extraSpecialArgs = { inherit inputs username unstable_pkgs profile; };
+            }
+            inputs.stylix.nixosModules.stylix
+            (import ./modules/stylix.nix)
+          ];
+          specialArgs = { host = "nixos-laptop";  inherit self inputs username stylix spicetify-nix unstable_pkgs system; };
         };
 
       };
