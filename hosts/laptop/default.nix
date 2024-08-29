@@ -1,11 +1,14 @@
 { pkgs, ... }:
 {
   imports = [
-    ./nvidia.nix
     ../../modules/bundle.nix
     ./hardware-configuration.nix
   ];
   networking.hostName = "nixos-laptop";
+
+  users.users."mhiri".packages = with pkgs;[
+    acpi
+  ];
 
   services.auto-cpufreq = {
     enable = true;

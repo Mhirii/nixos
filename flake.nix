@@ -60,7 +60,7 @@
               inputs.stylix.nixosModules.stylix
               (import ./modules/stylix.nix)
             ];
-            specialArgs = { host = "nixos-desktop"; inherit self inputs username stylix spicetify-nix unstable_pkgs system; };
+            specialArgs = { host = "nixos-desktop"; inherit self inputs username stylix spicetify-nix unstable_pkgs system profile; };
           };
         laptop =
           let
@@ -82,7 +82,7 @@
               inputs.stylix.nixosModules.stylix
               (import ./modules/stylix.nix)
             ];
-            specialArgs = { host = "nixos-laptop";  inherit self inputs username stylix spicetify-nix unstable_pkgs system; };
+            specialArgs = { host = "nixos-laptop";  inherit self inputs username stylix spicetify-nix unstable_pkgs system profile; };
           };
 
       };
