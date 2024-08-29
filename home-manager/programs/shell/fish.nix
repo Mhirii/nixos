@@ -215,6 +215,9 @@ in
       tlc = "tmux list-clients";
       tns = "tmux new -s";
 
+      dc = "docker-compose";
+      dcp = "docker-compose --profile";
+      dcf = "docker-compose --file";
       lzd = "lazydocker";
       lzg = "lazygit";
       lg = "lazygit";
