@@ -17,6 +17,8 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, nixpkgs_unstable, home-manager, stylix, hyprland, spicetify-nix, ... } @inputs:
@@ -54,7 +56,7 @@
             inputs.stylix.nixosModules.stylix
             (import ./modules/stylix.nix)
           ];
-          specialArgs = { host = "nixos-desktop"; inherit self inputs username stylix spicetify-nix unstable_pkgs; };
+          specialArgs = { host = "nixos-desktop"; inherit self inputs username stylix spicetify-nix unstable_pkgs system; };
         };
 
       };

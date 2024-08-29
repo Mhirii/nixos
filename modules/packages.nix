@@ -1,4 +1,4 @@
-{ inputs, pkgs, unstable_pkgs, ... }:
+{ inputs, pkgs, unstable_pkgs, system, ... }:
 {
 
   # Allow unfree packages
@@ -105,6 +105,7 @@
     unstable_pkgs.floorp
     unstable_pkgs.fish
     unstable_pkgs.bun
+    inputs.zen-browser.packages."${system}".specific
   ]);
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Monaspace" "JetBrainsMono" ]; })
