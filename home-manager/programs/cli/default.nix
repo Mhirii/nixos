@@ -17,6 +17,6 @@
   programs.jq.enable = true;
   programs.lazygit.enable = true;
   programs.man.enable = true;
-  programs.navi.enable = true;
+  # programs.navi.enable = true;
   programs.ripgrep.enable = true;
 }
