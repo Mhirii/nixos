@@ -1,4 +1,4 @@
-{config, ...}:
+{ config, ... }:
 {
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -9,6 +9,10 @@
     # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
     # of just the bare essentials.
     powerManagement.enable = false;
+
+    # Fine-grained power management. Turns off GPU when not in use.
+    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
+    powerManagement.finegrained = true;
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
@@ -24,5 +28,11 @@
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.production;
+
+    prime = {
+      sync.enable = true;
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:2:0:0";
+    };
   };
 }
