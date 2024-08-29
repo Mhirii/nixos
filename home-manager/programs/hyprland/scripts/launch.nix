@@ -44,13 +44,13 @@ let
               end
 
           case browser
-              if pgrep floorp >/dev/null
-                  set browserClient (hyprctl clients -j | jq ".[] | select(.initialClass == \"floorp\") | .workspace.id")
+              if pgrep zen >/dev/null
+                  set browserClient (hyprctl clients -j | jq ".[] | select(.initialClass == \"zen-alpha\") | .workspace.id")
                   if test -n "$browserClient"
                       hyprctl dispatch workspace $browserClient
                   end
               else
-                  floorp
+                  zen
               end
 
 

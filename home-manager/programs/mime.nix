@@ -1,5 +1,5 @@
 let
-  browser = "floorp.desktop";
+  browser = "userapp-Zen Browser-EQ48S2.desktop";
   image = "org.gnome.eog.desktop";
   editor = "nvim.desktop";
 in

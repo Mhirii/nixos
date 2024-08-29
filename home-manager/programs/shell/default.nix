@@ -33,7 +33,7 @@
     psgrep = "ps aux | grep -v grep | grep -i -e VSZ -e";
   };
   home.sessionVariables = {
-    BROWSER = "floorp";
+    BROWSER = "zen";
     TERM = "xterm-256color";
     TERMINAL = "kitty";
     EDITOR = "nvim";
