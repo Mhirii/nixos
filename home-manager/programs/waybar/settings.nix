@@ -1,6 +1,10 @@
-{ ... }:
+{ profile, ... }:
 let
   terminal = "kitty";
+  battery = {
+    laptop = [ "battery" ];
+    desktop = [ ];
+  };
 in
 {
   programs.waybar.settings.mainBar = {
@@ -27,8 +31,10 @@ in
       "backlight"
       "cpu"
       "group/bluetooths"
-      "clock"
-    ];
+    ]
+    ++ battery.${profile}
+    ++ [ "clock" ];
+
     clock = {
       calendar = {
         format = { today = "<span color='#b4befe'><b><u>{}</u></b></span>"; };
@@ -128,17 +134,15 @@ in
     };
     battery = {
       format = "{icon} {capacity}%";
+      format-alt = "{icon} {capacity}% {time}";
       format-icons = [ " " " " " " " " " " ];
       format-charging = " {capacity}%";
       format-full = " {capacity}%";
-      format-warning = " {capacity}%";
+      format-warning = " {capacity}% {time}";
       interval = 5;
       states = {
         warning = 20;
       };
-      format-time = "{H}h{M}m";
-      tooltip = true;
-      tooltip-format = "{time}";
     };
     "custom/launcher" = {
       format = "";

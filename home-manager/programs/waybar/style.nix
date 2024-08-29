@@ -6,6 +6,8 @@ let
     font_size = "15px";
     font_weight = "bold";
     pad_adjacents = "6px";
+    pad_block = "16px";
+    margin_block = "4px";
   };
 in
 {
@@ -104,7 +106,7 @@ in
               border-radius: 8px;
               border: 1px solid;
               border-color: @borderColor;
-              margin: 4px 8px;
+              margin: 4px ${custom.margin_block};
               opacity: 0.9;
               background: @layer;
 
@@ -164,7 +166,7 @@ in
               /* background-color: @bg; */
               color: @text_color;
               padding: 0px 8px;
-              margin: 2px 8px;
+              margin: 2px ${custom.margin_block};
               border-radius: 8px;
               border: 0px solid @borderColor;
             }
@@ -274,13 +276,13 @@ in
 
             #tray {
               padding: 0 20px;
-              margin: 4px 8px;
+              margin: 4px ${custom.margin_block};
             }
 
             custom-notification {
               padding-left: 20px;
               padding-right: 20px;
-              margin: 4px 8px;
+              margin: 4px ${custom.margin_block};
             }
 
             #custom-launcher {
@@ -289,7 +291,7 @@ in
               font-weight: ${custom.font_weight};
               padding-left: 10px;
               padding-right: 15px;
-              margin: 4px 8px;
+              margin: 4px ${custom.margin_block};
               margin-right: 4px;
             }
 
@@ -306,10 +308,12 @@ in
               padding: 0px 4px;
             }
             #battery{
-              padding-right: 12px;
-              border-right: 1px solid;
+              padding-right: 20px;
+              padding-left: 20px;
+              border: 1px solid;
               border-color: @borderColor;
-              border-radius: 0px 8px 8px 0px;
+              border-radius: 8px;
+              margin: 4px ${custom.margin_block};
             }
             #backlight{
               padding-right: ${custom.pad_adjacents};
@@ -328,6 +332,7 @@ in
               border-radius: 0px 8px 8px 0px;
               padding-left: ${custom.pad_adjacents};
               padding-right: 20px;
+              margin-right: ${custom.margin_block};
             }
       #clock {
         font-weight: 600;
@@ -337,7 +342,7 @@ in
         border-radius: 8px;
         padding-right: 20px;
         padding-left: 20px;
-        margin: 4px 8px;
+        margin: 4px ${custom.margin_block};
         margin-right: 4px;
 
       }
