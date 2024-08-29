@@ -16,9 +16,6 @@
     delta
     gh
     glab
-    docker
-    docker-compose
-    docker-buildx
     lazydocker
     #postman
     wget
@@ -96,9 +93,13 @@
 
     unstable_pkgs.neovim
     unstable_pkgs.neovide
-    #unstable_pkgs.floorp
+
     unstable_pkgs.fish
     unstable_pkgs.bun
+    unstable_pkgs.docker
+    unstable_pkgs.docker-compose
+    unstable_pkgs.docker-buildx
+
     inputs.zen-browser.packages."${system}".specific
   ]);
   fonts.packages = with pkgs; [
