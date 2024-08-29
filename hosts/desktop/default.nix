@@ -1,6 +1,7 @@
 { inputs, pkgs, ... }:
 {
   imports = [
+    ./nvidia.nix
     ./hardware-configuration.nix
     ../../modules/bundle.nix
   ];
