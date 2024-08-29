@@ -34,7 +34,7 @@
   };
   home.sessionVariables = {
     BROWSER = "floorp";
-    TERM = "kitty";
+    TERM = "xterm-256color";
     TERMINAL = "kitty";
     EDITOR = "nvim";
     USE_EDITOR = "$EDITOR";

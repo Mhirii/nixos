@@ -28,7 +28,8 @@
 
     EDITOR = "nvim";
     BROWSER = "floorp";
-    TERM = "kitty";
+    TERM = "xterm-256color";
     TERMINAL = "kitty";
+    COLORTERM = "truecolor";
   };
 }

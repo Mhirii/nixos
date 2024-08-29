@@ -26,6 +26,7 @@ in
         set -U __done_notification_urgency_level low
 
         set WGPU_BACKEND gl
+        set -g fish_term24bit 1
       '';
 
     interactiveShellInit = # fish
