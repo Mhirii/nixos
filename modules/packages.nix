@@ -9,8 +9,6 @@
 
     # tools
     vim
-    # neovim
-    neovide
     tmux
     alacritty
     ueberzugpp # to render images in alacritty
@@ -103,6 +101,7 @@
     font-manager
 
     unstable_pkgs.neovim
+    unstable_pkgs.neovide
     unstable_pkgs.floorp
     unstable_pkgs.fish
     unstable_pkgs.bun
