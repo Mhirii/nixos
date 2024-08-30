@@ -6,8 +6,7 @@
   home.stateVersion = "18.09";
   programs.home-manager.enable = true;
 
-  home.packages = [
-  ];
+  home.packages = [ ];
 
   home.file = { };
 

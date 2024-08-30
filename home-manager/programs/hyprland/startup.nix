@@ -15,7 +15,7 @@
       "hyprctl dispatch exec [workspace special silent] '$terminal -e btop'"
       "hyprctl dispatch exec [workspace 2 silent] '$HOME/.config/hypr/scripts/launch.fish' browser"
       "hyprctl dispatch exec [workspace 5 silent] discord"
-      "hyprctl dispatch exec [workspace 5 silent] betterbird"
+      "hyprctl dispatch exec [workspace 5 silent] thunderbird"
       "hyprctl dispatch exec [workspace 6 silent] spotify"
       "hyprctl dispatch exec [workspace special:third silent] bitwarden"
     ];

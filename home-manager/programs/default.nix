@@ -10,6 +10,7 @@
     ./kitty.nix
     (import ./spicetify.nix)
     ./cli
+    ./thunderbird.nix
     # ./vscode.nix
   ];
 }
