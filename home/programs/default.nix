@@ -11,6 +11,7 @@
     (import ./spicetify.nix)
     ./cli
     ./thunderbird.nix
+    ./sops.nix
     # ./vscode.nix
   ];
 }

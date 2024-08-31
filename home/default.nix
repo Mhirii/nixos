@@ -1,4 +1,4 @@
-{ unstable_pkgs, config, pkgs, spicetify-nix, ... }:
+{ unstable_pkgs, config, pkgs, spicetify-nix, inputs, ... }:
 {
 
   home.username = "mhiri";
@@ -13,6 +13,7 @@
 
 
   imports = [
+    inputs.sops-nix.homeManagerModules.sops
     ./programs
   ];
 
