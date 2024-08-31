@@ -30,6 +30,7 @@
     # Enable CUPS to print documents.
     printing.enable = true;
     openssh.enable = false;
+    dbus.enable = true;
   };
 
   virtualisation.docker = {
