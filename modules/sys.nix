@@ -35,8 +35,11 @@ in
 
 
   security.rtkit.enable = true;
-  hardware = {
-    opengl.enable = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport = false;
+    # this fixes chromium but breaks about everything else
+    # package = getNvidiaDriver profile; 
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -47,7 +50,7 @@ in
     # Enable this if you have graphical corruption issues or application crashes after waking
     # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
     # of just the bare essentials.
-    powerManagement.enable = false;
+    powerManagement.enable = true;
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
@@ -73,5 +76,6 @@ in
   };
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
   system.stateVersion = "24.05";
 }
