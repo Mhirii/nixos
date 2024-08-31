@@ -38,8 +38,8 @@
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+      programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
       nixosConfigurations = {
-        programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
         desktop =
           let
             profile = "desktop";
