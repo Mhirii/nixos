@@ -40,7 +40,7 @@ in
 {
   stylix.enable = true;
   # stylix.image = ../home-manager/assets/midnight.png;
-  stylix.image = ../home-manager/assets/idx.png;
+  stylix.image = ../home/assets/idx.png;
   stylix.polarity = "dark";
   stylix.base16Scheme = monospace;
   #

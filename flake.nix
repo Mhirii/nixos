@@ -53,7 +53,7 @@
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
-                home-manager.users.mhiri = import ./home-manager/home.nix;
+                home-manager.users.mhiri = import ./home;
                 home-manager.backupFileExtension = "bckup";
                 home-manager.extraSpecialArgs = { inherit inputs username unstable_pkgs profile; };
               }
@@ -75,7 +75,7 @@
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
-                home-manager.users.mhiri = import ./home-manager/home.nix;
+                home-manager.users.mhiri = import ./home;
                 home-manager.backupFileExtension = "bckup";
                 home-manager.extraSpecialArgs = { inherit inputs username unstable_pkgs profile; };
               }
