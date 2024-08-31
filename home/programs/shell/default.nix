@@ -31,6 +31,8 @@
     # ps
     ps = "ps auxf";
     psgrep = "ps aux | grep -v grep | grep -i -e VSZ -e";
+
+    offload = lib.mkDefault "$FLAKE/offload.sh";
   };
   home.sessionVariables = {
     BROWSER = "zen";
