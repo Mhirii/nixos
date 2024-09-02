@@ -29,7 +29,7 @@
     gnome.gnome-keyring.enable = true;
     # Enable CUPS to print documents.
     printing.enable = true;
-    openssh.enable = false;
+    openssh.enable = true;
     dbus.enable = true;
   };
 
