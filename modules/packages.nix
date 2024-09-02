@@ -90,6 +90,7 @@
     polkit_gnome
 
     font-manager
+    telegram-desktop
 
     unstable_pkgs.neovim
     unstable_pkgs.neovide
