@@ -11,7 +11,7 @@ in
     prefix = "M-d";
     terminal = "tmux-256color";
     tmuxp.enable = false;
-    shell = "${pkgs.nushell}/bin/nu";
+    shell = "${pkgs.fish}/bin/fish";
 
     plugins = with pkgs.tmuxPlugins; [
       sensible
