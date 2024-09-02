@@ -46,6 +46,7 @@
     yarn
     biome
     esbuild
+    typescript
     sass
     sassc
     rustup
