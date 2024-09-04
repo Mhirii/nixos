@@ -77,4 +77,5 @@ in
     desktop = 1.0;
     popups = 0.9;
   };
+  stylix.targets.gnome.enable = false;
 }

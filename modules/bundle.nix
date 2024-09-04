@@ -1,7 +1,6 @@
 { username, pkgs, inputs, ... }: {
   # system.stateVersion = "24.05";
   imports =
-
     [ (import ../nixos/configuration.nix) ]
     ++ [ (import ./sys.nix) ]
     ++ [ (import ./xserver.nix) ]
@@ -14,5 +13,6 @@
     ++ [ (import ./hyprland.nix) ]
     ++ [ (import ./gnome.nix) ]
     ++ [ (import ./nh.nix) ]
-    ++ [ (import ./packages.nix) ];
+    ++ [ (import ./packages.nix) ]
+  ;
 }
