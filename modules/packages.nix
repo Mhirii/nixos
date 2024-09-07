@@ -57,7 +57,6 @@
 
     # software
     #firefox
-    chromium
     bitwarden-desktop
     bitwarden-cli
     discord
