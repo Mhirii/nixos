@@ -13,5 +13,6 @@
     ./thunderbird.nix
     ./sops.nix
     ./vscode.nix
+    ./chromium.nix
   ];
 }
