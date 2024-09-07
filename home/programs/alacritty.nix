@@ -1,9 +1,9 @@
 # home.packages = lib.optionals config.programs.alacritty.enable ;
-{ lib, ... }:
+{ lib,pkgs, ... }:
 {
   home.packages = [
-    ueberzugpp # to render images in alacritty
-  ]
+    pkgs.ueberzugpp # to render images in alacritty
+  ];
     programs.alacritty = {
   enable = true;
 
