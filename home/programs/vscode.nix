@@ -170,8 +170,8 @@
       workbench.sideBar.location = "right";
       workbench.startupEditor = "none";
 
-      "workbench.colorTheme" = "IDX Monospace Dark";
-      # workbench.colorTheme = "Catppuccin Mocha";
+      # "workbench.colorTheme" = "IDX Monospace Dark";
+      workbench.colorTheme = "Catppuccin Mocha";
       "catppuccin.accentColor" = "mauve";
       "catppuccin.boldKeywords" = true;
       "catppuccin.italicComments" = false;
