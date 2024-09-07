@@ -1,5 +1,9 @@
-{ username, ... }:
+{ username, pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    sops
+  ];
+
   sops = {
 
     defaultSopsFile = ../../secrets/secrets.yaml;
