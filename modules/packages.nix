@@ -89,6 +89,10 @@
     gtk4
     polkit_gnome
 
+    libreoffice
+    inkscape
+    ani-cli
+
     font-manager
     telegram-desktop
 
