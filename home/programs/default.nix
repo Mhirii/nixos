@@ -12,6 +12,6 @@
     ./cli
     ./thunderbird.nix
     ./sops.nix
-    # ./vscode.nix
+    ./vscode.nix
   ];
 }
