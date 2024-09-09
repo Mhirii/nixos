@@ -3,7 +3,6 @@
   imports =
     [ (import ../nixos/configuration.nix) ]
     ++ [ (import ./sys.nix) ]
-    ++ [ (import ./xserver.nix) ]
     ++ [ (import ./network.nix) ]
     ++ [ (import ./variables.nix) ]
     ++ [ (import ./pipewire.nix) ]
