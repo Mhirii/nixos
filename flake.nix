@@ -36,6 +36,7 @@
         config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
+      prefs = { nvidiaOffload = true; };
       commonModules = profile: [
         (import ./hosts/${profile})
         inputs.spicetify-nix.nixosModules.default
@@ -54,7 +55,7 @@
       mkSystem = host: profile: lib.nixosSystem {
         inherit system;
         modules = commonModules profile;
-        specialArgs = { inherit self inputs username stylix spicetify-nix unstable_pkgs system profile; host = "nixos-${host}"; };
+        specialArgs = { inherit self inputs username stylix spicetify-nix unstable_pkgs system profile prefs; host = "nixos-${host}"; };
 
       };
 

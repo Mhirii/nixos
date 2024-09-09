@@ -1,8 +1,17 @@
-{ config, profile, ... }:
+{ config, profile, prefs, ... }:
 let
   getNvidiaDriver = profile: with config.boot.kernelPackages.nvidiaPackages;
-    if profile == "laptop" then stable
+    if profile == "laptop" then beta
     else production;
+
+  disableOffload = { enable = false; };
+  enableOffload = { enable = true; enableOffloadCmd = true; };
+  offload = profile:
+    if profile == "laptop" then
+      if prefs.nvidiaOffload
+      then enableOffload
+      else disableOffload
+    else disableOffload;
 in
 {
   hardware.opengl = {
@@ -36,5 +45,7 @@ in
     nvidiaSettings = true;
 
     package = getNvidiaDriver profile;
+
+    prime.offload = offload profile;
   };
 }
