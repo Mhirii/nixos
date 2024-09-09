@@ -59,9 +59,10 @@
     #firefox
     bitwarden-desktop
     bitwarden-cli
-    discord
-    #slack
+    # discord
     betterdiscordctl
+    webcord-vencord
+    #slack
     spotify
     spicetify-cli
     zathura
