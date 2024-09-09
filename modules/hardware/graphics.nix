@@ -5,36 +5,6 @@ let
     else production;
 in
 {
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-  services.blueman.enable = true;
-  hardware.bluetooth.settings = {
-    General = {
-      Experimental = true;
-    };
-  };
-
-  time.timeZone = "Africa/Tunis";
-
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
-
-  security.rtkit.enable = true;
   hardware.opengl = {
     enable = true;
     driSupport = false;
@@ -67,15 +37,4 @@ in
 
     package = getNvidiaDriver profile;
   };
-  nix = {
-    settings = {
-      auto-optimise-store = true;
-      experimental-features = [ "nix-command" "flakes" ];
-      substituters = [ "https://nix-gaming.cachix.org" ];
-    };
-  };
-
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.nvidia.acceptLicense = true;
-  system.stateVersion = "24.05";
 }
