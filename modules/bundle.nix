@@ -8,7 +8,6 @@
     ++ [ (import ./hardware) ]
     ++ [ (import ./nix.nix) ]
     ++ [ (import ./variables.nix) ]
-    ++ [ (import ./program.nix) ]
     ++ [ (import ./services.nix) ]
     ++ [ (import ./user.nix) ]
     ++ [ (import ./hyprland.nix) ]
