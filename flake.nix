@@ -36,7 +36,7 @@
         config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
-      prefs = { nvidiaOffload = true; };
+      prefs = { nvidiaOffload = false; };
       commonModules = profile: [
         (import ./hosts/${profile})
         inputs.spicetify-nix.nixosModules.default
