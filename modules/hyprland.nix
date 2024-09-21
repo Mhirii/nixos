@@ -1,4 +1,11 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, prefs, ... }:
+let
+  extraPortals =
+    if prefs.gnome
+    then [ pkgs.xdg-desktop-portal-hyprland ]
+    else [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
+in
+{
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -8,10 +15,7 @@
     enable = true;
     wlr.enable = true;
     xdgOpenUsePortal = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-gtk
-    ];
+    extraPortals = extraPortals;
   };
 
   # xdg.portal = {
