@@ -3,7 +3,7 @@
   imports = [
     ../../modules/bundle.nix
     ./hardware-configuration.nix
-    ./nvidia.nix
+    # ./nvidia.nix
   ];
   networking.hostName = "nixos-laptop";
 
