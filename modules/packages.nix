@@ -70,6 +70,8 @@
     gnome.eog
     vlc
     playerctl
+    insomnia
+    postman
 
     #sys
     cliphist
@@ -95,6 +97,7 @@
 
     font-manager
     telegram-desktop
+    vscode
 
     unstable_pkgs.neovim
     unstable_pkgs.neovide
