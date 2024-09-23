@@ -16,11 +16,16 @@
     QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_STYLE_OVERRIDE = "kvantum";
     MOZ_ENABLE_WAYLAND = "1";
-    WLR_BACKEND = "vulkan";
-    WLR_RENDERER = "vulkan";
+    # WLR_BACKEND = "vulkan";
+    # WLR_RENDERER = "vulkan";
     WLR_NO_HARDWARE_CURSORS = "1";
     XDG_SESSION_TYPE = "wayland";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    WLR_RENDERER_ALLOW_SOFTWARE = "1";
+    LIBVA_DRIVER_NAME = "nvidia";
+    AQ_DRM_DEVICES = "/dev/dri/card2:/dev/dri/card1";
   };
 }
