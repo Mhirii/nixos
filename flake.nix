@@ -37,6 +37,9 @@
       };
       lib = nixpkgs.lib;
       prefs = { nvidiaOffload = false; gnome = false; };
+      backupName = builtins.readFile (builtins.toFile "date" ''
+        date +backup-%d-%m_%H-%M
+      '');
       commonModules = profile: [
         (import ./hosts/${profile})
         inputs.spicetify-nix.nixosModules.default
@@ -45,7 +48,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.mhiri = import ./home;
-          home-manager.backupFileExtension = "bckup";
+          home-manager.backupFileExtension = backupName;
           home-manager.extraSpecialArgs = { inherit inputs username unstable_pkgs profile; };
         }
         inputs.stylix.nixosModules.stylix
