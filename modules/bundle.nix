@@ -9,8 +9,7 @@
     ++ [ (import ./variables.nix) ]
     ++ [ (import ./services.nix) ]
     ++ [ (import ./user.nix) ]
-    ++ [ (import ./hyprland.nix) ]
-    ++ [ (import ./gnome.nix) ]
+    ++ [ (import ./desktops) ]
     ++ [ (import ./packages.nix) ]
   ;
 }
