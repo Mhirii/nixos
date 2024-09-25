@@ -11,5 +11,6 @@
     ++ [ (import ./user.nix) ]
     ++ [ (import ./desktops) ]
     ++ [ (import ./packages.nix) ]
+    ++ [ (import ./polkit.nix) ]
   ;
 }

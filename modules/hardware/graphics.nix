@@ -14,11 +14,16 @@ let
     else disableOffload;
 in
 {
-  hardware.opengl = {
-    enable = true;
-    driSupport = false;
-    # this fixes chromium but breaks about everything else
-    # package = getNvidiaDriver profile; 
+  hardware = {
+    bluetooth.enable = true;
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+      # this fixes chromium but breaks about everything else
+      # package = getNvidiaDriver profile; 
+      #
+    };
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];

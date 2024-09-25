@@ -6,8 +6,11 @@ let
     else [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
 in
 {
-  programs.hyprland.enable = true;
-  programs.hyprland.xwayland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+  };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
@@ -43,5 +46,9 @@ in
     fuzzel
     nwg-look
     nwg-displays
+    libnotify
+    qt5.qtwayland
+    qt6.qtwayland
+    wlogout
   ];
 }
