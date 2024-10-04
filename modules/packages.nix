@@ -2,7 +2,14 @@
 {
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "electron-25.9.0"
+    ];
+  };
+
 
   environment.systemPackages = (with pkgs; [
     home-manager
@@ -38,8 +45,17 @@
     sqlite
     postgresql
 
-    # langs
+    # go
     go
+    air
+    protobuf
+    protoc-gen-go
+    protoc-gen-go-grpc
+    protoc-gen-js
+    protoc-gen-grpc-web
+    grpcurl
+
+    # js
     nodejs_22
     nodePackages.pnpm
     prettierd
@@ -49,11 +65,16 @@
     typescript
     sass
     sassc
+    # rust
     rustup
+    # c
     clang
     clang-tools
     cmake
+    # others
     python3
+    envoy
+    gnumake
 
     # software
     #firefox
@@ -98,6 +119,8 @@
     font-manager
     telegram-desktop
     vscode
+
+    obsidian
 
     unstable_pkgs.neovim
     unstable_pkgs.neovide
