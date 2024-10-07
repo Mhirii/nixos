@@ -14,7 +14,7 @@
     BUN_INSTALL = "$HOME/.bun";
     PNPM_HOME = "${ XDG_DATA_HOME }/pnpm";
 
-    WGPU_BACKEND = "gl";
+    # WGPU_BACKEND = "gl";
 
     # Not officially in the specification
     XDG_BIN_HOME = "$HOME/.local/bin";

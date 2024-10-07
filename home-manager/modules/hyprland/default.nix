@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -15,7 +15,7 @@
     ./monitors.nix
     ./inputs.nix
     ./rules.nix
-    ./ags.nix
+    # ./ags.nix
     ./variables.nix
   ];
 }

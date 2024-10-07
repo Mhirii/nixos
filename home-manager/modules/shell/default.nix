@@ -1,13 +1,11 @@
-{ lib, ... }:
-{
+{ lib, ... }: {
+
   imports = [
     ./bash.nix
-    ./zsh.nix
     ./fish.nix
-    ./nushell
   ];
-  home.shellAliases = {
 
+  home.shellAliases = {
     ls = lib.mkDefault "eza -al --color=always --group-directories-first --icons";
     la = lib.mkDefault "eza -a --color=always --group-directories-first --icons";
     ll = lib.mkDefault "eza -l --color=always --group-directories-first --icons";
@@ -23,6 +21,7 @@
     untar = lib.mkDefault "tar -zxvf";
 
     lg = lib.mkDefault "lazygit";
+    lzd = lib.mkDefault "lazydocker";
     v = lib.mkDefault "nvim";
 
     grep = "grep --color=auto";

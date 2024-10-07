@@ -2,7 +2,7 @@
 {
   programs.kitty = {
     enable = true;
-    package = unstable_pkgs.nushell;
+    # package = unstable_pkgs.nushell;
     shellIntegration = {
       enableZshIntegration = true;
       enableFishIntegration = true;

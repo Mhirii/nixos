@@ -107,13 +107,13 @@ in
     };
   };
 
-  programs.nushell = {
-    extraEnv = ''
-      mkdir ${config.xdg.cacheHome}/starship
-      ${pkgs.starship}/bin/starship init nu | save -f ${config.xdg.cacheHome}/starship/init.nu
-    '';
-    extraConfig = ''
-      use ${config.xdg.cacheHome}/starship/init.nu
-    '';
-  };
+  # programs.nushell = {
+  #   extraEnv = ''
+  #     mkdir ${config.xdg.cacheHome}/starship
+  #     ${pkgs.starship}/bin/starship init nu | save -f ${config.xdg.cacheHome}/starship/init.nu
+  #   '';
+  #   extraConfig = ''
+  #     use ${config.xdg.cacheHome}/starship/init.nu
+  #   '';
+  # };
 }

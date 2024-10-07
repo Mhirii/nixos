@@ -1,4 +1,4 @@
-{ profile, ... }:
+{ ... }:
 let
   monitor = {
     laptop = [
@@ -16,6 +16,6 @@ in
   wayland.windowManager.hyprland.settings = {
 
     #monitor= eDP-1, 1920x1080@60.00000, 0x0, 1
-    monitor = monitor.${profile};
+    monitor = monitor.laptop;
   };
 }

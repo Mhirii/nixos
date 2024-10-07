@@ -1,5 +1,8 @@
-{ profile, ... }:
+{ ... }:
 let
+  # FIXME: This is a temporary workaround to get the profile
+  profile = "laptop";
+
   terminal = "kitty";
   battery = {
     laptop = [ "battery" ];

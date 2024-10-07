@@ -1,5 +1,7 @@
-{ config, pkgs, profile, ... }:
+{ config, pkgs, ... }:
 let
+  # FIXME: this is a temporary fix
+  profile = "laptop";
   base16 = config.stylix.base16Scheme;
 in
 {
