@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./bluetooth.nix
-    # ./graphics.nix
+    ./graphics.nix
     ./network.nix
     ./pipewire.nix
   ];
