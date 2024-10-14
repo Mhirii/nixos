@@ -78,6 +78,7 @@
     python3
     envoy
     gnumake
+		alejandra
 
     # software
     #firefox
