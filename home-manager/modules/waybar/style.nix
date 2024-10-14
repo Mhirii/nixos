@@ -1,5 +1,4 @@
-{ config, ... }:
-let
+{config, ...}: let
   base16 = config.stylix.base16Scheme;
   custom = {
     font = "MonaspiceNe Nerd Font";
@@ -9,17 +8,17 @@ let
     pad_block = "16px";
     margin_block = "4px";
   };
-in
-{
+in {
   stylix.targets.waybar.enable = false;
-  programs.waybar.style = #css
+  programs.waybar.style =
+    #css
     ''
             @define-color bg alpha(${base16.base00}, 0.9);
             @define-color translucent alpha(${base16.base00}, 0.5);
             @define-color bg-lighter shade(mix(@bg, ${base16.base07}, 0.2), 1.2);
             @define-color borderColor alpha(@bg-lighter, 0.8);
             @define-color layer alpha(@bg, 0.3);
-            @define-color bg_selected alpha(mix(@layer, ${ base16.base07 }, 0.3), 0.5);
+            @define-color bg_selected alpha(mix(@layer, ${base16.base07}, 0.3), 0.5);
             @define-color text_inactive ${base16.base05};
             @define-color text_muted ${base16.base06};
             @define-color text_active ${base16.base07};
@@ -193,7 +192,7 @@ in
               padding-left: 4px;
             }
             #pulseaudio.muted {
-              color: ${ base16.base08 };
+              color: ${base16.base08};
             }
             #network {
               padding: 0px;
@@ -221,7 +220,7 @@ in
               to {
                 padding-left: 4px;
                 padding-right: 4px;
-                color: ${ base16.base08};
+                color: ${base16.base08};
               }
             }
 
@@ -360,7 +359,7 @@ in
             #bluetooth.connected,
             #networks,
             #taskbar,
-            #cpu, 
+            #cpu,
             #battery,
             #custom-appmenuicon,
             #hardware {
@@ -371,5 +370,3 @@ in
             }
     '';
 }
-
-

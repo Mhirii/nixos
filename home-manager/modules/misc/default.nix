@@ -1,7 +1,6 @@
-{ ... }: {
+{...}: {
   imports = [
-		./gtk.nix
-		./mime.nix
+    ./gtk.nix
+    ./mime.nix
   ];
-
 }

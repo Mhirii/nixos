@@ -1,11 +1,13 @@
-{ pkgs, prefs, ... }:
-let
+{
+  pkgs,
+  prefs,
+  ...
+}: let
   extraPortals =
     if prefs.gnome
-    then [ pkgs.xdg-desktop-portal-hyprland ]
-    else [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
-in
-{
+    then [pkgs.xdg-desktop-portal-hyprland]
+    else [pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk];
+in {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;

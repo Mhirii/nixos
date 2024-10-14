@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   monospace = {
     base00 = "#10151d";
     base01 = "#1f2939";
@@ -18,8 +17,7 @@ let
     base0E = "#a87ffb";
     base0F = "#bd9cfe";
   };
-in
-{
+in {
   stylix.enable = true;
   stylix.image = ../assets/idx.png;
   stylix.polarity = "dark";
@@ -32,7 +30,7 @@ in
 
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerdfonts.override { fonts = [ "Monaspace" ]; };
+      package = pkgs.nerdfonts.override {fonts = ["Monaspace"];};
       name = "MonaspaceNe Nerd Font";
       # name = "JetBrainsMono Nerd Font Mono";
     };

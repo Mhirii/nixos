@@ -1,5 +1,4 @@
-{ lib, ... }: {
-
+{lib, ...}: {
   imports = [
     ./bash.nix
     ./fish.nix

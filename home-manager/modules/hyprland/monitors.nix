@@ -1,5 +1,4 @@
-{ ... }:
-let
+{...}: let
   monitor = {
     laptop = [
       "Unknown-1, disable"
@@ -11,10 +10,8 @@ let
       ", preferred, auto, 1.00 "
     ];
   };
-in
-{
+in {
   wayland.windowManager.hyprland.settings = {
-
     #monitor= eDP-1, 1920x1080@60.00000, 0x0, 1
     monitor = monitor.laptop;
   };

@@ -1,8 +1,11 @@
-{ config, pkgs, ... }:
 {
-
-  home.packages = [ pkgs.hyprlock ];
+  config,
+  pkgs,
+  ...
+}: {
+  home.packages = [pkgs.hyprlock];
   xdg.configFile."hypr/hyprlock.conf".text = with config.colorScheme.colors; #bash
+  
     ''
       $background = ${base00}
       $text = ${base05}
@@ -15,7 +18,7 @@
       $accent = $cyan
 
       background {
-        monitor = 
+        monitor =
         path = $HOME/flake/home-manager/assets/midnight.png
         color = $background
         blur_passes = 3 # 0 disables blurring
@@ -68,5 +71,4 @@
       }
 
     '';
-
 }

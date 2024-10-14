@@ -1,15 +1,13 @@
-{ ... }:
-let
+{...}: let
   # FIXME: This is a temporary workaround to get the profile
   profile = "laptop";
 
   terminal = "kitty";
   battery = {
-    laptop = [ "battery" ];
-    desktop = [ ];
+    laptop = ["battery"];
+    desktop = [];
   };
-in
-{
+in {
   programs.waybar.settings.mainBar = {
     position = "top";
     layer = "top";
@@ -28,19 +26,20 @@ in
       "mpris"
       "custom/notification"
     ];
-    modules-right = [
-      "privacy"
-      "pulseaudio"
-      "backlight"
-      "cpu"
-      "group/bluetooths"
-    ]
-    ++ battery.${profile}
-    ++ [ "clock" ];
+    modules-right =
+      [
+        "privacy"
+        "pulseaudio"
+        "backlight"
+        "cpu"
+        "group/bluetooths"
+      ]
+      ++ battery.${profile}
+      ++ ["clock"];
 
     clock = {
       calendar = {
-        format = { today = "<span color='#b4befe'><b><u>{}</u></b></span>"; };
+        format = {today = "<span color='#b4befe'><b><u>{}</u></b></span>";};
       };
       format = "{:%H:%M}";
       tooltip = "true";
@@ -67,7 +66,7 @@ in
         default = " ";
       };
       persistent-workspaces = {
-        "*" = [ 1 2 3 4 5 6 7 8 9 10 ];
+        "*" = [1 2 3 4 5 6 7 8 9 10];
       };
     };
     "hyprland/submap" = {
@@ -108,7 +107,7 @@ in
       format-bluetooth-muted = "󰖁 {icon}󰂯 {format_source}";
       format-muted = "  {volume}%";
       format-icons = {
-        default = [ "󰕿" "󰖀" "󰕾" ];
+        default = ["󰕿" "󰖀" "󰕾"];
       };
       scroll-step = 5;
       on-click = "pamixer -t";
@@ -138,7 +137,7 @@ in
     battery = {
       format = "{icon} {capacity}%";
       format-alt = "{icon} {capacity}% {time}";
-      format-icons = [ " " " " " " " " " " ];
+      format-icons = [" " " " " " " " " "];
       format-charging = " {capacity}%";
       format-full = " {capacity}%";
       format-warning = " {capacity}% {time}";

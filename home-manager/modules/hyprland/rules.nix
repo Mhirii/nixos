@@ -1,37 +1,31 @@
-{ ... }:
-let
+{...}: let
   opacity = "0.8";
 
-  float_windowrule =
-    let
-      f = regex: "float, ^(${regex})$";
-    in
-    [
-      (f "org.gnome.Calculator")
-      (f "org.gnome.Nautilus")
-      (f "pavucontrol")
-      (f "nm-connection-editor")
-      (f "blueberry.py")
-      (f "org.gnome.Settings")
-      (f "org.gnome.design.Palette")
-      (f "Color Picker")
-      (f "xdg-desktop-portal")
-      (f "xdg-desktop-portal-gnome")
-    ];
+  float_windowrule = let
+    f = regex: "float, ^(${regex})$";
+  in [
+    (f "org.gnome.Calculator")
+    (f "org.gnome.Nautilus")
+    (f "pavucontrol")
+    (f "nm-connection-editor")
+    (f "blueberry.py")
+    (f "org.gnome.Settings")
+    (f "org.gnome.design.Palette")
+    (f "Color Picker")
+    (f "xdg-desktop-portal")
+    (f "xdg-desktop-portal-gnome")
+  ];
 
-  opacity_windowrule =
-    let
-      o = regex: "opacity ${opacity} override ${opacity} override, ^(${regex})$";
-    in
-    [
-      (o "thunar")
-      (o "Spotify")
-      (o "WebCord")
-      (o "Code")
-      (o "mako")
-    ];
-in
-{
+  opacity_windowrule = let
+    o = regex: "opacity ${opacity} override ${opacity} override, ^(${regex})$";
+  in [
+    (o "thunar")
+    (o "Spotify")
+    (o "WebCord")
+    (o "Code")
+    (o "mako")
+  ];
+in {
   wayland.windowManager.hyprland.settings = {
     general = {
       layout = "master";
@@ -58,8 +52,6 @@ in
       drop_at_cursor = "yes";
     };
 
-
-
     windowrule =
       [
         "noblur,^(firefox)$"
@@ -73,8 +65,7 @@ in
       "ignorezero , waybar"
     ];
 
-    blurls = [ "thunar" ];
-
+    blurls = ["thunar"];
 
     windowrulev2 = [
       "opacity 0.7 0.7,floating:1"

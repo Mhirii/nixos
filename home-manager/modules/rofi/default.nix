@@ -1,8 +1,10 @@
-{ pkgs, config, ... }:
-let
-  base16 = config.stylix.base16Scheme;
-in
 {
+  pkgs,
+  config,
+  ...
+}: let
+  base16 = config.stylix.base16Scheme;
+in {
   home = {
     file = {
       ".config/rofi/colors.rasi".text = ''

@@ -1,5 +1,6 @@
 let
-  volume_script = #fish
+  volume_script =
+    #fish
     ''
       #!/usr/bin/env fish
       function toggle_mute
@@ -66,36 +67,36 @@ let
           end
       end
     '';
-  brightness_script = #bash
-    '' 
-    #!/usr/bin/env bash
-    get_backlight() {
-      LIGHT=$(printf "%.0f\n" $(brightnessctl i))
-      echo $LIGHT "%"
-    }
-    notify_user() {
-      # notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$icon" "Brightness : $(brightnessctl g)"
-    percentage=$(expr $(brightnessctl g) \* 100 / $(brightnessctl m))
-    hyprctl notify -1 1000 "rgb(31748F)" $percentage
-    }
-    inc_backlight() {
-      brightnessctl set 5%+ && notify_user
-    }
-    dec_backlight() {
-      brightnessctl set 5%- && notify_user
-    }
-    if [[ "$1" == "--get" ]]; then
-      brightnessctl g
-    elif [[ "$1" == "--inc" ]]; then
-      inc_backlight
-    elif [[ "$1" == "--dec" ]]; then
-      dec_backlight
-    else
-      get_backlight
-    fi
-  '';
-in
-{
+  brightness_script =
+    #bash
+    ''
+      #!/usr/bin/env bash
+      get_backlight() {
+        LIGHT=$(printf "%.0f\n" $(brightnessctl i))
+        echo $LIGHT "%"
+      }
+      notify_user() {
+        # notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$icon" "Brightness : $(brightnessctl g)"
+      percentage=$(expr $(brightnessctl g) \* 100 / $(brightnessctl m))
+      hyprctl notify -1 1000 "rgb(31748F)" $percentage
+      }
+      inc_backlight() {
+        brightnessctl set 5%+ && notify_user
+      }
+      dec_backlight() {
+        brightnessctl set 5%- && notify_user
+      }
+      if [[ "$1" == "--get" ]]; then
+        brightnessctl g
+      elif [[ "$1" == "--inc" ]]; then
+        inc_backlight
+      elif [[ "$1" == "--dec" ]]; then
+        dec_backlight
+      else
+        get_backlight
+      fi
+    '';
+in {
   home.file = {
     volume = {
       text = volume_script;

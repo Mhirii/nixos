@@ -1,10 +1,12 @@
-{ config, pkgs, ... }:
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   # FIXME: this is a temporary fix
   profile = "laptop";
   base16 = config.stylix.base16Scheme;
-in
-{
+in {
   home.packages = with pkgs; [
     fishPlugins.pisces
   ];
@@ -12,7 +14,8 @@ in
   programs.fish = {
     enable = true;
 
-    shellInit = # fish
+    shellInit =
+      # fish
       ''
         set fish_greeting
 
@@ -31,7 +34,8 @@ in
         set -g fish_term24bit 1
       '';
 
-    interactiveShellInit = # fish
+    interactiveShellInit =
+      # fish
       ''
           set fish_greeting
 
@@ -122,7 +126,8 @@ in
       '';
 
     functions = {
-      __history_previous_command = # fish
+      __history_previous_command =
+        # fish
         ''
           switch (commandline -t)
               case "!"
@@ -132,7 +137,8 @@ in
                   commandline -i !
           end
         '';
-      __history_previous_command_arguments = # fish
+      __history_previous_command_arguments =
+        # fish
         ''
           switch (commandline -t)
               case "!"
@@ -142,11 +148,13 @@ in
                   commandline -i '$'
           end
         '';
-      getVitePID = # fish
+      getVitePID =
+        # fish
         ''
           pgrep -a node | rg internship | sed 's/ .*//' $argv
         '';
-      switch_mode = # fish
+      switch_mode =
+        # fish
         ''
           if [ "$fish_key_bindings" = fish_vi_key_bindings ]
               fish_default_key_bindings
@@ -159,7 +167,8 @@ in
           echo "$mode Keybinds set"
           starship prompt
         '';
-      tmux_fzf = # fish
+      tmux_fzf =
+        # fish
         ''
           set prev (pwd)
           zi
@@ -174,7 +183,8 @@ in
           end
           starship prompt
         '';
-      yz = # fish
+      yz =
+        # fish
         ''
           set tmp (mktemp -t "yazi-cwd.XXXXX")
           yazi $argv --cwd-file="$tmp"
@@ -183,12 +193,14 @@ in
           end
           rm -f -- "$tmp"
         '';
-      zoxide_find = #fish
+      zoxide_find =
+        #fish
         ''
           zi
           starship prompt
         '';
-      nixw = # fish
+      nixw =
+        # fish
         ''
           if test -n "$FLAKE" && test (pwd) != "$FLAKE"
             cd $FLAKE
@@ -230,7 +242,6 @@ in
 
       v = "nvim";
     };
-
   };
 
   home.file."stylix" = {
@@ -239,13 +250,13 @@ in
       preferred_background: ${base16.base00}
       fish_color_normal ${base16.base07}
       fish_color_command ${base16.base0D}
-      fish_color_param ${base16.base0C }
+      fish_color_param ${base16.base0C}
       fish_color_keyword ${base16.base0E}
       fish_color_quote ${base16.base0B}
       fish_color_redirection ${base16.base0E}
       fish_color_end ${base16.base09}
       fish_color_comment ${base16.base06}
-      fish_color_error ${base16.base08 }
+      fish_color_error ${base16.base08}
       fish_color_gray ${base16.base06}
       fish_color_selection --background=${base16.base04}
       fish_color_search_match --background=${base16.base04}
@@ -253,17 +264,16 @@ in
       fish_color_operator ${base16.base0E}
       fish_color_escape ${base16.base08}
       fish_color_autosuggestion ${base16.base06}
-      fish_color_cancel ${base16.base0A }
+      fish_color_cancel ${base16.base0A}
       fish_color_cwd f6d484
       fish_color_user ${base16.base0B}
       fish_color_host ${base16.base0D}
       fish_color_host_remote ${base16.base0B}
-      fish_color_status ${base16.base0A }
+      fish_color_status ${base16.base0A}
       fish_pager_color_progress ${base16.base06}
       fish_pager_color_prefix ${base16.base06}
       fish_pager_color_completion ${base16.base06}
       fish_pager_color_description ${base16.base06}
       ";
   };
-
 }

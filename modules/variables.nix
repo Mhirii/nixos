@@ -5,14 +5,14 @@
     XDG_DATA_HOME = "$HOME/.local/share";
     XDG_STATE_HOME = "$HOME/.local/state";
 
-    CARGO_HOME = "${ XDG_DATA_HOME }/cargo";
-    CUDA_CACHE_PATH = "${ XDG_CACHE_HOME }/nv";
-    GTK2_RC_FILES = "${ XDG_CONFIG_HOME }/gtk-2.0/gtkrc";
-    RUSTUP_HOME = "${ XDG_DATA_HOME }/rustup";
-    GOPATH = "${ XDG_DATA_HOME }/go";
-    GOBIN = "${ GOPATH }/bin";
+    CARGO_HOME = "${XDG_DATA_HOME}/cargo";
+    CUDA_CACHE_PATH = "${XDG_CACHE_HOME}/nv";
+    GTK2_RC_FILES = "${XDG_CONFIG_HOME}/gtk-2.0/gtkrc";
+    RUSTUP_HOME = "${XDG_DATA_HOME}/rustup";
+    GOPATH = "${XDG_DATA_HOME}/go";
+    GOBIN = "${GOPATH}/bin";
     BUN_INSTALL = "$HOME/.bun";
-    PNPM_HOME = "${ XDG_DATA_HOME }/pnpm";
+    PNPM_HOME = "${XDG_DATA_HOME}/pnpm";
 
     # WGPU_BACKEND = "gl";
 

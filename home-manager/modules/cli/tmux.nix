@@ -1,8 +1,11 @@
-{ pkgs, lib, config, ... }:
-let
-  base16 = config.stylix.base16Scheme;
-in
 {
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
+  base16 = config.stylix.base16Scheme;
+in {
   programs.tmux = {
     enable = true;
     baseIndex = 1;
@@ -22,7 +25,8 @@ in
       tmux-fzf
       {
         plugin = catppuccin;
-        extraConfig = #sh
+        extraConfig =
+          #sh
           ''
             set -g @catppuccin_date_time_color "${base16.base0B}"
             set -g @catppuccin_date_time_text "%H:%M"
@@ -63,7 +67,8 @@ in
       tmux-thumbs
     ];
 
-    extraConfig = #sh
+    extraConfig =
+      #sh
       ''
         set -ag terminal-overrides ",xterm-256color:RGB"
         set-option -g allow-passthrough

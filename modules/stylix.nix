@@ -1,5 +1,8 @@
-{ inputs, pkgs, ... }:
-let
+{
+  inputs,
+  pkgs,
+  ...
+}: let
   midnight = {
     base00 = "#0F1B2E";
     base01 = "#1E3452";
@@ -36,8 +39,7 @@ let
     base0E = "#a87ffb";
     base0F = "#bd9cfe";
   };
-in
-{
+in {
   stylix.enable = true;
   # stylix.image = ../home-manager/assets/midnight.png;
   stylix.image = ../home/assets/idx.png;
@@ -51,7 +53,7 @@ in
 
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerdfonts.override { fonts = [ "Monaspace" ]; };
+      package = pkgs.nerdfonts.override {fonts = ["Monaspace"];};
       name = "MonaspaceNe Nerd Font";
       # name = "JetBrainsMono Nerd Font Mono";
     };

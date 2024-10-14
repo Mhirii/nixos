@@ -1,12 +1,10 @@
-{ ... }: {
+{...}: {
   imports =
-    [ (import ./cli) ]
-    ++ [ (import ./hyprland) ]
-    ++ [ (import ./misc) ]
-    ++ [ (import ./programs) ]
-    ++ [ (import ./rofi) ]
-    ++ [ (import ./shell) ]
-    ++ [ (import ./waybar) ]
-  ;
-
+    [(import ./cli)]
+    ++ [(import ./hyprland)]
+    ++ [(import ./misc)]
+    ++ [(import ./programs)]
+    ++ [(import ./rofi)]
+    ++ [(import ./shell)]
+    ++ [(import ./waybar)];
 }

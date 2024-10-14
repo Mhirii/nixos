@@ -25,22 +25,21 @@ let
     "SUPER CTRL, j,            resizeactive,                   0 10"
   ];
 
-  characters = [ "1" "2" "3" "4" "5" "6" "u" "i" "o" "p" ];
+  characters = ["1" "2" "3" "4" "5" "6" "u" "i" "o" "p"];
   workspaces = builtins.genList (x: builtins.toString (x + 1)) 10;
   workspace_bindings = builtins.concatLists (builtins.genList
     (
-      x:
-      let
+      x: let
         ws = builtins.elemAt workspaces x;
         char = builtins.elemAt characters x;
-      in
-      [
+      in [
         "SUPER, ${char}, workspace, ${ws}"
         "SUPER CTRL, ${char}, focusworkspaceoncurrentmonitor, ${ws}"
         "SUPER SHIFT, ${char}, movetoworkspace, ${ws}"
         "SUPER ALT, ${char}, movetoworkspacesilent, ${ws}"
       ]
-    ) 10);
+    )
+    10);
 
   scratchpads = [
     "SUPER,       S,            togglespecialworkspace"
@@ -109,7 +108,6 @@ let
     "SUPER,      7,                     exec, playerctl previous"
     "SUPER,      8,                     exec, playerctl play-pause"
     "SUPER,      9,                     exec, playerctl next"
-
   ];
   media_e = [
     ",            xf86audioraisevolume,  exec, $scripts/volume.fish inc"
@@ -133,11 +131,7 @@ let
     "SUPER CTRL,  F,            centerwindow,"
     "SUPER ALT,   TAB,          layoutmsg,                      swapwithmaster master,"
   ];
-
-in
-{
-
-
+in {
   wayland.windowManager.hyprland.settings = {
     "$scripts" = "~/.config/hypr/scripts";
     "$launch" = "$scripts/launch.fish";
@@ -151,15 +145,14 @@ in
       ++ scratchpads
       ++ cycle
       ++ monitors
-      ++ media
-    ;
-    binde = resize
+      ++ media;
+    binde =
+      resize
       ++ media_e;
 
     bindm = [
       "SUPER,      mouse:272,    movewindow"
       "SUPER,      mouse:273,    resizewindow"
     ];
-
   };
 }

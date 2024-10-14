@@ -1,15 +1,16 @@
 # home.packages = lib.optionals config.programs.alacritty.enable ;
-{ lib, pkgs, ... }:
 {
+  lib,
+  pkgs,
+  ...
+}: {
   home.packages = [
     pkgs.ueberzugpp # to render images in alacritty
   ];
   programs.alacritty = {
     enable = true;
 
-
     settings = {
-
       live_config_reload = true;
       selection.save_to_clipboard = true;
 
@@ -22,8 +23,14 @@
       };
 
       font = {
-        normal = lib.mkForce { family = "MonaspiceNe Nerd Font"; style = "Medium"; };
-        bold = { family = "MonaspiceNe Nerd Font"; style = "Bold"; };
+        normal = lib.mkForce {
+          family = "MonaspiceNe Nerd Font";
+          style = "Medium";
+        };
+        bold = {
+          family = "MonaspiceNe Nerd Font";
+          style = "Bold";
+        };
         size = lib.mkDefault 12;
       };
       # font.normal.family = "MonaspiceNe Nerd Font";
@@ -41,7 +48,6 @@
           y = 4;
         };
       };
-
     };
   };
 }

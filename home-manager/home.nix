@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   home.username = "mhiri";
   home.homeDirectory = "/home/mhiri";
   home.stateVersion = "23.11";
@@ -13,7 +12,6 @@
     TERMINAL = "kitty";
     COLORTERM = "truecolor";
   };
-
 
   programs.home-manager.enable = true;
 

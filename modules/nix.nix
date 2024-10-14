@@ -2,8 +2,8 @@
   nix = {
     settings = {
       auto-optimise-store = true;
-      experimental-features = [ "nix-command" "flakes" ];
-      substituters = [ "https://nix-gaming.cachix.org" ];
+      experimental-features = ["nix-command" "flakes"];
+      substituters = ["https://nix-gaming.cachix.org"];
       warn-dirty = false;
     };
     gc = {

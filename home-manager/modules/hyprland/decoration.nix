@@ -1,11 +1,14 @@
-{ config, lib, ... }:
 {
+  config,
+  lib,
+  ...
+}: {
   wayland.windowManager.hyprland.settings = with config.colorScheme.colors; {
     general = {
       gaps_in = 4;
       gaps_out = 4;
       border_size = 3;
-      "col.active_border" = lib.mkDefault " ${ base0D } 45deg";
+      "col.active_border" = lib.mkDefault " ${base0D} 45deg";
       "col.inactive_border" = lib.mkDefault "rgba(00000000)";
     };
     misc = {
@@ -25,19 +28,18 @@
         brightness = 0.7;
       };
 
-
       dim_inactive = false;
       dim_strength = 0.1;
       dim_special = 0.4;
       dim_around = 0.4;
       inactive_opacity = 0.95;
 
-      blurls = [ "rofi" "mako" "launcher" "bar0" ];
+      blurls = ["rofi" "mako" "launcher" "bar0"];
 
       drop_shadow = false;
       shadow_range = 10;
       shadow_render_power = 10;
-      "col.shadow" = lib.mkDefault "rgba(${ base00 }70)";
+      "col.shadow" = lib.mkDefault "rgba(${base00}70)";
     };
 
     animations = {
@@ -56,6 +58,5 @@
         "specialWorkspace, 1, 3, myBezier, slidevert"
       ];
     };
-
   };
 }

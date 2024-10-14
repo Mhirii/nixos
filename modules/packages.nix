@@ -1,6 +1,10 @@
-{ inputs, pkgs, unstable_pkgs, system, ... }:
 {
-
+  inputs,
+  pkgs,
+  unstable_pkgs,
+  system,
+  ...
+}: {
   # Allow unfree packages
   # nixpkgs.config.allowUnfree = true;
   nixpkgs.config = {
@@ -10,8 +14,7 @@
     ];
   };
 
-
-  environment.systemPackages = (with pkgs; [
+  environment.systemPackages = with pkgs; [
     home-manager
 
     # tools
@@ -132,9 +135,9 @@
     unstable_pkgs.docker-buildx
 
     inputs.zen-browser.packages."${system}".specific
-  ]);
+  ];
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Monaspace" "JetBrainsMono" ]; })
+    (nerdfonts.override {fonts = ["Monaspace" "JetBrainsMono"];})
   ];
 
   programs.fish.enable = true;
@@ -146,5 +149,5 @@
     enableSSHSupport = true;
   };
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [ ];
+  programs.nix-ld.libraries = with pkgs; [];
 }

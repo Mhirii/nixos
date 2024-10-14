@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.waybar = {
     enable = true;
   };
@@ -7,6 +6,7 @@
   #   mesonFlags = (oa.mesonFlags or [ ]) ++ [ "-Dexperimental=true" ];
   # });
 
-  imports = [ (import ./settings.nix) ]
-    ++ [ (import ./style.nix) ];
+  imports =
+    [(import ./settings.nix)]
+    ++ [(import ./style.nix)];
 }

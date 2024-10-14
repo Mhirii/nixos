@@ -1,7 +1,6 @@
-{ pkgs, ... }:
-let name = "Mhirii"; in
-{
-
+{pkgs, ...}: let
+  name = "Mhirii";
+in {
   home.packages = with pkgs; [
     delta
     gh
@@ -12,7 +11,6 @@ let name = "Mhirii"; in
     enable = true;
     userName = name;
     userEmail = "ahmedmhiri218@gmail.com";
-
 
     extraConfig = {
       init.defaultBranch = "main";

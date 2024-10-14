@@ -1,7 +1,11 @@
-{ lib, prefs, ... }:
-let
+{
+  lib,
+  prefs,
+  ...
+}: let
   nvidiaConfig =
-    if prefs.nvidiaOffload then {
+    if prefs.nvidiaOffload
+    then {
       hardware.nvidia = {
         prime = {
           # sync.enable = true;
@@ -9,9 +13,9 @@ let
           nvidiaBusId = "PCI:2:0:0";
         };
       };
-    } else { };
-in
-{
+    }
+    else {};
+in {
   config = lib.mkMerge [
     nvidiaConfig
   ];

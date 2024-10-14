@@ -1,5 +1,6 @@
 let
-  launch_script = #fish
+  launch_script =
+    #fish
     ''
       #!/usr/bin/env fish
 
@@ -96,8 +97,7 @@ let
               $terminal -e cava &
       end
     '';
-in
-{
+in {
   home.file = {
     launch = {
       text = launch_script;

@@ -1,5 +1,4 @@
-{ ... }: {
-
+{...}: {
   imports = [
     ./btop.nix
     ./git.nix
@@ -13,7 +12,7 @@
   programs.fd = {
     enable = true;
     hidden = true;
-    ignores = [ ".git/*" "node_modules/*" "dist/*" "tmp/*" ];
+    ignores = [".git/*" "node_modules/*" "dist/*" "tmp/*"];
   };
 
   programs.fzf.enable = true;
