@@ -1,0 +1,74 @@
+error:
+       … while evaluating the attribute 'config'
+
+         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:9:
+
+          321|         options = checked options;
+          322|         config = checked (removeAttrs config [ "_module" ]);
+             |         ^
+          323|         _module = checked (config._module);
+
+       … while calling the 'seq' builtin
+
+         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:18:
+
+          321|         options = checked options;
+          322|         config = checked (removeAttrs config [ "_module" ]);
+             |                  ^
+          323|         _module = checked (config._module);
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: file 'nixos-config' was not found in the Nix search path (add it using $NIX_PATH or -I)
+
+       at «none»:0: (source not available)
+building Nix...
+error:
+       … while evaluating the attribute 'config'
+
+         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:9:
+
+          321|         options = checked options;
+          322|         config = checked (removeAttrs config [ "_module" ]);
+             |         ^
+          323|         _module = checked (config._module);
+
+       … while calling the 'seq' builtin
+
+         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:18:
+
+          321|         options = checked options;
+          322|         config = checked (removeAttrs config [ "_module" ]);
+             |                  ^
+          323|         _module = checked (config._module);
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: file 'nixos-config' was not found in the Nix search path (add it using $NIX_PATH or -I)
+
+       at «none»:0: (source not available)
+building the system configuration...
+error:
+       … while evaluating the attribute 'config.system.build.toplevel'
+
+         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:9:
+
+          321|         options = checked options;
+          322|         config = checked (removeAttrs config [ "_module" ]);
+             |         ^
+          323|         _module = checked (config._module);
+
+       … while calling the 'seq' builtin
+
+         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:18:
+
+          321|         options = checked options;
+          322|         config = checked (removeAttrs config [ "_module" ]);
+             |                  ^
+          323|         _module = checked (config._module);
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: file 'nixos-config' was not found in the Nix search path (add it using $NIX_PATH or -I)
+
+       at «none»:0: (source not available)
