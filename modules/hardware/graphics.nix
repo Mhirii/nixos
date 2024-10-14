@@ -21,7 +21,7 @@
       if prefs.nvidiaOffload
       then enableOffload
       else disableOffload
-    else disableOffload;
+    else enableOffload;
 in {
   hardware = {
     bluetooth.enable = true;
