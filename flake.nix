@@ -28,13 +28,13 @@
         config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
-      prefs = { nvidiaOffload = false; gnome = false; };
+      prefs = { nvidiaOffload = false; gnome = false; gdm = true; };
       backupName = builtins.readFile (builtins.toFile "date" ''
         date +backup-%d-%m_%H-%M
       '');
-      commonModules = profile: 
-				[ (import ./hosts/${profile}) ]
-			;
+      commonModules = profile:
+        [ (import ./hosts/${profile}) ]
+      ;
 
       mkSystem = host: profile: lib.nixosSystem {
         inherit system;
