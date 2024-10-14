@@ -78,10 +78,10 @@
     python3
     envoy
     gnumake
-		alejandra
+    alejandra
 
     # software
-    #firefox
+    firefox
     bitwarden-desktop
     bitwarden-cli
     # discord

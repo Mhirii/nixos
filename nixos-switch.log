@@ -1,74 +1,24 @@
-error:
-       … while evaluating the attribute 'config'
-
-         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:9:
-
-          321|         options = checked options;
-          322|         config = checked (removeAttrs config [ "_module" ]);
-             |         ^
-          323|         _module = checked (config._module);
-
-       … while calling the 'seq' builtin
-
-         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:18:
-
-          321|         options = checked options;
-          322|         config = checked (removeAttrs config [ "_module" ]);
-             |                  ^
-          323|         _module = checked (config._module);
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: file 'nixos-config' was not found in the Nix search path (add it using $NIX_PATH or -I)
-
-       at «none»:0: (source not available)
-building Nix...
-error:
-       … while evaluating the attribute 'config'
-
-         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:9:
-
-          321|         options = checked options;
-          322|         config = checked (removeAttrs config [ "_module" ]);
-             |         ^
-          323|         _module = checked (config._module);
-
-       … while calling the 'seq' builtin
-
-         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:18:
-
-          321|         options = checked options;
-          322|         config = checked (removeAttrs config [ "_module" ]);
-             |                  ^
-          323|         _module = checked (config._module);
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: file 'nixos-config' was not found in the Nix search path (add it using $NIX_PATH or -I)
-
-       at «none»:0: (source not available)
 building the system configuration...
-error:
-       … while evaluating the attribute 'config.system.build.toplevel'
-
-         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:9:
-
-          321|         options = checked options;
-          322|         config = checked (removeAttrs config [ "_module" ]);
-             |         ^
-          323|         _module = checked (config._module);
-
-       … while calling the 'seq' builtin
-
-         at /nix/store/0283cbhm47kd3lr9zmc5fvdrx9qkav8s-source/lib/modules.nix:322:18:
-
-          321|         options = checked options;
-          322|         config = checked (removeAttrs config [ "_module" ]);
-             |                  ^
-          323|         _module = checked (config._module);
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: file 'nixos-config' was not found in the Nix search path (add it using $NIX_PATH or -I)
-
-       at «none»:0: (source not available)
+these 17 derivations will be built:
+  /nix/store/fjdjip429yhf66vzjq1ldm81qgz7f4cw-system-path.drv
+  /nix/store/ihjg38l62nnc7ygjydgmw99fadskfwgx-X-Restart-Triggers-polkit.drv
+  /nix/store/6byd532yc1cqcw35gz82m0p687mmfqgc-unit-polkit.service.drv
+  /nix/store/6x2ax0a8kbiaw7lk39wdvidn1zq7g87k-dbus-1.drv
+  /nix/store/8azc7pl2yvm1lhrfqfwk1n8cm74lf7h3-man-paths.drv
+  /nix/store/bk5r34x337lb25c0zpvbqfanm62dscmv-unit-accounts-daemon.service.drv
+  /nix/store/h6kypkc2rj98n6ncp1rns4cslan3yr7v-firefox-131.0.2_fish-completions.drv
+  /nix/store/fax4jykyj972mj3rhnbrchvi6634n6k3-system_fish-completions.drv
+  /nix/store/prd57d7g6vaxymixmf1gbcyinwanrabs-X-Restart-Triggers-dbus.drv
+  /nix/store/dk5xbcbd4dnf4syxjbp9v93iqf20m3m5-unit-dbus.service.drv
+  /nix/store/fnqg5namn378pmwvq1d1vd2akhrxsgdx-system-units.drv
+  /nix/store/zagm9f8f3nmi4zplh6jfjzzm7shn0x00-man-cache.drv
+  /nix/store/hf0h4pvsvywxdj5azks6cl2s2rq5q0qy-etc-man_db.conf.drv
+  /nix/store/ym1qzcs38rr5j1w8zyqw9cqnwfd8kq4k-unit-dbus.service.drv
+  /nix/store/x8ypcvxj3j3l3362wz4aqw60wyj4cfzp-user-units.drv
+  /nix/store/dh1bl4sbwa39rjb56flqzh0s6x3zmhsc-etc.drv
+  /nix/store/pps8gsv1bpls50cs754mlk9imfr8yhmz-nixos-system-nixos-laptop-24.05.20241012.a3f9ad6.drv
+these 2 paths will be fetched (64.93 MiB download, 262.38 MiB unpacked):
+  /nix/store/iwdzkv47j1d6dkd1wny42n1jhhskkbp0-firefox-131.0.2
+  /nix/store/4hgmg05y16vhp6qvmb2p1avzdsigw2mq-firefox-unwrapped-131.0.2
+copying path '/nix/store/4hgmg05y16vhp6qvmb2p1avzdsigw2mq-firefox-unwrapped-131.0.2' from 'https://cache.nixos.org'...
+error: interrupted by the user
