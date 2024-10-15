@@ -44,6 +44,8 @@
     printing.enable = true;
     openssh = {
       enable = true;
+      settings.PasswordAuthentication = false;
+      settings.KbdInteractiveAuthentication = false;
     };
     dbus.enable = true;
   };
