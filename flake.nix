@@ -34,7 +34,7 @@
     };
     lib = nixpkgs.lib;
     prefs = {
-      nvidiaOffload = false;
+      nvidiaOffload = true;
       gnome = false;
       gdm = true;
       awesomewm = true;
