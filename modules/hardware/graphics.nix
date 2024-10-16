@@ -7,7 +7,7 @@
   getNvidiaDriver = profile:
     with config.boot.kernelPackages.nvidiaPackages;
       if profile == "laptop"
-      then beta
+      then stable
       else production;
 
   disableOffload = {enable = false;};
