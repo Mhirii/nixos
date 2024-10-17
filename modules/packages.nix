@@ -57,6 +57,7 @@
     protoc-gen-js
     protoc-gen-grpc-web
     grpcurl
+    golangci-lint
 
     # js
     nodejs_22
