@@ -47,6 +47,7 @@
     fastfetch
     sqlite
     postgresql
+    ytmdl
 
     # go
     go
