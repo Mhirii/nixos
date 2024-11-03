@@ -38,6 +38,8 @@
       gnome = false;
       gdm = true;
       awesomewm = true;
+      disableGpu = true;
+      prime = true;
     };
     backupName = builtins.readFile (builtins.toFile "date" ''
       date +backup-%d-%m_%H-%M
