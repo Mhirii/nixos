@@ -89,7 +89,6 @@
     # discord
     betterdiscordctl
     webcord-vencord
-    element-desktop-wayland
     #slack
     spotify
     spicetify-cli
