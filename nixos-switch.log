@@ -18,11 +18,4 @@ error:
 
        (stack trace truncated; use '--show-trace' to show the full trace)
 
-       error: attempt to call something which is not a function but a path
-
-       at /nix/store/1qzj8y9jysw7bhvwjgv0bf77pr3wcyyh-source/hosts/laptop/default.nix:55:10:
-
-           54|       imports = [
-           55|         (../../modules/hardware/disable.nix {
-             |          ^
-           56|           prefs = {
+       error: getting status of '/nix/store/faw98s5nm41ciz64bnf3p99ph64bk58d-source/modules/hardware/disable.nix': No such file or directory
