@@ -3,8 +3,9 @@
   prefs,
   ...
 }: let
+  enable = prefs.enablePrime && !prefs.disableGpu;
   nvidiaConfig = {
-    hardware.nvidia = lib.mkIf (prefs.prime && prefs.nvidiaOffload) {
+    hardware.nvidia = lib.mkIf enable {
       prime = {
         # sync.enable = true;
         intelBusId = "PCI:0:2:0";

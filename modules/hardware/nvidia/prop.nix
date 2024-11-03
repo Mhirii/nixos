@@ -3,12 +3,14 @@
   lib,
   prefs,
   ...
-}: {
+}: let
+  enable = !prefs.disableGpu;
+in {
   hardware.opengl.enable = true;
 
-  services.xserver.videoDrivers = lib.mkIf (!prefs.disableGpu) ["nvidia"];
+  services.xserver.videoDrivers = lib.mkIf enable ["nvidia"];
 
-  hardware.nvidia = lib.mkIf (!prefs.disableGpu) {
+  hardware.nvidia = {
     modesetting.enable = true;
 
     powerManagement.enable = false;

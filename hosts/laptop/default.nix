@@ -52,11 +52,7 @@
     };
     oss.configuration = {
       imports = [
-        (import ../../modules/hardware/disable.nix {
-          prefs = {
-            disableGpu = false;
-          };
-        })
+        ../../modules/hardware/nvidia/nouveau.nix
       ];
     };
   };

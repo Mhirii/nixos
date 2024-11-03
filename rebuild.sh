@@ -20,10 +20,7 @@ echo "Nixos Rebuilding"
 trap "echo 'Script interrupted'; exit 1" INT
 sudo nixos-rebuild switch --flake $HOME/flake#laptop 2>&1 | tee nixos-switch.log
 if [ $? -eq 0 ]; then
-  rebuild_success=true
-else
-  cat nixos-switch.log | grep --color error
-  exit 1
+  cat nixos-switch.log | grep --color error && exit 1 || rebuild_success=true
 fi
 
 if [ "$rebuild_success" = false ]; then
