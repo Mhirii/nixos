@@ -1,9 +1,14 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  prefs,
+  ...
+}: {
   hardware.opengl.enable = true;
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = lib.mkIf (!prefs.disableGpu) ["nvidia"];
 
-  hardware.nvidia = {
+  hardware.nvidia = lib.mkIf (!prefs.disableGpu) {
     modesetting.enable = true;
 
     powerManagement.enable = false;

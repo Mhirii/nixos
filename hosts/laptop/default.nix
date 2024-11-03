@@ -7,6 +7,7 @@
     ../../modules/bundle.nix
     ./hardware-configuration.nix
     ./nvidia.nix
+    ../../modules/hardware/nvidia/disable.nix
   ];
   networking.hostName = "nixos-laptop";
 
@@ -49,9 +50,13 @@
         ../../modules/hardware/nvidia/prime.nix
       ];
     };
-    disableGpu.configuration = {
+    oss.configuration = {
       imports = [
-        ../../modules/hardware/nvidia/disable.nix
+        (../../modules/hardware/disable.nix {
+          prefs = {
+            disableGpu = false;
+          };
+        })
       ];
     };
   };
