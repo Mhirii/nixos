@@ -126,6 +126,7 @@
     font-manager
     telegram-desktop
     vscode
+    zed
 
     obsidian
 
