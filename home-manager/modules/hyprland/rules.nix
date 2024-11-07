@@ -77,6 +77,8 @@ in {
       "float,title:^(submap)$"
       "center 1,title:^(submap)$"
       "tile, title:(Developer Tools.*)"
+      "center 1, initialTitle:^(File Upload)$"
+      "size 80% 70%, initialTitle:^(File Upload)$"
     ];
   };
 }
