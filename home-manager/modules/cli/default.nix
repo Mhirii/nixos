@@ -19,7 +19,6 @@
   programs.fzf.tmux.enableShellIntegration = true;
 
   programs.jq.enable = true;
-  programs.lazygit.enable = true;
   programs.man.enable = true;
   programs.ripgrep.enable = true;
 }

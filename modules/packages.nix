@@ -22,10 +22,10 @@
     kitty
     starship
     git
-    lazygit
     delta
     gh
     glab
+    lazygit
     lazydocker
     #postman
     wget
