@@ -83,5 +83,4 @@ in {
     # askPassword = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
   };
   services.ssh-agent.enable = true;
-  programs.seahorse.enable = true;
 }
