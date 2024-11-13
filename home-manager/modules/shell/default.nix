@@ -1,4 +1,8 @@
-{lib, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./bash.nix
     ./fish.nix
@@ -39,5 +43,6 @@
     EDITOR = "nvim";
     USE_EDITOR = "$EDITOR";
     VISUAL = "$EDITOR";
+    # SSH_ASKPASS = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
   };
 }
