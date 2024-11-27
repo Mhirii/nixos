@@ -48,6 +48,8 @@
     sqlite
     postgresql
     ytmdl
+    zip
+    unzip
 
     # go
     go
