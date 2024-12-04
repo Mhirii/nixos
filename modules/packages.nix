@@ -144,6 +144,8 @@
     unstable_pkgs.docker-buildx
 
     inputs.zen-browser.packages."${system}".specific
+
+    unstable_pkgs.unciv
   ];
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Monaspace" "JetBrainsMono"];})
