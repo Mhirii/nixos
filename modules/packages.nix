@@ -142,6 +142,10 @@
     unstable_pkgs.docker
     unstable_pkgs.docker-compose
     unstable_pkgs.docker-buildx
+    unstable_pkgs.minikube
+    unstable_pkgs.kubectl
+    unstable_pkgs.terraform
+    unstable_pkgs.k3s
 
     inputs.zen-browser.packages."${system}".specific
 
