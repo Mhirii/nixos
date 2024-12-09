@@ -78,6 +78,7 @@
     clang
     clang-tools
     cmake
+    gcc
     # others
     python3
     envoy
