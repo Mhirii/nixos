@@ -6,7 +6,7 @@
 }: let
   enable = !prefs.disableGpu;
 in {
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   services.xserver.videoDrivers = lib.mkIf enable ["nvidia"];
 

@@ -98,7 +98,7 @@
     spicetify-cli
     zathura
     mpv
-    gnome.eog
+    eog
     vlc
     playerctl
     insomnia
@@ -121,7 +121,7 @@
     gtk3
     gtk4
     polkit_gnome
-    gnome.seahorse
+    seahorse
 
     libreoffice
     inkscape

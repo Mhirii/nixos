@@ -1,9 +1,9 @@
 {lib, ...}: {
   hardware = {
-    opengl = {
+    graphics = {
       enable = lib.mkDefault true;
-      driSupport = true;
-      driSupport32Bit = true;
+      # driSupport = true;
+      # driSupport32Bit = true;
     };
   };
 }
