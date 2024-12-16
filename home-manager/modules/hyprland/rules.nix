@@ -38,8 +38,6 @@ in {
       special_scale_factor = 0.9;
       #	(0.0 - 1.0) master split factor, the ratio of master split
       mfact = 0.5;
-      #whether to apply gaps when there is only one window on a workspace, aka. smart gaps. (default: disabled - 0) no border - 1, with border - 2
-      no_gaps_when_only = 0;
       #default placement of the master area, can be left, right, top, bottom or center
       orientation = "left";
       #inherit fullscreen status when cycling/swapping to another window (e.g. monocle layout)

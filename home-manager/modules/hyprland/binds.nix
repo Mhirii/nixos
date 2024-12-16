@@ -126,7 +126,6 @@ let
   window = [
     "SUPER,       F,            fullscreen,"
     "SUPER SHIFT, F,            togglefloating,"
-    ",            F11,          fakefullscreen"
     "SUPER,       Y,            pin"
     "SUPER CTRL,  F,            centerwindow,"
     "SUPER ALT,   TAB,          layoutmsg,                      swapwithmaster master,"

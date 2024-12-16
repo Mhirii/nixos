@@ -35,11 +35,6 @@
       inactive_opacity = 0.95;
 
       blurls = ["rofi" "mako" "launcher" "bar0"];
-
-      drop_shadow = false;
-      shadow_range = 10;
-      shadow_render_power = 10;
-      "col.shadow" = lib.mkDefault "rgba(${base00}70)";
     };
 
     animations = {
