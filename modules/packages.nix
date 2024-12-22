@@ -94,6 +94,7 @@
     webcord-vencord
     element-desktop
     #slack
+    teams-for-linux
     spotify
     spicetify-cli
     zathura
