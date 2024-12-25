@@ -84,6 +84,7 @@
     envoy
     gnumake
     alejandra
+    protols
 
     # software
     firefox
