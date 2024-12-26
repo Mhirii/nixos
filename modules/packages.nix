@@ -105,6 +105,7 @@
     playerctl
     insomnia
     postman
+    deluge
 
     #sys
     cliphist
