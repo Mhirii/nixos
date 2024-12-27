@@ -12,6 +12,8 @@
     zen-browser.url = "github:MarceColl/zen-browser-flake";
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+
+    ghostty.url = "github:ghostty-org/ghostty";
   };
 
   outputs = {
@@ -20,6 +22,7 @@
     nixpkgs_unstable,
     hyprland,
     stylix,
+    ghostty,
     ...
   } @ inputs: let
     username = "mhiri";
