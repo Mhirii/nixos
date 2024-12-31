@@ -140,6 +140,8 @@
     unstable_pkgs.neovide
     unstable_pkgs.zed-editor
 
+    unstable_pkgs.mangayomi
+
     unstable_pkgs.fish
     unstable_pkgs.bun
     unstable_pkgs.deno
