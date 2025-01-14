@@ -6,5 +6,6 @@
     ++ [(import ./programs)]
     ++ [(import ./rofi)]
     ++ [(import ./shell)]
+    ++ [(import ./kdeconnect)]
     ++ [(import ./waybar)];
 }
