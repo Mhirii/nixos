@@ -4,6 +4,5 @@
     ./chromium.nix
     ./kitty.nix
     ./thunderbird.nix
-    ./ghostty.nix
   ];
 }

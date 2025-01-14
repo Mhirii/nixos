@@ -135,6 +135,7 @@
     vscode
 
     obsidian
+    megasync
 
     unstable_pkgs.neovim
     unstable_pkgs.neovide
@@ -154,7 +155,6 @@
     unstable_pkgs.k3s
 
     inputs.zen-browser.packages."${system}".specific
-    # inputs.ghostty.packages."${system}".default
 
     unstable_pkgs.unciv
   ];
