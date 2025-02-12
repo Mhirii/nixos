@@ -137,6 +137,8 @@
     obsidian
     megasync
 
+    ncurses
+
     unstable_pkgs.neovim
     unstable_pkgs.neovide
     unstable_pkgs.zed-editor
@@ -153,8 +155,9 @@
     unstable_pkgs.kubectl
     unstable_pkgs.terraform
     unstable_pkgs.k3s
+    unstable_pkgs.jetbrains.goland
 
-    inputs.zen-browser.packages."${system}".specific
+    inputs.zen-browser.packages."${system}".default
 
     unstable_pkgs.unciv
   ];

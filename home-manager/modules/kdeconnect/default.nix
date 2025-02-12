@@ -1,3 +1,3 @@
-{pkgs, ...}:{
-	services.kdeconnect.enable = true;
+{pkgs, ...}: {
+  services.kdeconnect.enable = true;
 }

@@ -1,5 +1,5 @@
 let
-  browser = "userapp-Zen Browser-EQ48S2.desktop";
+  browser = "userapp-Zen-JKUK12.desktop";
   image = "org.gnome.eog.desktop";
   editor = "nvim.desktop";
 in {
