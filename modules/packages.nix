@@ -27,7 +27,6 @@
     glab
     lazygit
     lazydocker
-    #postman
     wget
     curl
     curlie
@@ -135,7 +134,6 @@
     vscode
 
     obsidian
-    megasync
 
     ncurses
 
@@ -155,7 +153,14 @@
     unstable_pkgs.kubectl
     unstable_pkgs.terraform
     unstable_pkgs.k3s
+    unstable_pkgs.kind
+
+    # jetbrains
     unstable_pkgs.jetbrains.goland
+    unstable_pkgs.jetbrains.rust-rover
+    unstable_pkgs.jetbrains.webstorm
+    unstable_pkgs.jetbrains.clion
+    unstable_pkgs.jetbrains-toolbox
 
     inputs.zen-browser.packages."${system}".default
 
