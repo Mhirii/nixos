@@ -73,6 +73,7 @@
     sassc
     # rust
     rustup
+    cargo
     # c
     clang
     clang-tools
