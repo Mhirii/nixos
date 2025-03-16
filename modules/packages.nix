@@ -72,8 +72,8 @@
     sass
     sassc
     # rust
-    rustup
-    cargo
+    # rustup
+    # cargo
     # c
     clang
     clang-tools

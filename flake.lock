@@ -719,9 +719,30 @@
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs_unstable": "nixpkgs_unstable",
+        "rust-overlay": "rust-overlay",
         "sops-nix": "sops-nix",
         "stylix": "stylix",
         "zen-browser": "zen-browser"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1742092396,
+        "narHash": "sha256-oI9Nom826RVhnYpBW68PzSr8Bsw0DX97ng39bwwX7A8=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "af76221b285a999ab7d9d77fce8ba1db028f9801",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     },
     "sops-nix": {

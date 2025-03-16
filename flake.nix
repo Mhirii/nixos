@@ -13,6 +13,11 @@
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # ghostty.url = "github:ghostty-org/ghostty";
   };
 
@@ -22,6 +27,7 @@
     nixpkgs_unstable,
     hyprland,
     stylix,
+    rust-overlay,
     # ghostty,
     ...
   } @ inputs: let
@@ -47,7 +53,13 @@
     backupName = builtins.readFile (builtins.toFile "date" ''
       date +backup-%d-%m_%H-%M
     '');
-    commonModules = profile: [(import ./hosts/${profile})];
+    commonModules = profile: [
+      (import ./hosts/${profile})
+      ({pkgs, ...}: {
+        nixpkgs.overlays = [rust-overlay.overlays.default];
+        environment.systemPackages = [pkgs.rust-bin.stable.latest.default];
+      })
+    ];
 
     mkSystem = host: profile:
       lib.nixosSystem {
