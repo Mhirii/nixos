@@ -55,7 +55,12 @@
         ../../modules/hardware/nvidia/nouveau.nix
       ];
     };
-  };
+		passthrough.configuration = {
+      imports = [
+        ../../modules/hardware/nvidia/passthrough.nix
+      ];
+		};
+	};
 
   boot = {
     kernelModules = ["acpi_call"];
