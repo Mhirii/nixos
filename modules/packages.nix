@@ -85,7 +85,7 @@
     gnumake
     alejandra
     protols
-    # just
+    just
 
     # software
     firefox
