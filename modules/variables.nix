@@ -13,6 +13,7 @@
     GOBIN = "${GOPATH}/bin";
     BUN_INSTALL = "$HOME/.bun";
     PNPM_HOME = "${XDG_DATA_HOME}/pnpm";
+    ENCORE_HOME = "${XDG_DATA_HOME}/encore";
 
     # WGPU_BACKEND = "gl";
 

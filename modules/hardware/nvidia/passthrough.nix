@@ -1,7 +1,7 @@
 {
-	lib,
-	pkgs,
-	...
+  lib,
+  pkgs,
+  ...
 }: {
   boot.extraModprobeConfig = lib.mkIf true ''
     blacklist nouveau
@@ -20,6 +20,5 @@
   '';
   boot.blacklistedKernelModules = lib.mkIf true ["nouveau" "nvidia" "nvidia_drm" "nvidia_modeset"];
 
-	boot.kernelParams = [ "intel_iommu=on" ];
+  boot.kernelParams = ["intel_iommu=on"];
 }
-

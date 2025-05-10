@@ -51,7 +51,7 @@
     unzip
 
     # go
-    go
+    # unstable_pkgs.go
     air
     protobuf
     protoc-gen-go
@@ -85,6 +85,7 @@
     gnumake
     alejandra
     protols
+    # just
 
     # software
     firefox
