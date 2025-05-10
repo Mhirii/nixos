@@ -51,7 +51,7 @@
     unzip
 
     # go
-    # unstable_pkgs.go
+    unstable_pkgs.go
     air
     protobuf
     protoc-gen-go
