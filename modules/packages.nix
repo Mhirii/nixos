@@ -58,6 +58,7 @@
     protoc-gen-go-grpc
     protoc-gen-js
     protoc-gen-grpc-web
+    evans
     grpcurl
     golangci-lint
 
