@@ -49,6 +49,7 @@
     ytmdl
     zip
     unzip
+    warp
 
     # go
     unstable_pkgs.go
