@@ -62,6 +62,7 @@
     evans
     grpcurl
     golangci-lint
+    atlas
 
     # js
     nodejs_22
