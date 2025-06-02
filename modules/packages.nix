@@ -171,8 +171,9 @@
 
     unstable_pkgs.unciv
   ];
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Monaspace" "JetBrainsMono"];})
+  fonts.packages = with pkgs.nerd-fonts; [
+    monaspace
+    jetbrains-mono
   ];
 
   programs.fish.enable = true;
