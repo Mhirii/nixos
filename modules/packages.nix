@@ -49,7 +49,7 @@
     ytmdl
     zip
     unzip
-    warp
+    warp-terminal
 
     # go
     unstable_pkgs.go
