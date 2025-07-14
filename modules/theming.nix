@@ -4,7 +4,8 @@
   ...
 }: {
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Monaspace" "JetBrainsMono"];})
+    nerd-fonts.monaspace
+    nerd-fonts.jetbrains-mono
   ];
 
   environment.systemPackages = with pkgs; [

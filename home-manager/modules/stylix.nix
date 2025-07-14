@@ -30,7 +30,7 @@ in {
 
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerdfonts.override {fonts = ["Monaspace"];};
+      package = pkgs.nerd-fonts.monaspace;
       name = "MonaspaceNe Nerd Font";
       # name = "JetBrainsMono Nerd Font Mono";
     };
