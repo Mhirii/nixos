@@ -38,29 +38,29 @@
 
   # environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
 
-  specialisation = {
-    proprietary.configuration = {
-      imports = [
-        ../../modules/hardware/nvidia/prop.nix
-      ];
-    };
-    prime.configuration = {
-      imports = [
-        ../../modules/hardware/nvidia/prop.nix
-        ../../modules/hardware/nvidia/prime.nix
-      ];
-    };
-    oss.configuration = {
-      imports = [
-        ../../modules/hardware/nvidia/nouveau.nix
-      ];
-    };
-    passthrough.configuration = {
-      imports = [
-        ../../modules/hardware/nvidia/passthrough.nix
-      ];
-    };
-  };
+  # specialisation = {
+  #   proprietary.configuration = {
+  #     imports = [
+  #       ../../modules/hardware/nvidia/prop.nix
+  #     ];
+  #   };
+  #   prime.configuration = {
+  #     imports = [
+  #       ../../modules/hardware/nvidia/prop.nix
+  #       ../../modules/hardware/nvidia/prime.nix
+  #     ];
+  #   };
+  #   oss.configuration = {
+  #     imports = [
+  #       ../../modules/hardware/nvidia/nouveau.nix
+  #     ];
+  #   };
+  #   passthrough.configuration = {
+  #     imports = [
+  #       ../../modules/hardware/nvidia/passthrough.nix
+  #     ];
+  #   };
+  # };
 
   boot = {
     kernelModules = ["acpi_call"];

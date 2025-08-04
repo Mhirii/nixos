@@ -68,7 +68,6 @@
     nodejs_22
     nodePackages.pnpm
     prettierd
-    yarn
     biome
     esbuild
     typescript
@@ -91,17 +90,15 @@
     just
 
     # software
-    firefox
+    # firefox
     bitwarden-desktop
     bitwarden-cli
     # discord
-    betterdiscordctl
-    webcord-vencord
-    element-desktop
+    # webcord-vencord
     #slack
-    teams-for-linux
+    # teams-for-linux
     spotify
-    spicetify-cli
+    # spicetify-cli
     zathura
     mpv
     eog
@@ -131,16 +128,15 @@
     seahorse
 
     libreoffice
-    inkscape
+    # inkscape
     ani-cli
 
     font-manager
-    telegram-desktop
     vscode
 
     obsidian
 
-    ncurses
+    # ncurses
 
     unstable_pkgs.neovim
     unstable_pkgs.neovide
@@ -150,22 +146,19 @@
 
     unstable_pkgs.fish
     unstable_pkgs.bun
-    unstable_pkgs.deno
+    # unstable_pkgs.deno
     unstable_pkgs.docker
     unstable_pkgs.docker-compose
     unstable_pkgs.docker-buildx
     unstable_pkgs.minikube
     unstable_pkgs.kubectl
-    unstable_pkgs.terraform
-    unstable_pkgs.k3s
+    # unstable_pkgs.terraform
     unstable_pkgs.kind
 
     # jetbrains
-    unstable_pkgs.jetbrains.goland
-    unstable_pkgs.jetbrains.rust-rover
-    unstable_pkgs.jetbrains.webstorm
-    unstable_pkgs.jetbrains.clion
-    unstable_pkgs.jetbrains-toolbox
+    # unstable_pkgs.jetbrains.goland
+    # unstable_pkgs.jetbrains.rust-rover
+    # unstable_pkgs.jetbrains-toolbox
 
     inputs.zen-browser.packages."${system}".default
 

@@ -6,8 +6,7 @@
     nixpkgs_unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     stylix.url = "github:danth/stylix";
 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    ags.url = "github:Aylur/ags";
+    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     sops-nix.url = "github:Mic92/sops-nix";
@@ -25,7 +24,7 @@
     self,
     nixpkgs,
     nixpkgs_unstable,
-    hyprland,
+    # hyprland,
     stylix,
     rust-overlay,
     # ghostty,
@@ -72,7 +71,7 @@
       };
   in {
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
-    programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    # programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     nixosConfigurations = {
       desktop = mkSystem "desktop" "desktop";
       laptop = mkSystem "laptop" "laptop";

@@ -3,9 +3,9 @@
   system.stateVersion = "24.05";
   imports =
     [(import ./boot.nix)]
+    ++ [(import ./nix.nix)]
     ++ [(import ./i18n.nix)]
     ++ [(import ./hardware)]
-    ++ [(import ./nix.nix)]
     ++ [(import ./variables.nix)]
     ++ [(import ./services.nix)]
     ++ [(import ./user.nix)]
