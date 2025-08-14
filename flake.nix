@@ -56,7 +56,13 @@
       (import ./hosts/${profile})
       ({pkgs, ...}: {
         nixpkgs.overlays = [rust-overlay.overlays.default];
-        environment.systemPackages = [pkgs.rust-bin.stable.latest.default];
+        environment.systemPackages = with pkgs; [
+          rust-bin.stable.latest.default
+          cargo
+          rust-analyzer
+          clippy
+          rustfmt
+        ];
       })
     ];
 
@@ -71,7 +77,7 @@
       };
   in {
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
-    # programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     nixosConfigurations = {
       desktop = mkSystem "desktop" "desktop";
       laptop = mkSystem "laptop" "laptop";
