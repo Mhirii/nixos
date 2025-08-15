@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  username,
+  pkgs,
+  ...
+}: {
   services = {
     keyd = {
       enable = true;
@@ -61,7 +65,7 @@
   virtualisation.docker = {
     enable = true;
     rootless = {
-      enable = true;
+      enable = false;
       setSocketVariable = true;
     };
     enableNvidia = false;
