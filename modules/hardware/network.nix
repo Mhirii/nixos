@@ -8,6 +8,7 @@
       enable = true;
       allowedTCPPorts = [22 80 443 59010 59011];
       allowedUDPPorts = [59010 59011];
+      trustedInterfaces = ["docker0"];
       extraCommands = ''
         iptables -I INPUT 1 -i docker0 -p tcp -d 172.17.0.1 -j ACCEPT
         iptables -I INPUT 2 -i docker0 -p udp -d 172.17.0.1 -j ACCEPT
