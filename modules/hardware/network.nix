@@ -4,8 +4,11 @@
     # hostName = "nixos";
     networkmanager.enable = true;
     nameservers = ["1.1.1.1"];
+    hosts = {
+      "172.17.0.1" = ["host.docker.internal"];
+    };
     firewall = {
-      enable = true;
+      enable = false;
       allowedTCPPorts = [22 80 443 3000 8080 8081 8082 8083 8443 59010 59011];
       allowedUDPPorts = [8080 8081 8082 8083 59010 59011];
       trustedInterfaces = ["docker0" "bridge"];
