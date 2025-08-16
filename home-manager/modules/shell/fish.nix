@@ -114,6 +114,10 @@ in {
       '';
 
     functions = {
+      getLocalIP = ''
+        ip addr show wlo1 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1
+      '';
+
       getVitePID =
         # fish
         ''
