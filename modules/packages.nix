@@ -155,6 +155,7 @@
     unstable_pkgs.kubectl
     # unstable_pkgs.terraform
     unstable_pkgs.kind
+    unstable_pkgs.opencode
 
     # jetbrains
     # unstable_pkgs.jetbrains.goland
