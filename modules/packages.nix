@@ -98,7 +98,7 @@
     # webcord-vencord
     #slack
     # teams-for-linux
-    spotify
+    unstable_pkgs.spotify
     # spicetify-cli
     zathura
     mpv
