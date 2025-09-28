@@ -53,6 +53,7 @@
 
     # go
     unstable_pkgs.go
+    unstable_pkgs.graphviz
     unstable_pkgs.delve
     air
     protobuf
