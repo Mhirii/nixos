@@ -165,6 +165,8 @@
 
     inputs.zen-browser.packages."${system}".default
 
+    unstable_pkgs.rclone
+
     unstable_pkgs.unciv
   ];
   fonts.packages = with pkgs; [
