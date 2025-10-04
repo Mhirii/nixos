@@ -166,6 +166,7 @@
     inputs.zen-browser.packages."${system}".default
 
     unstable_pkgs.rclone
+    unstable_pkgs.notion
 
     unstable_pkgs.unciv
   ];
