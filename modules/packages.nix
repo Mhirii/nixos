@@ -83,6 +83,8 @@
     clang-tools
     cmake
     gcc
+    lua
+    luajit
     # others
     python3
     envoy
