@@ -1,11 +1,12 @@
 {pkgs, ...}: {
-  # services.dnsmasq = {
-  #   enable = true;
-  #   package = pkgs.dnsmasq;
-  #   extraConfig = ''
-  #     address=/mhiri-dev.tn/127.0.0.1
-  #   '';
-  # };
+  services.dnsmasq = {
+    enable = true;
+    package = pkgs.dnsmasq;
+    resolveLocalQueries = true;
+    settings = {
+      address = ["/mhiri-dev.tn/127.0.0.1"];
+    };
+  };
 
   networking = {
     # wireless.enable = true; #user networkmanager instead
@@ -15,12 +16,6 @@
     hosts = {
       "172.17.0.1" = ["host.docker.internal"];
     };
-    # resolvConf = {
-    #   # Point your system resolver to dnsmasq at localhost
-    #   # You may need to adjust this depending on your system resolver setup
-    #   # For systemd-resolved, you may need additional config
-    #   nameservers = ["127.0.0.1"];
-    # };
     firewall = {
       enable = false;
       allowedTCPPorts = [22 80 443 3000 8080 8081 8082 8083 8443 59010 59011];
