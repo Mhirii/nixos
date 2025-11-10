@@ -12,7 +12,7 @@
     # wireless.enable = true; #user networkmanager instead
     # hostName = "nixos";
     networkmanager.enable = true;
-    nameservers = ["1.1.1.1"];
+    nameservers = ["1.1.1.1" "8.8.8.8"];
     hosts = {
       "172.17.0.1" = ["host.docker.internal"];
     };
