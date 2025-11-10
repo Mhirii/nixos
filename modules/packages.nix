@@ -30,6 +30,7 @@
     wget
     curl
     curlie
+    dig
     yazi
     pgcli
     eza
@@ -92,6 +93,7 @@
     alejandra
     protols
     just
+    statix
 
     # software
     # firefox
@@ -130,6 +132,7 @@
     gtk4
     polkit_gnome
     seahorse
+    dnsmasq
 
     libreoffice
     # inkscape
