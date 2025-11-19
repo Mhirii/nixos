@@ -99,6 +99,7 @@
     # firefox
     bitwarden-desktop
     bitwarden-cli
+    google-chrome
     # discord
     # webcord-vencord
     #slack
