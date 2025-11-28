@@ -4,6 +4,7 @@
   ...
 }: {
   services = {
+    cron.enable = true;
     keyd = {
       enable = true;
       keyboards = {
