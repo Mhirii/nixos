@@ -154,6 +154,7 @@
 
     unstable_pkgs.fish
     unstable_pkgs.bun
+    unstable_pkgs.deno
     # unstable_pkgs.deno
     unstable_pkgs.docker
     unstable_pkgs.docker-compose
