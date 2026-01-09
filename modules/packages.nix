@@ -144,8 +144,11 @@
 
     obsidian
 
-    # ncurses
+    # tui
+    unstable_pkgs.bluetui
+    unstable_pkgs.impala
 
+    # Coding
     unstable_pkgs.neovim
     unstable_pkgs.neovide
     unstable_pkgs.zed-editor
