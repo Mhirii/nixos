@@ -146,8 +146,6 @@
 
     # tui
     unstable_pkgs.bluetui
-    unstable_pkgs.impala
-    unstable_pkgs.iwd # needed by impala
 
     # Coding
     unstable_pkgs.neovim
