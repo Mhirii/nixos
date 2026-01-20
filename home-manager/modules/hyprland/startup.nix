@@ -1,15 +1,17 @@
 {
   wayland.windowManager.hyprland = {
     settings.exec-once = [
-      # "hyprpaper"
       "nm-applet --indicator"
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+
       "wl-paste -t text --watch clipman store"
       "wl-clipboard-history -t"
       "wl-paste --watch cliphist store"
+
       "swaync"
-      "waybar"
+
+      # "waybar"
 
       "tmux new -s default -d && tmux send-keys -t default btop C-m"
 
@@ -19,6 +21,11 @@
       "hyprctl dispatch exec [workspace 5 silent] thunderbird"
       "hyprctl dispatch exec [workspace 6 silent] spotify"
       "hyprctl dispatch exec [workspace special:third silent] bitwarden"
+
+			"hyprctl hyprpaper preload '/home/mhiri/flake/home-manager/assets/idx.png'"
+			"hyprctl hyprpaper wallpaper ',/home/mhiri/flake/home-manager/assets/idx.png'"
+
+			"hyprpanel"
     ];
   };
 }

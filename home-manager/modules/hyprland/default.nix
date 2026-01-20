@@ -13,7 +13,6 @@
     ./monitors.nix
     ./inputs.nix
     ./rules.nix
-    # ./ags.nix
     ./variables.nix
   ];
 }

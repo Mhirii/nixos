@@ -13,9 +13,5 @@
       # -1.0 - 1.0, 0 means no modification.
       sensitivity = 0;
     };
-
-    gestures = {
-      workspace_swipe = "on";
-    };
   };
 }

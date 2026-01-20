@@ -7,5 +7,6 @@
     ++ [(import ./rofi)]
     ++ [(import ./shell)]
     ++ [(import ./kdeconnect)]
-    ++ [(import ./waybar)];
+    ++ [(import ./hyprpanel)];
+    # ++ [(import ./waybar)];
 }

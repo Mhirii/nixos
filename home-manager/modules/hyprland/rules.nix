@@ -2,10 +2,8 @@
   opacity = "0.8";
 
   float_windowrule = let
-    f = regex: "float, ^(${regex})$";
+    f = regex: "float, class:^(${regex})$";
   in [
-    (f "org.gnome.Calculator")
-    (f "org.gnome.Nautilus")
     (f "pavucontrol")
     (f "nm-connection-editor")
     (f "blueberry.py")
@@ -17,7 +15,7 @@
   ];
 
   opacity_windowrule = let
-    o = regex: "opacity ${opacity} override ${opacity} override, ^(${regex})$";
+    o = regex: "opacity ${opacity} override ${opacity} override, class:^(${regex})$";
   in [
     (o "thunar")
     (o "Spotify")
@@ -42,8 +40,6 @@ in {
       orientation = "left";
       #inherit fullscreen status when cycling/swapping to another window (e.g. monocle layout)
       inherit_fullscreen = "yes";
-      #when using orientation=center, keep the master window centered, even when it is the only window in the workspace.
-      always_center_master = "yes";
       #if enabled, resizing direction will be determined by the mouse’s position on the window (nearest to which corner). Else, it is based on the window’s tiling position.
       smart_resizing = "yes";
       #when enabled, dragging and dropping windows will put them at the cursor position. Otherwise, when dropped at the stack side, they will go to the top/bottom of the stack depending on new_on_top.
@@ -51,10 +47,7 @@ in {
     };
 
     windowrule =
-      [
-        "noblur,^(firefox)$"
-      ]
-      ++ float_windowrule
+      float_windowrule
       ++ opacity_windowrule;
 
     layerrule = [
