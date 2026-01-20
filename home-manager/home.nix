@@ -1,7 +1,7 @@
 {...}: {
   home.username = "mhiri";
   home.homeDirectory = "/home/mhiri";
-  home.stateVersion = "23.11";
+  home.stateVersion = "25.11";
   home.packages = [
   ];
 
