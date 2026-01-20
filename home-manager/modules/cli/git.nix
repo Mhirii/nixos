@@ -9,10 +9,12 @@ in {
 
   programs.git = {
     enable = true;
-    userName = name;
-    userEmail = "ahmedmhiri218@gmail.com";
 
-    extraConfig = {
+    settings = {
+      user = {
+        name = name;
+        email = "ahmedmhiri218@gmail.com";
+      };
       init.defaultBranch = "main";
       color.ui = true;
       github.user = name;
@@ -64,21 +66,26 @@ in {
         period = 5;
       };
     };
-
-    delta = {
-      enable = true;
-      options = {
-        features = "decorations";
-        side-by-side = true;
-        interactive.keep-plus-minus-markers = false;
-      };
-    };
-
-    # diff-so-fancy.enable = true;
   };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options = {
+      features = "decorations";
+      side-by-side = true;
+      interactive.keep-plus-minus-markers = false;
+    };
+  };
+
+  # diff-so-fancy.enable = true;
+
   programs.ssh = {
     enable = true;
-    addKeysToAgent = "yes";
+    enableDefaultConfig = true;
+    matchBlocks."*" = {
+      addKeysToAgent = "yes";
+    };
     # enableAskPassword = true;
     # askPassword = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
   };

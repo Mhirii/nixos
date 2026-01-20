@@ -50,7 +50,7 @@ rebuild-force:
 # Rebuild home-manager
 rebuild-home:
     @echo "Rebuilding home-manager..."
-    cd home-manager && home-manager switch --flake .
+    cd home-manager && home-manager switch --flake . -b (date +backup-%d-%m_%H-%M)
 
 # Format nix files with alejandra
 format:

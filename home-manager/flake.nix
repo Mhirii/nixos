@@ -33,7 +33,7 @@
       inherit pkgs;
       modules = [
         ./home.nix
-        stylix.homeManagerModules.stylix
+        stylix.homeModules.stylix
         (import ./modules/stylix.nix)
       ];
       extraSpecialArgs = {inherit inputs unstable_pkgs;};

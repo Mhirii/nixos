@@ -46,7 +46,7 @@ in {
     swappy
     wl-clipboard
     waybar
-    rofi-wayland
+    rofi
     fuzzel
     nwg-look
     nwg-displays

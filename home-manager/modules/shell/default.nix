@@ -43,6 +43,6 @@
     EDITOR = "nvim";
     USE_EDITOR = "$EDITOR";
     VISUAL = "$EDITOR";
-    SSH_ASKPASS = "${pkgs.gnome.seahorse}/libexec/seahorse/ssh-askpass";
+    SSH_ASKPASS = "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
   };
 }

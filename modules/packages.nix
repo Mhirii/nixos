@@ -65,7 +65,6 @@
     evans
     grpcurl
     golangci-lint
-    atlas
 
     # js
     nodejs_22
@@ -88,7 +87,6 @@
     luajit
     # others
     python3
-    envoy
     gnumake
     alejandra
     protols
@@ -156,15 +154,12 @@
 
     unstable_pkgs.fish
     unstable_pkgs.bun
-    unstable_pkgs.deno
     # unstable_pkgs.deno
     unstable_pkgs.docker
     unstable_pkgs.docker-compose
     unstable_pkgs.docker-buildx
-    unstable_pkgs.minikube
     unstable_pkgs.kubectl
     # unstable_pkgs.terraform
-    unstable_pkgs.kind
     unstable_pkgs.opencode
 
     # jetbrains
@@ -179,7 +174,8 @@
     unstable_pkgs.unciv
   ];
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Monaspace" "JetBrainsMono"];})
+    nerd-fonts.monaspace
+    nerd-fonts.jetbrains-mono
   ];
 
   programs.fish.enable = true;

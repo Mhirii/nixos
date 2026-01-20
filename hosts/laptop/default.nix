@@ -13,7 +13,7 @@
 
   users.users."mhiri".packages = with pkgs; [
     acpi
-    go-upower-notify
+    upower-notify
     upower
     brightnessctl
     cpupower-gui
