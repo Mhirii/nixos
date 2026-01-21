@@ -8,5 +8,5 @@
     ++ [(import ./shell)]
     ++ [(import ./kdeconnect)]
     ++ [(import ./hyprpanel)];
-    # ++ [(import ./waybar)];
+  # ++ [(import ./waybar)];
 }

@@ -1,4 +1,8 @@
-{pkgs, lib, ...}: let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   monospace = {
     base00 = "#10151d";
     base01 = "#1f2939";
@@ -17,7 +21,7 @@
     base0E = "#a87ffb";
     base0F = "#bd9cfe";
   };
-	samurai = {
+  samurai = {
     base00 = "#0b0e14";
     base01 = "#161b29";
     base02 = "#222a3f";
@@ -34,26 +38,26 @@
     base0D = "#759eea";
     base0E = "#9d7cd8";
     base0F = "#8af0e6";
-	};
-	nasa={
-		base00 = "#0e131b";
-		base01 = "#1d2533";
-		base02 = "#303b4d";
-		base03 = "#455166";
-		base04 = "#8b98a9";
-		base05 = "#a4afbd";
-		base06 = "#d9dfe7";
-		base07 = "#fafbfe";
-		base08 = "#ef7d93";
-		base09 = "#efc48c";
-		base0A = "#e6b96a";
-		base0B = "#82cca6";
-		base0C = "#7bc7e6";
-		base0D = "#8ba3e8";
-		base0E = "#a58ae6";
-		base0F = "#c48bd9";
-	};
-	theme = nasa;
+  };
+  nasa = {
+    base00 = "#0e131b";
+    base01 = "#1d2533";
+    base02 = "#303b4d";
+    base03 = "#455166";
+    base04 = "#8b98a9";
+    base05 = "#a4afbd";
+    base06 = "#d9dfe7";
+    base07 = "#fafbfe";
+    base08 = "#ef7d93";
+    base09 = "#efc48c";
+    base0A = "#e6b96a";
+    base0B = "#82cca6";
+    base0C = "#7bc7e6";
+    base0D = "#8ba3e8";
+    base0E = "#a58ae6";
+    base0F = "#c48bd9";
+  };
+  theme = nasa;
 in {
   stylix.enable = true;
   stylix.enableReleaseChecks = false;
@@ -95,8 +99,7 @@ in {
     popups = 0.9;
   };
   stylix.targets.gnome.enable = false;
-	stylix.targets.hyprpanel={
-		enable=false;
-	};
+  stylix.targets.hyprpanel = {
+    enable = false;
+  };
 }
-

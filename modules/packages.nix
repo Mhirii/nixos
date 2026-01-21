@@ -172,6 +172,8 @@
     unstable_pkgs.rclone
 
     unstable_pkgs.unciv
+
+    unstable_pkgs.cypress
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.monaspace
