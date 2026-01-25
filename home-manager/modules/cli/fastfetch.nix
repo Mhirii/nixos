@@ -3,7 +3,7 @@
 		enable = true;
 		settings={
 			logo={
-				source="nixos_small";
+				source="nixos";
 				padding={
 					right=1;
 				};
@@ -23,12 +23,14 @@
         "wm"
         "terminal"
         "cpu"
+				"Processes"
         "gpu"
         "memory"
 				"disk"
 				"battery"
-        "break"
-        "colors"
+				"localIp"
+				"break"
+				"colors"
       ];
 		};
 	};

@@ -47,6 +47,7 @@ in {
           set -U __done_notification_urgency_level low
 
           if status --is-interactive
+              fastfetch
               source ("starship" init fish --print-full-init | psub)
           end
 
