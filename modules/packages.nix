@@ -44,7 +44,6 @@
     btop
     speedtest-rs
     jq
-    fastfetch
     sqlite
     postgresql
     ytmdl
@@ -173,6 +172,7 @@
 
     unstable_pkgs.unciv
 
+    unstable_pkgs.teams-for-linux
     unstable_pkgs.cypress
   ];
   fonts.packages = with pkgs; [

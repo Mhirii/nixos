@@ -12,6 +12,23 @@ in {
         customModules.storage.paths = ["/"];
         launcher.icon = "󰣇";
         launcher.autoDetectIcon = true;
+        layouts={
+	        "0"={
+	            left= ["dashboard" "workspaces" "battery" "volume" "systray"];
+	            middle= ["media"];
+	            right= ["network" "bluetooth" "clock" "notifications"];
+    	    };
+         "1"={
+         			left= ["dashboard" "workspaces" "battery" "volume" "systray"];
+	            middle= ["media"];
+	            right= ["network" "bluetooth" "clock" "notifications"];
+    	    };
+         "2"={
+      				left= ["dashboard" "workspaces" "battery" "volume" "systray"];
+	            middle= ["media"];
+	            right= ["network" "bluetooth" "clock" "notifications"];
+    	    };
+        };
         workspaces = {
           monitorSpecific = false;
           show_numbered = false;
@@ -65,20 +82,20 @@ in {
                 background = theme.base00;
                 border = theme.base01;
                 card = theme.base00;
-                clear = theme.base0D;
-                label = theme.base0D;
-                scrollbar.color = theme.base0D;
+                clear = theme.base0C;
+                label = theme.base0C;
+                scrollbar.color = theme.base0C;
                 no_notifications_label = theme.base01;
 
                 pager = {
                   background = theme.base00;
-                  button = theme.base0D;
+                  button = theme.base0C;
                   label = theme.base04;
                 };
 
                 switch = {
                   disabled = theme.base01;
-                  enabled = theme.base0D;
+                  enabled = theme.base0C;
                   puck = theme.base02;
                   switch_divider = theme.base02;
                 };
@@ -99,8 +116,8 @@ in {
                 buttons = {
                   sleep = {
                     icon = theme.base01;
-                    text = theme.base0D;
-                    icon_background = theme.base0D;
+                    text = theme.base0C;
+                    icon_background = theme.base0C;
                     background = theme.base00;
                   };
 
@@ -161,9 +178,9 @@ in {
 
                 directories = {
                   right = {
-                    bottom.color = theme.base0D;
+                    bottom.color = theme.base0C;
                     middle.color = theme.base0E;
-                    top.color = theme.base0C;
+                    top.color = theme.base0D;
                   };
 
                   left = {
@@ -191,7 +208,7 @@ in {
 
                   bluetooth = {
                     text = theme.base01;
-                    background = theme.base0D;
+                    background = theme.base0C;
                   };
 
                   wifi = {
@@ -205,28 +222,28 @@ in {
                 shortcuts = {
                   recording = theme.base0B;
                   text = theme.base01;
-                  background = theme.base0D;
+                  background = theme.base0C;
                 };
 
                 powermenu = {
                   confirmation = {
                     button_text = theme.base00;
                     deny = theme.base0E;
-                    confirm = theme.base0C;
+                    confirm = theme.base0D;
                     body = theme.base06;
-                    label = theme.base0D;
+                    label = theme.base0C;
                     border = theme.base01;
                     background = theme.base00;
                     card = theme.base00;
                   };
 
-                  sleep = theme.base0D;
+                  sleep = theme.base0C;
                   logout = theme.base0B;
                   restart = theme.base09;
                   shutdown = theme.base08;
                 };
 
-                profile.name = theme.base0C;
+                profile.name = theme.base0D;
                 border.color = theme.base01;
                 background.color = theme.base00;
                 card.color = theme.base00;
@@ -241,15 +258,15 @@ in {
                   };
 
                   thermometer = {
-                    extremelycold = theme.base0D;
-                    cold = theme.base0D;
-                    moderate = theme.base0D;
+                    extremelycold = theme.base0C;
+                    cold = theme.base0C;
+                    moderate = theme.base0C;
                     hot = theme.base09;
                     extremelyhot = theme.base08;
                   };
 
                   stats = theme.base0E;
-                  status = theme.base0C;
+                  status = theme.base0D;
                   temperature = theme.base06;
                   icon = theme.base0E;
                 };
@@ -260,11 +277,11 @@ in {
                   currentday = theme.base0E;
                   paginator = theme.base0E;
                   weekdays = theme.base0E;
-                  yearmonth = theme.base0C;
+                  yearmonth = theme.base0D;
                 };
 
                 time = {
-                  timeperiod = theme.base0C;
+                  timeperiod = theme.base0D;
                   time = theme.base0E;
                 };
 
@@ -309,34 +326,34 @@ in {
 
               bluetooth = {
                 iconbutton = {
-                  iconbutton.active = theme.base0D;
+                  iconbutton.active = theme.base0C;
                   iconbutton.passive = theme.base06;
                 };
 
                 icons = {
-                  icons.active = theme.base0D;
+                  icons.active = theme.base0C;
                   icons.passive = theme.base04;
                 };
 
                 listitems = {
-                  active = theme.base0D;
+                  active = theme.base0C;
                   passive = theme.base06;
                 };
 
                 switch = {
                   puck = theme.base02;
                   disabled = theme.base01;
-                  enabled = theme.base0D;
+                  enabled = theme.base0C;
                   switch_divider = theme.base02;
                 };
 
                 status = theme.base03;
                 text = theme.base06;
-                label.color = theme.base0D;
+                label.color = theme.base0C;
                 border.color = theme.base01;
                 background.color = theme.base00;
                 card.color = theme.base00;
-                scroller.color = theme.base0D;
+                scroller.color = theme.base0C;
               };
 
               network = {
@@ -410,8 +427,8 @@ in {
 
                 buttons = {
                   text = theme.base00;
-                  background = theme.base0D;
-                  enabled = theme.base0C;
+                  background = theme.base0C;
+                  enabled = theme.base0D;
                   inactive = theme.base03;
                 };
 
@@ -419,8 +436,8 @@ in {
                 card.color = theme.base00;
                 background.color = theme.base00;
                 album = theme.base0E;
-                artist = theme.base0C;
-                song = theme.base0D;
+                artist = theme.base0D;
+                song = theme.base0C;
               };
             };
 
@@ -429,7 +446,7 @@ in {
 
             buttons = {
               active = theme.base0E;
-              default = theme.base0D;
+              default = theme.base0C;
               disabled = theme.base03;
               text = theme.base01;
             };
@@ -437,7 +454,7 @@ in {
             cards = theme.base00;
 
             check_radio_button = {
-              active = theme.base0D;
+              active = theme.base0C;
               background = theme.base01;
             };
 
@@ -452,43 +469,43 @@ in {
             feinttext = theme.base01;
 
             iconbuttons = {
-              active = theme.base0D;
+              active = theme.base0C;
               passive = theme.base06;
             };
 
             icons = {
-              active = theme.base0D;
+              active = theme.base0C;
               passive = theme.base03;
             };
 
-            label = theme.base0D;
+            label = theme.base0C;
 
             listitems = {
-              active = theme.base0D;
+              active = theme.base0C;
               passive = theme.base06;
             };
 
             popover = {
               background = theme.base01;
               border = theme.base01;
-              text = theme.base0D;
+              text = theme.base0C;
             };
 
             progressbar = {
               background = theme.base02;
-              foreground = theme.base0D;
+              foreground = theme.base0C;
             };
 
             slider = {
               background = theme.base03;
               backgroundhover = theme.base02;
-              primary = theme.base0D;
+              primary = theme.base0C;
               puck = theme.base03;
             };
 
             switch = {
               disabled = theme.base01;
-              enabled = theme.base0D;
+              enabled = theme.base0C;
               puck = theme.base02;
             };
 
@@ -501,14 +518,14 @@ in {
           };
 
           background = theme.base00;
-          border.color = theme.base0D;
+          border.color = theme.base0C;
           buttons = {
             background = theme.base00;
-            borderColor = theme.base0D;
+            borderColor = theme.base0C;
             hover = theme.base02;
-            icon = theme.base0C;
+            icon = theme.base06;
             icon_background = theme.base00;
-            text = theme.base0C;
+            text = theme.base06;
 
             battery = {
               background = theme.base00;
@@ -520,41 +537,41 @@ in {
 
             bluetooth = {
               background = theme.base00;
-              border = theme.base0D;
-              icon = theme.base0D;
-              icon_background = theme.base0D;
-              text = theme.base0D;
+              border = theme.base0C;
+              icon = theme.base0C;
+              icon_background = theme.base0C;
+              text = theme.base0C;
             };
 
             clock = {
               background = theme.base00;
-              border = theme.base0E;
-              icon = theme.base0E;
-              icon_background = theme.base0E;
-              text = theme.base0E;
+              border = theme.base06;
+              icon = theme.base06;
+              icon_background = theme.base06;
+              text = theme.base06;
             };
 
             dashboard = {
               background = theme.base00;
-              border = theme.base0C;
-              icon = theme.base0C;
+              border = theme.base0D;
+              icon = theme.base0D;
             };
 
             media = {
               background = theme.base00;
-              border = theme.base0D;
-              icon = theme.base0D;
-              icon_background = theme.base0D;
-              text = theme.base0D;
+              border = theme.base0B;
+              icon = theme.base0B;
+              icon_background = theme.base0B;
+              text = theme.base0B;
             };
 
             modules = {
               cava = {
                 background = theme.base00;
-                border = theme.base0C;
-                icon = theme.base0C;
+                border = theme.base0D;
+                icon = theme.base0D;
                 icon_background = theme.base00;
-                text = theme.base0C;
+                text = theme.base0D;
               };
               cpu = {
                 background = theme.base00;
@@ -565,10 +582,10 @@ in {
               };
               hypridle = {
                 background = theme.base00;
-                border = theme.base0D;
-                icon = theme.base0D;
+                border = theme.base0C;
+                icon = theme.base0C;
                 icon_background = theme.base00;
-                text = theme.base0D;
+                text = theme.base0C;
               };
               hyprsunset = {
                 background = theme.base00;
@@ -579,10 +596,10 @@ in {
               };
               kbLayout = {
                 background = theme.base00;
-                border = theme.base0D;
-                icon = theme.base0D;
+                border = theme.base0C;
+                icon = theme.base0C;
                 icon_background = theme.base00;
-                text = theme.base0D;
+                text = theme.base0C;
               };
               microphone = {
                 background = theme.base00;
@@ -613,17 +630,17 @@ in {
               };
               storage = {
                 background = theme.base00;
-                border = theme.base0D;
-                icon = theme.base0D;
-                icon_background = theme.base00;
-                text = theme.base0D;
-              };
-              submap = {
-                background = theme.base00;
                 border = theme.base0C;
                 icon = theme.base0C;
                 icon_background = theme.base00;
                 text = theme.base0C;
+              };
+              submap = {
+                background = theme.base00;
+                border = theme.base0D;
+                icon = theme.base0D;
+                icon_background = theme.base00;
+                text = theme.base0D;
               };
               updates = {
                 background = theme.base00;
@@ -650,10 +667,10 @@ in {
 
             network = {
               background = theme.base00;
-              border = theme.base0E;
-              icon = theme.base0E;
-              icon_background = theme.base0E;
-              text = theme.base0E;
+              border = theme.base0C;
+              icon = theme.base0C;
+              icon_background = theme.base0C;
+              text = theme.base0C;
             };
 
             notifications = {
@@ -672,10 +689,10 @@ in {
 
             volume = {
               background = theme.base00;
-              border = theme.base09;
-              icon = theme.base09;
-              icon_background = theme.base09;
-              text = theme.base09;
+              border = theme.base07;
+              icon = theme.base07;
+              icon_background = theme.base07;
+              text = theme.base07;
             };
 
             windowtitle = {
@@ -690,11 +707,11 @@ in {
               active = theme.base0D;
               available = theme.base04;
               background = theme.base00;
-              border = theme.base07;
-              hover = theme.base02;
+              border = theme.base06;
+              hover = theme.base03;
               numbered_active_highlighted_text_color = theme.base00;
-              numbered_active_underline_color = theme.base07;
-              occupied = theme.base05;
+              numbered_active_underline_color = theme.base06;
+              occupied = theme.base06;
             };
           };
         };

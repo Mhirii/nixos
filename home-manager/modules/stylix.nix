@@ -45,17 +45,17 @@
     base02 = "#303b4d";
     base03 = "#455166";
     base04 = "#8b98a9";
-    base05 = "#a4afbd";
+    base05 = "#a4afbd"; 
     base06 = "#d9dfe7";
     base07 = "#fafbfe";
     base08 = "#ef7d93";
     base09 = "#efc48c";
     base0A = "#e6b96a";
     base0B = "#82cca6";
-    base0C = "#7bc7e6";
-    base0D = "#8ba3e8";
-    base0E = "#a58ae6";
-    base0F = "#c48bd9";
+    base0C = "#73A3F3";
+    base0D = "#5FC0E3"; 
+    base0E = "#BD60FB";
+    base0F = "#FC226B";
   };
   theme = nasa;
 in {
