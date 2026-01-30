@@ -20,29 +20,16 @@ in {
 
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
+    # wlr.enable = true;
     xdgOpenUsePortal = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
     ];
     config.common.default = ["hyprland" "gtk"];
     config.common."org.freedesktop.portal.OpenURI" = "gtk";
   };
 
-  # xdg.portal = {
-  #   enable = true;
-  #   wlr.enable = true;
-  #   xdgOpenUsePortal = true;
-  #   extraPortals = [
-  #     pkgs.xdg-desktop-portal-hyprland
-  #     pkgs.xdg-desktop-portal-gtk
-  #   ];
-  # };
   environment.systemPackages = with pkgs; [
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal-gtk
     hyprpicker
     hyprcursor
     hyprshot
