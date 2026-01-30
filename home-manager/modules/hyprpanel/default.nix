@@ -12,22 +12,22 @@ in {
         customModules.storage.paths = ["/"];
         launcher.icon = "󰣇";
         launcher.autoDetectIcon = true;
-        layouts={
-	        "0"={
-	            left= ["dashboard" "workspaces" "battery" "volume" "systray"];
-	            middle= ["media"];
-	            right= ["network" "bluetooth" "clock" "notifications"];
-    	    };
-         "1"={
-         			left= ["dashboard" "workspaces" "battery" "volume" "systray"];
-	            middle= ["media"];
-	            right= ["network" "bluetooth" "clock" "notifications"];
-    	    };
-         "2"={
-      				left= ["dashboard" "workspaces" "battery" "volume" "systray"];
-	            middle= ["media"];
-	            right= ["network" "bluetooth" "clock" "notifications"];
-    	    };
+        layouts = {
+          "0" = {
+            left = ["dashboard" "workspaces" "battery" "volume" "systray"];
+            middle = ["media"];
+            right = ["network" "bluetooth" "clock" "notifications"];
+          };
+          "1" = {
+            left = ["dashboard" "workspaces" "battery" "volume" "systray"];
+            middle = ["media"];
+            right = ["network" "bluetooth" "clock" "notifications"];
+          };
+          "2" = {
+            left = ["dashboard" "workspaces" "battery" "volume" "systray"];
+            middle = ["media"];
+            right = ["network" "bluetooth" "clock" "notifications"];
+          };
         };
         workspaces = {
           monitorSpecific = false;

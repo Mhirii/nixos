@@ -6,7 +6,7 @@
     ./tmux.nix
     ./yazi.nix
     ./zoxide.nix
-		./fastfetch.nix
+    ./fastfetch.nix
   ];
 
   programs.bat.enable = true;

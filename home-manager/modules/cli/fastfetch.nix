@@ -1,14 +1,14 @@
 {...}: {
-  programs.fastfetch={
-		enable = true;
-		settings={
-			logo={
-				source="nixos";
-				padding={
-					right=1;
-				};
-			};
-			modules=[
+  programs.fastfetch = {
+    enable = true;
+    settings = {
+      logo = {
+        source = "nixos";
+        padding = {
+          right = 1;
+        };
+      };
+      modules = [
         "title"
         "separator"
         "os"
@@ -23,15 +23,15 @@
         "wm"
         "terminal"
         "cpu"
-				"Processes"
+        "Processes"
         "gpu"
         "memory"
-				"disk"
-				"battery"
-				"localIp"
-				"break"
-				"colors"
+        "disk"
+        "battery"
+        "localIp"
+        "break"
+        "colors"
       ];
-		};
-	};
+    };
+  };
 }

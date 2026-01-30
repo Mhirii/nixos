@@ -22,7 +22,13 @@ in {
     enable = true;
     wlr.enable = true;
     xdgOpenUsePortal = true;
-    extraPortals = extraPortals;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-wlr
+    ];
+    config.common.default = ["hyprland" "gtk"];
+    config.common."org.freedesktop.portal.OpenURI" = "gtk";
   };
 
   # xdg.portal = {
@@ -36,13 +42,14 @@ in {
   # };
   environment.systemPackages = with pkgs; [
     xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk
     hyprpicker
     hyprcursor
     hyprshot
     hyprlock
     hypridle
     hyprpaper
-    swaynotificationcenter
+    # swaynotificationcenter
     swappy
     wl-clipboard
     waybar
