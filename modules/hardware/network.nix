@@ -15,11 +15,12 @@
     nameservers = ["1.1.1.1" "8.8.8.8"];
     hosts = {
       "172.17.0.1" = ["host.docker.internal"];
+      "51.103.254.249" = ["k8s.qim.lab"];
     };
     firewall = {
       enable = false;
-      allowedTCPPorts = [22 80 443 3000 8080 8081 8082 8083 8443 59010 59011];
-      allowedUDPPorts = [8080 8081 8082 8083 59010 59011];
+      allowedTCPPorts = [22 80 443 3000 8080 8081 8082 8083 8443 59010 59011 4317 4318];
+      allowedUDPPorts = [8080 8081 8082 8083 59010 59011 4317 4318];
       trustedInterfaces = ["docker0" "bridge"];
       extraCommands = ''
         iptables -I INPUT 1 -i docker0 -p tcp -d 172.17.0.1 -j ACCEPT

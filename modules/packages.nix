@@ -174,6 +174,8 @@
 
     unstable_pkgs.teams-for-linux
     unstable_pkgs.cypress
+
+    unstable_pkgs.lmstudio
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.monaspace
