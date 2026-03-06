@@ -180,6 +180,8 @@
   fonts.packages = with pkgs; [
     nerd-fonts.monaspace
     nerd-fonts.jetbrains-mono
+    nerd-fonts.space-mono
+    google-fonts
   ];
 
   programs.fish.enable = true;
