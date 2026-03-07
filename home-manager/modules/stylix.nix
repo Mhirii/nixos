@@ -99,6 +99,11 @@ in {
     popups = 0.9;
   };
   stylix.targets.gnome.enable = false;
+  stylix.targets.vicinae = {
+		enable=true;
+		colors.enable=true;
+		opacity.enable=true;
+	};
   stylix.targets.hyprpanel = {
     enable = false;
   };

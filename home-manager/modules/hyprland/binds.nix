@@ -72,7 +72,8 @@ let
     "SUPER, T, exec, $launch tmux"
     "SUPER, b, exec, [workspace 2 silent] $launch browser"
     "SUPER, e, exec, thunar"
-    "SUPER, R, exec, rofi -show drun"
+    "SUPER, R, exec, vicinae toggle"
+    "SUPER SHIFT, R, exec, rofi -show drun"
     "SUPER, N, exec, swaync-client -t"
     "SUPER SHIFT, N, exec, neovide"
   ];

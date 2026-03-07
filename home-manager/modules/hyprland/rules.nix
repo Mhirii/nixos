@@ -53,10 +53,12 @@ in {
     layerrule = [
       "blur , waybar"
       "blur , overlay"
+      "blur , bottom"
+      "blur , top"
       "ignorezero , waybar"
     ];
 
-    blurls = ["thunar"];
+    blurls = ["thunar" "vicinae"];
 
     windowrulev2 = [
       "opacity 0.7 0.7,floating:1"

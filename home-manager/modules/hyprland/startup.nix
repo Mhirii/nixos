@@ -26,7 +26,7 @@
       "hyprctl hyprpaper preload '/home/mhiri/flake/home-manager/assets/nasa.png'"
       "hyprctl hyprpaper wallpaper ',/home/mhiri/flake/home-manager/assets/nasa.png'"
 
-      "hyprpanel"
+      # "hyprpanel"
     ];
   };
 }
