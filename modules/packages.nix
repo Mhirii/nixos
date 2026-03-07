@@ -148,6 +148,7 @@
     unstable_pkgs.neovim
     unstable_pkgs.neovide
     unstable_pkgs.zed-editor
+    unstable_pkgs. antigravity-fhs
 
     unstable_pkgs.mangayomi
 
