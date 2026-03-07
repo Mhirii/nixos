@@ -17,6 +17,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    antigravity-nix = {
+      url = "github:jacopone/antigravity-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # ghostty.url = "github:ghostty-org/ghostty";
   };
 
@@ -27,6 +32,7 @@
     # hyprland,
     stylix,
     rust-overlay,
+    antigravity-nix,
     # ghostty,
     ...
   } @ inputs: let
@@ -55,13 +61,14 @@
     commonModules = profile: [
       (import ./hosts/${profile})
       ({pkgs, ...}: {
-        nixpkgs.overlays = [rust-overlay.overlays.default];
+        nixpkgs.overlays = [rust-overlay.overlays.default antigravity-nix.overlays.default];
         environment.systemPackages = with pkgs; [
           rust-bin.stable.latest.default
           cargo
           rust-analyzer
           clippy
           rustfmt
+          google-antigravity
         ];
       })
     ];
