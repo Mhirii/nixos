@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   environment.sessionVariables = rec {
     XDG_CACHE_HOME = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
@@ -9,6 +9,7 @@
     CUDA_CACHE_PATH = "${XDG_CACHE_HOME}/nv";
     GTK2_RC_FILES = "${XDG_CONFIG_HOME}/gtk-2.0/gtkrc";
     RUSTUP_HOME = "${XDG_DATA_HOME}/rustup";
+    RUST_SRC_PATH = "${pkgs.rust-bin.stable.latest.rust-src}/lib/rustlib/src/rust/library";
     GOPATH = "${XDG_DATA_HOME}/go";
     GOBIN = "${GOPATH}/bin";
     BUN_INSTALL = "$HOME/.bun";

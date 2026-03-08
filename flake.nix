@@ -63,11 +63,9 @@
       ({pkgs, ...}: {
         nixpkgs.overlays = [rust-overlay.overlays.default antigravity-nix.overlays.default];
         environment.systemPackages = with pkgs; [
-          rust-bin.stable.latest.default
-          cargo
-          rust-analyzer
-          clippy
-          rustfmt
+          (rust-bin.stable.latest.default.override {
+            extensions = ["rust-src" "rust-analyzer" "clippy" "rustfmt"];
+          })
           google-antigravity
         ];
       })
