@@ -80,7 +80,7 @@ let
 
   utils = [
     "SUPER SHIFT, equal,  exec, hyprpicker -a"
-    "SUPER, V,  exec, $launch clipboard"
+    "SUPER, V,  exec, vicinae vicinae://extensions/vicinae/clipboard/history"
     ", print,  exec, hyprshot -m output"
     "CTRL, print,  exec, hyprshot -m region"
     "SHIFT, print,  exec, hyprshot -m window"
