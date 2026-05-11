@@ -191,6 +191,12 @@ in {
           rm -f $HOME/.config/fish/themes/stylix.theme.bckup && \
           sudo nixos-rebuild switch --flake $HOME/flake#${profile}
         '';
+      forti =
+        # fish
+        ''
+          openfortivpn-webview vpn.altersis-performance.com:443 2>/dev/null | \
+          sudo openfortivpn vpn.altersis-performance.com:443 --cookie-on-stdin --pppd-accept-remote
+        '';
     };
 
     shellAbbrs = {

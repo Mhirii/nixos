@@ -131,6 +131,8 @@
     polkit_gnome
     seahorse
     dnsmasq
+    openfortivpn
+    openfortivpn-webview
 
     libreoffice
     # inkscape
