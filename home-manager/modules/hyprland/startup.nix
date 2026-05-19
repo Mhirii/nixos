@@ -12,7 +12,6 @@
       # "swaync"
 
       "waybar"
-      "vicinae server"
 
       "tmux new -s default -d && tmux send-keys -t default btop C-m"
 
