@@ -97,7 +97,7 @@
     bitwarden-desktop
     bitwarden-cli
     google-chrome
-    discord
+    vesktop
     # webcord-vencord
     #slack
     # teams-for-linux
