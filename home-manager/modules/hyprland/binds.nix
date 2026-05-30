@@ -81,9 +81,13 @@ let
   utils = [
     "SUPER SHIFT, equal,  exec, hyprpicker -a"
     "SUPER, V,  exec, vicinae vicinae://extensions/vicinae/clipboard/history"
+    "SUPER, G,  exec, vicinae vicinae://extensions/pavle99/zed-recents/open-recents"
     ", print,  exec, hyprshot -m output"
     "CTRL, print,  exec, hyprshot -m region"
     "SHIFT, print,  exec, hyprshot -m window"
+    "SUPER, X,  exec, hyprshot -m output"
+    "SUPER CTRL, X,  exec, hyprshot -m region"
+    "SUPER SHIFT, X,  exec, hyprshot -m window"
   ];
 
   session = [
