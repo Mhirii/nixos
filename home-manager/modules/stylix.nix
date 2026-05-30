@@ -112,9 +112,9 @@ in {
   };
   stylix.opacity = {
     applications = 1.0;
-    terminal = 0.2;
+    terminal = 0.6;
     desktop = 1.0;
-    popups = 0.9;
+    popups = 0.8;
   };
   stylix.targets.gnome.enable = false;
   stylix.targets.vicinae = {
