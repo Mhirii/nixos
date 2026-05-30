@@ -10,6 +10,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -17,6 +21,7 @@
     home-manager,
     stylix,
     nixpkgs_unstable,
+    noctalia,
     ...
   } @ inputs: let
     system = "x86_64-linux";

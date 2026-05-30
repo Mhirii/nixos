@@ -57,11 +57,29 @@
     base0E = "#BD60FB";
     base0F = "#FC226B";
   };
-  theme = nasa;
+  field = {
+		base00 = "#0d1117";
+		base01 = "#161d27";
+		base02 = "#222d3d";
+		base03 = "#405368";
+		base04 = "#6b849c";
+		base05 = "#a5b6c7";
+		base06 = "#ccd8e3";
+		base07 = "#ebf0f5";
+		base08 = "#d16b77";
+		base09 = "#d6b054";
+		base0A = "#cf8c52";
+		base0B = "#68b37e";
+		base0C = "#538ecf";
+		base0D = "#4cb0b5";
+		base0E = "#9a7bc4";
+		base0F = "#008eac";
+};
+  theme = field;
 in {
   stylix.enable = true;
   stylix.enableReleaseChecks = false;
-  stylix.image = ../assets/nasa.png;
+  stylix.image = ../assets/field.png;
   stylix.polarity = "dark";
   stylix.base16Scheme = theme;
   # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
@@ -77,12 +95,12 @@ in {
       # name = "JetBrainsMono Nerd Font Mono";
     };
     sansSerif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Sans";
+      package = pkgs.geist-font;
+      name = "Geist Sans";
     };
     serif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Serif";
+      package = pkgs.geist-font;
+      name = "Geist Regular";
     };
   };
 
