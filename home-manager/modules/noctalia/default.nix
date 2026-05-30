@@ -90,6 +90,9 @@
             }
           ];
           center = [
+	          {
+	            id = "plugin:privacy-indicator";
+	          }
             {
               compactMode = false;
               hideMode = "hidden";
@@ -116,6 +119,21 @@
             }
           ];
           right = [
+            {
+              id = "plugin:monitor-layout";
+              defaultSettings = {
+                backend = "auto";
+                gridSize = 40;
+                hyprctlCommand = "hyprctl";
+                iconColor = "primary";
+                snapToGrid = true;
+                swayCommand = "swaymsg";
+              };
+            }
+            {
+              id = "WallpaperSelector";
+              iconColor = "none";
+            }
             {
               applyToAllMonitors = false;
               displayMode = "onhover";

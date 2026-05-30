@@ -11,7 +11,8 @@
 
       # "swaync"
 
-      "waybar"
+      # "waybar"
+      "noctalia-shell"
 
       "tmux new -s default -d && tmux send-keys -t default btop C-m"
 
