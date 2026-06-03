@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   lib,
+  config,
   ...
 }: {
   # import the home manager module
@@ -90,9 +91,9 @@
             }
           ];
           center = [
-	          {
-	            id = "plugin:privacy-indicator";
-	          }
+            {
+              id = "plugin:privacy-indicator";
+            }
             {
               compactMode = false;
               hideMode = "hidden";
@@ -117,6 +118,9 @@
               showUnreadBadge = true;
               unreadBadgeColor = "primary";
             }
+						{
+							id= "plugin:sticky-notes";
+						}
           ];
           right = [
             {
@@ -165,16 +169,13 @@
               showPowerProfiles = false;
             }
             {
-              displayMode = "onhover";
-              iconColor = "none";
-              id = "Network";
-              textColor = "none";
-            }
-            {
-              displayMode = "onhover";
-              iconColor = "none";
-              id = "Bluetooth";
-              textColor = "none";
+              blacklist = ["nm-applet"];
+              chevronColor = "none";
+              colorizeIcons = false;
+              drawerEnabled = false;
+              hidePassive = false;
+              id = "Tray";
+              pinned = [];
             }
             {
               clockColor = "none";
@@ -210,7 +211,14 @@
         settingsPanelMode = "attached";
         settingsPanelSideBarCardStyle = false;
       };
+			wallpaper = {
+				enabled= true;
+				directory = "${config.home.homeDirectory}/flake/home-manager/assets";
+				wallpaperChangeMode= "random";
+				randomIntervalSec= 300;
+				transitionDuration= 1500;
+				transitionType= [ "fade" "wipe" ];
+			};
     };
-    # this may also be a string or a path to a JSON file.
   };
 }
