@@ -118,9 +118,9 @@
               showUnreadBadge = true;
               unreadBadgeColor = "primary";
             }
-						{
-							id= "plugin:sticky-notes";
-						}
+            {
+              id = "plugin:sticky-notes";
+            }
           ];
           right = [
             {
@@ -211,14 +211,14 @@
         settingsPanelMode = "attached";
         settingsPanelSideBarCardStyle = false;
       };
-			wallpaper = {
-				enabled= true;
-				directory = "${config.home.homeDirectory}/flake/home-manager/assets";
-				wallpaperChangeMode= "random";
-				randomIntervalSec= 300;
-				transitionDuration= 1500;
-				transitionType= [ "fade" "wipe" ];
-			};
+      wallpaper = {
+        enabled = true;
+        directory = "${config.home.homeDirectory}/flake/home-manager/assets";
+        wallpaperChangeMode = "random";
+        randomIntervalSec = 300;
+        transitionDuration = 1500;
+        transitionType = ["fade" "wipe"];
+      };
     };
   };
 }

@@ -5,5 +5,6 @@
     ./kitty.nix
     ./thunderbird.nix
     ./vicinae.nix
+    ./codex.nix
   ];
 }
