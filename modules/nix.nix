@@ -3,9 +3,9 @@
     settings = {
       auto-optimise-store = true;
       experimental-features = ["nix-command" "flakes"];
-      substituters = ["https://nix-gaming.cachix.org" "https://hyprland.cachix.org"];
+      substituters = ["https://nix-gaming.cachix.org" "https://hyprland.cachix.org" "https://codex-cli.cachix.org"];
       trusted-substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" "codex-cli.cachix.org-1:1Br3H1hHoRYG22n//cGKJOk3cQXgYobUel6O8DgSing="];
       warn-dirty = false;
 
       extra-substituters = ["https://noctalia.cachix.org"];
