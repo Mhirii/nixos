@@ -74,10 +74,6 @@
     typescript
     sass
     sassc
-    # rust
-    # rustup
-    # cargo
-    # c
     clang
     clang-tools
     cmake
@@ -96,19 +92,15 @@
     # firefox
     bitwarden-desktop
     bitwarden-cli
-    google-chrome
-    # webcord-vencord
-    #slack
-    # teams-for-linux
+
     unstable_pkgs.spotify
     # spicetify-cli
+
     zathura
     mpv
     eog
     vlc
     playerctl
-    insomnia
-    postman
     deluge
 
     #sys
@@ -142,42 +134,36 @@
 
     obsidian
 
-    # tui
-    unstable_pkgs.bluetui
-
     # Coding
     unstable_pkgs.neovim
     unstable_pkgs.neovide
     unstable_pkgs.zed-editor
-    # unstable_pkgs. antigravity-fhs # using overlay instead
-
-    unstable_pkgs.mangayomi
+		unstable_pkgs.opencode
+		unstable_pkgs.opencode-desktop
 
     unstable_pkgs.fish
     unstable_pkgs.bun
-    # unstable_pkgs.deno
     unstable_pkgs.docker
     unstable_pkgs.docker-compose
     unstable_pkgs.docker-buildx
     unstable_pkgs.kubectl
-    # unstable_pkgs.terraform
-    unstable_pkgs.opencode
 
     # jetbrains
     # unstable_pkgs.jetbrains.goland
     # unstable_pkgs.jetbrains.rust-rover
     # unstable_pkgs.jetbrains-toolbox
 
+    google-chrome
     inputs.zen-browser.packages."${system}".default
 
     unstable_pkgs.rclone
 
     unstable_pkgs.unciv
 
+		# work
     unstable_pkgs.teams-for-linux
     unstable_pkgs.cypress
 
-    unstable_pkgs.lmstudio
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.monaspace
