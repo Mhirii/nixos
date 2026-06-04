@@ -9,6 +9,9 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+		flake-utils = {
+			url = "github:numtide/flake-utils";
+		};
     stylix.url = "github:danth/stylix";
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
@@ -21,6 +24,9 @@
         flake-utils.follows = "flake-utils";
       };
     };
+		codex-desktop-linux = {
+			url = "github:ilysenko/codex-desktop-linux";
+		};
   };
 
   outputs = {

@@ -3,17 +3,15 @@ let
   codexCli = inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
-  imports = [
-    inputs.codex-cli-nix.homeModules.default
-  ];
-  programs.codex = {
-    enable = true;
-  };
+	home.packages = [ codexCli ];
 
 	home.sessionVariables.CODEX_CLI_PATH = "${codexCli}/bin/codex";
 
+	imports = [ inputs.codex-desktop-linux.homeManagerModules.default ];
+
+	programs.codexDesktopLinux.enable=true;
+
 	programs.codexDesktopLinux = {
-		enable=true;
     computerUseUi.enable = true;
     remoteMobileControl.enable = true;
 		remoteControl = {
