@@ -44,6 +44,7 @@
     btop
     speedtest-rs
     jq
+    yq
     sqlite
     postgresql
     ytmdl
@@ -138,8 +139,9 @@
     unstable_pkgs.neovim
     unstable_pkgs.neovide
     unstable_pkgs.zed-editor
-		unstable_pkgs.opencode
-		unstable_pkgs.opencode-desktop
+    unstable_pkgs.opencode
+    unstable_pkgs.opencode-desktop
+    unstable_pkgs.t3code
 
     unstable_pkgs.fish
     unstable_pkgs.bun
@@ -160,10 +162,9 @@
 
     unstable_pkgs.unciv
 
-		# work
+    # work
     unstable_pkgs.teams-for-linux
     unstable_pkgs.cypress
-
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.monaspace

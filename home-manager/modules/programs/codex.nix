@@ -1,22 +1,24 @@
-{inputs, pkgs, ...}: 
-let 
-  codexCli = inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default;
-in
 {
-	home.packages = [ codexCli ];
+  inputs,
+  pkgs,
+  ...
+}: let
+  codexCli = inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default;
+in {
+  home.packages = [codexCli];
 
-	home.sessionVariables.CODEX_CLI_PATH = "${codexCli}/bin/codex";
+  home.sessionVariables.CODEX_CLI_PATH = "${codexCli}/bin/codex";
 
-	imports = [ inputs.codex-desktop-linux.homeManagerModules.default ];
+  imports = [inputs.codex-desktop-linux.homeManagerModules.default];
 
-	programs.codexDesktopLinux.enable=true;
+  programs.codexDesktopLinux.enable = true;
 
-	programs.codexDesktopLinux = {
+  programs.codexDesktopLinux = {
     computerUseUi.enable = true;
     remoteMobileControl.enable = true;
-		remoteControl = {
-			enable=true;
-			package= codexCli;
-		};
-	};
+    remoteControl = {
+      enable = true;
+      package = codexCli;
+    };
+  };
 }
