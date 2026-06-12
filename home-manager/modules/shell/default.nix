@@ -37,7 +37,7 @@
     offload = lib.mkDefault "$FLAKE/offload.sh";
   };
   home.sessionVariables = {
-    BROWSER = "zen";
+    BROWSER = "zen-beta";
     TERM = "xterm-256color";
     TERMINAL = "kitty";
     EDITOR = "nvim";

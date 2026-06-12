@@ -7,7 +7,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    BROWSER = "zen";
+    BROWSER = "zen-beta";
     TERM = "xterm-256color";
     TERMINAL = "kitty";
     COLORTERM = "truecolor";
