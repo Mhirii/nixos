@@ -142,6 +142,7 @@
     unstable_pkgs.opencode
     unstable_pkgs.opencode-desktop
     unstable_pkgs.t3code
+    unstable_pkgs.pi-coding-agent
 
     unstable_pkgs.fish
     unstable_pkgs.bun
