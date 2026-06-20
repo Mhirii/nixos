@@ -49,7 +49,7 @@ in {
     windowrule =
       float_windowrule
       ++ opacity_windowrule
-			++ ["opacity 0.999 override 0.999 override, class:^(zen-beta)$"];
+      ++ ["opacity 0.999 override 0.999 override, class:^(zen-beta)$"];
 
     layerrule = [
       "blur , waybar"

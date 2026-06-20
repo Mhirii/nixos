@@ -1,6 +1,7 @@
 {
   username,
   pkgs,
+  unstable_pkgs,
   ...
 }: {
   services = {
@@ -69,6 +70,7 @@
       enable = false;
       setSocketVariable = true;
     };
+    package = unstable_pkgs.docker;
     enableNvidia = false;
   };
 }
