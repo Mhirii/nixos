@@ -137,7 +137,7 @@
 
     # Coding
     unstable_pkgs.neovim
-    unstable_pkgs.neovide
+    # unstable_pkgs.neovide
     unstable_pkgs.zed-editor
     unstable_pkgs.opencode
     unstable_pkgs.opencode-desktop

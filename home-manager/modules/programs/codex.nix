@@ -11,14 +11,14 @@ in {
 
   imports = [inputs.codex-desktop-linux.homeManagerModules.default];
 
-  programs.codexDesktopLinux.enable = true;
-
   programs.codexDesktopLinux = {
-    computerUseUi.enable = true;
-    remoteMobileControl.enable = true;
-    remoteControl = {
-      enable = true;
-      package = codexCli;
-    };
+		enable = true;
+    # computerUseUi.enable = true;
+    # remoteMobileControl.enable = true;
+    # remoteControl = {
+    #   enable = true;
+    #   package = codexCli;
+    # };
+		cliPackage = codexCli;
   };
 }

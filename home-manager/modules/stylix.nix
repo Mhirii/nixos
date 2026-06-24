@@ -125,4 +125,5 @@ in {
   stylix.targets.hyprpanel = {
     enable = false;
   };
+  stylix.targets.neovide.enable = false;
 }

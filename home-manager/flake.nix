@@ -12,9 +12,9 @@
     flake-utils = {
       url = "github:numtide/flake-utils";
     };
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix/release-25.11";
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+      url = "github:noctalia-dev/noctalia/legacy-v4";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     codex-cli-nix = {
@@ -47,6 +47,20 @@
       date +backup-%d-%m_%H-%M
     '');
   in {
+		nix.settings = {
+			substituters = [ "https://codex-cli.cachix.org" ];
+			trusted-public-keys = [
+				"codex-cli.cachix.org-1:1Br3H1hHoRYG22n//cGKJOk3cQXgYobUel6O8DgSing="
+			];
+		};
+		nixConfig = {
+			extra-substituters = [ "https://noctalia.cachix.org" "https://codex-cli.cachix.org" ];
+			extra-trusted-public-keys = [
+				"noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+				"codex-cli.cachix.org-1:1Br3H1hHoRYG22n//cGKJOk3cQXgYobUel6O8DgSing="
+			];
+		};
+
     homeConfigurations."mhiri" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [

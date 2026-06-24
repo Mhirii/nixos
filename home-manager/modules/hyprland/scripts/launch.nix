@@ -46,12 +46,12 @@ let
 
           case browser
               if pgrep zen >/dev/null
-                  set browserClient (hyprctl clients -j | jq ".[] | select(.initialClass == \"zen-alpha\") | .workspace.id")
+                  set browserClient (hyprctl clients -j | jq ".[] | select(.initialClass == \"zen-beta\") | .workspace.id")
                   if test -n "$browserClient"
                       hyprctl dispatch workspace $browserClient
                   end
               else
-                  zen
+                  zen-beta
               end
 
 
