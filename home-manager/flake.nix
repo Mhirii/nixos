@@ -27,6 +27,10 @@
     codex-desktop-linux = {
       url = "github:ilysenko/codex-desktop-linux";
     };
+    herdr = {
+      url = "github:ogulcancelik/herdr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

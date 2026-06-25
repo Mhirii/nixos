@@ -7,6 +7,7 @@
     ./yazi.nix
     ./zoxide.nix
     ./fastfetch.nix
+    ./herdr.nix
   ];
 
   programs.bat.enable = true;

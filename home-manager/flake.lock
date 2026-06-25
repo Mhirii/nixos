@@ -219,6 +219,26 @@
         "type": "gitlab"
       }
     },
+    "herdr": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782409813,
+        "narHash": "sha256-uL063c4v6/hyAY1ieQNTZIsBDb59M6Wy1TxJnXofrGI=",
+        "owner": "ogulcancelik",
+        "repo": "herdr",
+        "rev": "12cce7deeb2d27f7b11daece75881fcfd88ea607",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ogulcancelik",
+        "repo": "herdr",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -379,6 +399,7 @@
         "codex-cli-nix": "codex-cli-nix",
         "codex-desktop-linux": "codex-desktop-linux",
         "flake-utils": "flake-utils_2",
+        "herdr": "herdr",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs_unstable": "nixpkgs_unstable",
